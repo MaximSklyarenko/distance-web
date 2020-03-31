@@ -154,38 +154,37 @@
             </div>
         </div>
 
-        <!--<div id="slide-modal" class="uk-flex-top" uk-modal>-->
-            <!--<div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">-->
-                <!--<button class="uk-modal-close-outside" type="button" uk-close></button>-->
-                <!--<img src="{{selectedSlide}}" alt="" style="max-width:1280px">-->
-            <!--</div>-->
-        <!--</div>-->
+        <div id="slide-modal" class="uk-flex-top" uk-modal>
+            <div class="uk-modal-dialog uk-margin-auto-vertical" style="width: 1280px; height: 914px;">
+                <button class="uk-modal-close-outside" type="button" uk-close></button>
+                <div id="slideshow1"
+                     class="uk-position-relative uk-visible-toggle uk-light"
+                     tabindex="-1"
+                     ng-show="showSlide"
+                     uk-slideshow>
 
-        <div id="slideshow1"
-             class="uk-position-relative uk-visible-toggle uk-light"
-             tabindex="-1"
-             style="position: fixed!important;left: calc(50vw - 640px); top: 0px; height:100vh;width:1280px;background: rgba(255,255,255,.8);"
-             ng-show="showSlide"
-             uk-slideshow>
+                    <ul class="uk-slideshow-items">
+                        <li ng-repeat="slide in slides" slide-handler="" index="{{$index}}">
+                            <img src="{{slide}}" alt="" uk-cover ng-click="onSlideClick()">
+                        </li>
+                    </ul>
 
-            <ul class="uk-slideshow-items">
-                <li ng-repeat="slide in slides" slide-handler="" index="{{$index}}">
-                    <img src="{{slide}}" alt="" uk-cover ng-click="onSlideClick()">
-                </li>
-            </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large"
+                       style="color: rgba(102, 102, 102, 0.7);"
+                       href="#"
+                       uk-slidenav-previous
+                       uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large"
+                       style="color: rgba(102, 102, 102, 0.7);"
+                       href="#"
+                       uk-slidenav-next
+                       uk-slideshow-item="next"></a>
 
-            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large"
-               style="color: rgba(102, 102, 102, 0.7);"
-               href="#"
-               uk-slidenav-previous
-               uk-slideshow-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large"
-               style="color: rgba(102, 102, 102, 0.7);"
-               href="#"
-               uk-slidenav-next
-               uk-slideshow-item="next"></a>
+                </div>
 
+            </div>
         </div>
+
 
 
         <!--</div>-->

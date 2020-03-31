@@ -29,8 +29,8 @@
             'pics/slides/infograph9.jpg'
         ];
 
-        $scope.slideshow1 = UIkit.slideshow('#slideshow1', { ratio: '1280:914'});
-        // $scope.slideModal = UIkit.modal('#slide-modal');
+        $scope.slideshow1 = UIkit.slideshow('#slideshow1', { ratio: '1280:914', draggable: false});
+        $scope.slideModal = UIkit.modal('#slide-modal');
         $scope.selectedSlide = $scope.slides[0];
         $scope.showSlide = false;
 
@@ -42,12 +42,13 @@
         $scope.onClick = function (slide, index) {
             $scope.selectedSlide = slide;
             $scope.showSlide = true;
-            // $scope.slideModal.show();
+            $scope.slideModal.show();
             $scope.slideshow1.show(index);
         };
 
         $scope.onSlideClick = function () {
             $scope.showSlide = false;
+            $scope.slideModal.hide();
         }
 
     }]);

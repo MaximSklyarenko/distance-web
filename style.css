@@ -4,8 +4,8 @@
 @font-face {
     font-family: PTSans;
     src: url(pt-sans.ttf);
-   } 
-   
+   }
+
 html, body{
 	margin:0px; padding:0px;height:100%;
 	}
@@ -18,7 +18,7 @@ body{
 	}
 
 img{border:none;}
-textarea:focus, input:focus{
+textarea:focus, input:focus, a:hover{
 outline: none;
 }
 
@@ -40,7 +40,7 @@ a.img-link:hover{
 	background:none;
 	text-decoration:none;
 	padding:0px;
-	}	
+	}
 
 a.link-button{
 	background:#3a6dad;
@@ -60,10 +60,10 @@ a{-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition
 	color:#00aded;text-decoration:none;
 }
 
-a:hover{
-	color:#f00;
-	border-bottom:1px dotted #f00;
-	}
+/*a:hover{*/
+	/*color:#f00;*/
+	/*border-bottom:1px dotted #f00;*/
+	/*}*/
 
 a.op-button{
 	opacity:0.7;
@@ -236,7 +236,7 @@ div.dshi-block:hover{
 
 div.ispring-block{
 	-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition: all 0.2s ease;
-	color:#fff;	
+	color:#fff;
 }
 div.ispring-block:hover{
 	background:linear-gradient(15deg, #ccc, #fcfcfc);
@@ -246,7 +246,7 @@ div.ispring-block:hover{
 
 div.foxford-block{
 	-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition: all 0.2s ease;
-	color:#fff;	
+	color:#fff;
 	background:#333;
 }
 div.foxford-block:hover{
@@ -258,7 +258,7 @@ div.foxford-block:hover{
 
 div.ipro-block{
 	-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition: all 0.2s ease;
-	color:#fff;	
+	color:#fff;
 	background:#0060af;
 }
 div.ipro-block:hover{
@@ -269,7 +269,7 @@ div.ipro-block:hover{
 
 div.presentation-block{
 	-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition: all 0.2s ease;
-	color:#fff;		
+	color:#fff;
 	background:rgba(200, 0, 0, 0.8);
 	overflow:hidden;
 	width:250px;
@@ -286,7 +286,7 @@ div.presentation-block:hover{
 
 div.newres-block{
 	-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition: all 0.2s ease;
-	color:#fff;		
+	color:#fff;
 	background:rgba(0, 156, 175, 0.8);
 	overflow:hidden;
 	width:300px;
@@ -398,7 +398,7 @@ div.banner-block{
 	border:none;
 	border-radius:0px;
 }
-div.banner-block:hover{	
+div.banner-block:hover{
 	box-shadow:20px 20px 20px rgba(0,0,0,0.4);
 	border-radius:7px;
 }
@@ -524,9 +524,9 @@ div.banner-block:hover{
             background: none !important;
             padding: 0 !important;
         }
-    
-    
-    
+
+
+
     .header_block {
         font-size: 30px;
         font-weight: 600;
@@ -546,5 +546,5 @@ div.banner-block:hover{
         font-family: 'Roboto', sans-serif;
         padding:30px;
     }
-    
+
 

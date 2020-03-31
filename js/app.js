@@ -29,7 +29,7 @@
             'pics/slides/infograph9.jpg'
         ];
 
-        $scope.slideshow1 = UIkit.slideshow('#slideshow1', { ratio: '1280:914', draggable: false});
+        $scope.slideshow1 = UIkit.slideshow('#slideshow1', { ratio: '1280:914'});
         $scope.slideModal = UIkit.modal('#slide-modal');
         $scope.selectedSlide = $scope.slides[0];
         $scope.showSlide = false;

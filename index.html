@@ -115,40 +115,82 @@
          </div>
     </div>
     <!-- Слайдшоу -->
-    <style>
-        .uk-overlay-default
-        {
-            background:none !important;
-        }
-    </style>
+    <!--<style>-->
+        <!--.uk-overlay-default-->
+        <!--{-->
+            <!--background:none !important;-->
+        <!--}-->
+    <!--</style>-->
     <div style="width:1120px;padding-bottom:40px;" ng-controller="Slideshow">
         <div class=header_block style="text-align:center;">Рекомендации по обеспечению дистанционного обучения</div>
-        <div uk-slider onclick="document.getElementById('prev_pic').style.display=' -webkit-box';">
+        <!--<div uk-slider onclick="document.getElementById('prev_pic').style.display=' -webkit-box';">-->
+        <div uk-slider>
+
             <div class="uk-position-relative">
+
                 <div class="uk-slider-container uk-light">
                     <ul class="uk-slider-items uk-child-width-1-6 uk-child-width-1-6@s uk-child-width-1-6@m">
                         <li ng-repeat="slide in slides">
-                            <img src="{{slide}}" alt="" ng-click="onClick(slide)">
-                            <div ng-if="slide == selectedSlide" class="uk-overlay-default uk-position-cover"></div>
+                            <img src="{{slide}}" alt="" ng-click="onClick(slide, $index)">
+                            <div ng-if="showSlide && slide == selectedSlide" class="uk-overlay-default uk-position-cover"></div>
                         </li>
                     </ul>
                 </div>
+
                 <div class="uk-hidden@s uk-light">
                     <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
                        uk-slider-item="previous"></a>
                     <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next
                        uk-slider-item="next"></a>
                 </div>
+
                 <div class="uk-visible@s">
                     <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous
                        uk-slider-item="previous"></a>
                     <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next
                        uk-slider-item="next"></a>
                 </div>
+
             </div>
         </div>
-        <div id=prev_pic style="display:none;position: fixed;top: 0px; height:100vh;width:1120px;background: rgba(255,255,255,.8);" onclick="document.getElementById('prev_pic').style.display='none';">
-		<img src="{{selectedSlide}}" width=1120px;>
+
+        <!--<div id="slide-modal" class="uk-flex-top" uk-modal>-->
+            <!--<div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">-->
+                <!--<button class="uk-modal-close-outside" type="button" uk-close></button>-->
+                <!--<img src="{{selectedSlide}}" alt="" style="max-width:1280px">-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div id="slideshow1"
+             class="uk-position-relative uk-visible-toggle uk-light"
+             tabindex="-1"
+             style="position: fixed!important;left: calc(50vw - 640px); top: 0px; height:100vh;width:1280px;background: rgba(255,255,255,.8);"
+             ng-show="showSlide"
+             uk-slideshow>
+
+            <ul class="uk-slideshow-items">
+                <li ng-repeat="slide in slides" slide-handler="" index="{{$index}}">
+                    <img src="{{slide}}" alt="" uk-cover ng-click="onSlideClick()">
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large"
+               style="color: rgba(102, 102, 102, 0.7);"
+               href="#"
+               uk-slidenav-previous
+               uk-slideshow-item="previous"></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-slidenav-large"
+               style="color: rgba(102, 102, 102, 0.7);"
+               href="#"
+               uk-slidenav-next
+               uk-slideshow-item="next"></a>
+
+        </div>
+
+
+        <!--</div>-->
+        <!--<div id=prev_pic style="display:none;position: fixed;top: 0px; height:100vh;width:1120px;background: rgba(255,255,255,.8);" onclick="document.getElementById('prev_pic').style.display='none';">-->
+		<!--<img src="{{selectedSlide}}" width=1120px;>-->
 		</div>
     </div>
     <!-- Второй блок контента -->
@@ -414,7 +456,7 @@
 				</div>
                 <!-- Платформа «Цифровой колледж» -->
                 <div class=pl-border style="background:#e7ebee;border:1px solid #957EEE !important;">
-					<a href="https://e-learning.tspk-mo.ru/mck/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/e-learn.jpg" style="width:259px"></div></a> 
+					<a href="https://e-learning.tspk-mo.ru/mck/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/e-learn.jpg" style="width:259px"></div></a>
 				</div>
                 <!-- Портал дистанционного обучения. Интерактивные курсы -->
 				<div class=pl-border style="background:#5A2497;border:1px solid #957EEE !important;">
@@ -444,11 +486,11 @@
             <div class=header_block>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
             <div>
                 <!-- Алгоритмика -->
-                <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;"">
+                <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
                     <a href="https://free.algoritmika.org/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/algo.jpg" class=im-border-full-wh style="width:240px;"></div></a>
                 </div>
                 <!-- skyed -->
-                <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;"">
+                <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
                     <a href="https://edu.skyeng.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/skyed.png" class=im-border-full-wh style="width:250px;"></div></a>
                 </div>
 				<!-- Арзамас -->
@@ -489,7 +531,7 @@
 				<!-- Кванториум -->
                 <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
                     <a href="https://kvantorium-perm.ru/timetable/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/kvantorium.jpg" class=im-border-full-wh style="width:240px;"></div></a>
-                </div>		
+                </div>
             </div>
         </div>
         <div style="width:1120px;"  id=do>
@@ -497,7 +539,7 @@
             <div style="font-size: 22px;text-align: justify;">С целью организационно-методической поддержки организации дистанционного образования обучающихся с ограниченными возможностями здоровья на сайте ФГБНУ «Институт коррекционной педагогики Российской академии образования» создан раздел, содержащий методические и информационные материалы для специалистов и родителей <a href="https://ikp-rao.ru/distancionnoe-obuchenie-detej-s-ovz/">https://ikp-rao.ru/distancionnoe-obuchenie-detej-s-ovz/</a>.
             </div>
         </div>
-        
+
         <!-- подвал -->
 		<div style="padding-top:40px;">8-800-505-89-66 – служба технической поддержки ЭПОС.Школа</div>
 		<div>8-800-300-44-44 – служба технической поддержки СЭДиЖ</div>

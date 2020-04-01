@@ -29,70 +29,40 @@
         <img src="header.svg?v21" alt="Generic placeholder image" class="media-object" style="flex: 1 0 auto;">
     </div>
 
+	<table>
+	<tr>
+	<td>
     <!--Навигация -->
     <div style="width:1120px;display: inline-flex;justify-content: center;align-items: center;padding-bottom: 20px;">
-        <div  style="background:linear-gradient(90deg, #A546CC, #64169B);
-        width:200px;
-        height:50px;
-        border-radius: 15px;
-        float:left;
-        margin-right:10px;
-        margin-bottom:10px;">
-            <a href="#obr"><div style="        width:200px;
-            height:50px;
-            border-radius:15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;">
-            <div style="color:white">ШКОЛЫ</div>
+        <div style="background:linear-gradient(90deg, #A546CC, #64169B);width:200px;height:50px;border-radius: 15px;margin-right:10px;margin-bottom:10px;">
+            <a href="#obr">
+			<div style="width:200px;height:50px;display:flex;justify-content:center;align-items:center;text-align:center;">
+            <div style="color:white;">ШКОЛЫ</div>
             </div></a>
         </div>
-        <div  style="background:linear-gradient(90deg, #A546CC, #64169B);        width:200px;
-        height:50px;
-        border-radius: 15px;
-        float:left;
-        margin-right:10px;
-        margin-bottom:10px;">
-            <a href="#spo"><div  style="        width:200px;
-                       height:50px;
-                       border-radius:15px;
-                       display: flex;
-                       justify-content: center;
-                       align-items: center;">
-            <div style="color:white">ТЕХНИКУМЫ, КОЛЛЕДЖИ</div>
+        <div style="background:linear-gradient(90deg, #A546CC, #64169B);width:200px;height:50px;border-radius: 15px;margin-right:10px;margin-bottom:10px;">
+            <a href="#spo">
+			<div style="width:200px;height:50px;display:flex;justify-content:center;align-items:center;text-align:center;">
+            <div style="color:white;">ТЕХНИКУМЫ, КОЛЛЕДЖИ</div>
             </div></a>
         </div>
-            <div  style="background:linear-gradient(90deg, #A546CC, #64169B);           width:200px;
-            height:50px;
-            border-radius: 15px;
-            float:left;
-            margin-right:10px;
-            margin-bottom:10px;">
-                <a href="#dist"><div  style="        width:200px;
-                           height:50px;
-                           border-radius:15px;
-                           display: flex;
-                           justify-content: center;
-                           align-items: center;">
-                <div style="color:white">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
-                </div></a>
-            </div>
-        <div  style="background:linear-gradient(90deg, #A546CC, #64169B);           width:200px;
-        height:50px;
-        border-radius: 15px;
-        float:left;
-        margin-right:10px;
-        margin-bottom:10px;">
-            <a href="#do"><div  style="        width:200px;
-                       height:50px;
-                       border-radius:15px;
-                       display: flex;
-                       justify-content: center;
-                       align-items: center;">
-            <div style="color:white">ДЕТЯМ С ОВЗ</div>
+        <div style="background:linear-gradient(90deg, #A546CC, #64169B);width:200px;height:50px;border-radius: 15px;margin-right:10px;margin-bottom:10px;">
+			<a href="#do">
+			<div style="width:200px;height:50px;display:flex;justify-content:center;align-items:center;text-align:center;">
+            <div style="color:white;">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
             </div></a>
         </div>
+        <div style="background:linear-gradient(90deg, #A546CC, #64169B);width:200px;height:50px;border-radius: 15px;margin-right:10px;margin-bottom:10px;">
+            <a href="#dist">
+			<div style="width:200px;height:50px;display:flex;justify-content:center;align-items:center;text-align:center;">
+            <div style="color:white;">ДЕТЯМ С ОВЗ</div>
+            </div></a>
         </div>
+    </div>
+	</td>
+	</tr>
+	<tr>
+	<td>
     <!-- Первый блок контента -->
     <div style="width:1120px;display: inline-flex;justify-content: center;align-items: center;">
          <!-- Коронавирус -->
@@ -114,42 +84,36 @@
              </div>
          </div>
     </div>
+	</td>
+	</tr>
+	<tr>
+	<td>
     <!-- Слайдшоу -->
-
     <div style="width:1120px;padding-bottom:40px;" ng-controller="Slideshow">
         <div class=header_block style="text-align:center;">Рекомендации по обеспечению дистанционного обучения</div>
         <div uk-slider>
-
             <div class="uk-position-relative">
-
                 <div class="uk-slider-container uk-light">
                     <ul class="uk-slider-items uk-child-width-1-6 uk-child-width-1-6@s uk-child-width-1-6@m uk-grid">
                         <li ng-repeat="slide in slides">
-                            <!--<div class="uk-panel">-->
-                                <img src="{{slide}}" alt="" ng-click="onClick(slide, $index)">
-                            <!--</div>-->
-                            <!--<div ng-if="showSlide && slide == selectedSlide" class="uk-overlay-default uk-position-cover"></div>-->
+                            <img src="{{slide}}" alt="" ng-click="onClick(slide, $index)">
                         </li>
                     </ul>
                 </div>
-
                 <div class="uk-hidden@s uk-light">
                     <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous
                        uk-slider-item="previous"></a>
                     <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next
                        uk-slider-item="next"></a>
                 </div>
-
                 <div class="uk-visible@s">
                     <a class="uk-position-center-left-out uk-position-small" href="#" uk-slidenav-previous
                        uk-slider-item="previous"></a>
                     <a class="uk-position-center-right-out uk-position-small" href="#" uk-slidenav-next
                        uk-slider-item="next"></a>
                 </div>
-
             </div>
         </div>
-
         <div id="slide-modal" class="uk-flex-top" uk-modal>
             <div class="uk-modal-dialog uk-margin-auto-vertical" style="width: 1120px; height: 800px;">
                 <div id="slideshow1"
@@ -157,13 +121,11 @@
                      tabindex="-1"
                      ng-show="showSlide"
                      uk-slideshow>
-
                     <ul class="uk-slideshow-items">
                         <li ng-repeat="slide in slides" slide-handler="" index="{{$index}}">
                             <img src="{{slide}}" alt="" uk-cover ng-click="onSlideClick()">
                         </li>
                     </ul>
-
                     <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-slidenav-large"
                        style="color: rgba(102, 102, 102, 0.7);"
                        href="#"
@@ -174,14 +136,15 @@
                        href="#"
                        uk-slidenav-next
                        uk-slideshow-item="next"></a>
-
                 </div>
-
             </div>
         </div>
-
 		</div>
     </div>
+	</td>
+	</tr>
+	<tr>
+	<td>
     <!-- Второй блок контента -->
     <div style="width:1120px;padding-bottom:40px;">
         <div class=header_block style="text-align:center;">Технологии проведения дистанционного обучения</div>
@@ -206,8 +169,12 @@
           <div style="padding:20px;">
               <a href="https://trueconf.ru/blog/news/besplatnaya-videosvyaz-dlya-obrazovaniya-i-distanczionnoj-raboty.html"><img src="pics/trueconf.svg" width=200px></a>
           </div>
-         </div>
+        </div>
     </div>
+	</td>
+	</tr>
+	<tr>
+	<td>
     <!-- Третий блок контента -->
     <style>
         .pl-border
@@ -254,6 +221,9 @@
         <div style="width:1120px;" id=obr>
             <div class=header_block>ШКОЛЫ</div>
             <div>
+				<table>
+				<tr>
+				<td>
                 <!-- Учи ру -->
                 <div class=pl-border>
                     <a href="https://uchi.ru/"><img src="pics/uchiru.png" class=im-border></a>
@@ -262,29 +232,48 @@
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/uchi.pdf'">Учителю</div>
                     </div>
                 </div>
+				</td>
+				<td>
                 <!-- yandex ру -->
                 <div class=pl-border>
-                    <a href="https://education.yandex.ru/home/"><img src="pics/yandex-u.png" class=im-border></a>
+                    <a href="https://education.yandex.ru/home/"><img src="pics/yandex-u.png" class=im-border style="heigt:95px;"></a>
                     <div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/yandex.pdf'">Родителю</div>
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/yandex.pdf'">Учителю</div>
                     </div>
                 </div>
+				</td>
+				<td>
+				<!-- Яндекс.Школа -->
+				<div class=pl-border>
+					<a href="https://school.yandex.ru/"><img src="pics/yschool.png" class=im-border></a>
+					<div style="width:100%; height:50px;display: inline-flex;">
+                        <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/yschool.pdf'">Учителю</div>
+                    </div>
+				</div>
+				</td>
+				<td>
                 <!-- РЭШ -->
                 <div class=pl-border>
-                    <a href="https://resh.edu.ru/"><img src="pics/resh.png" class=im-border-p></a>
-                    <div style="width:257px; height:50px;display: inline-flex;">
+                    <a href="https://resh.edu.ru/"><img src="pics/resh.png" class=im-border-p style="width:100%;"></a>
+                    <div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/resh.pdf'">Родителю</div>
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/resh.pdf'">Учителю</div>
                     </div>
                 </div>
+				</td>
+				</tr>
+				<tr>
+				<td>
                 <!-- Просвещение -->
                 <div class=pl-border style="background:#0060af;">
-                    <a href="https://media.prosv.ru"><div class=im-border><img src="https://distance.mosedu.ru/wp-content/themes/dtheme/pics/logo-ipro.png" style="width:90%; padding-top:15px;"></div></a>
-                    <div style="width:100%; height:50px;display: inline-flex;">
+                    <a href="https://media.prosv.ru"><div style="align-items:center;justify-content:center;display:flex;" class=im-border><img src="pics/logo-ipro.png" style="width:90%;"></div></a>
+                    <div style="width:100%; height:50px;display:inline-flex;">
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/prosv.pdf'">Учителю</div>
                     </div>
                 </div>
+				</td>
+				<td>
 				<!-- Библиотека МЭШ -->
                 <div class=pl-border style="background:#5A2497;">
 					<a href="https://uchebnik.mos.ru/"><div class=im-border>
@@ -294,41 +283,61 @@
 						<div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='https://uchebnik.mos.ru/catalogue'">Учителю</div>
                     </div>
                 </div>
+				</td>
+				<td>
                 <!-- Российский учебник-->
                 <div class=pl-border>
-					<a href="https://rosuchebnik.ru/"><img src="pics/rosuchebnik.png" class=im-border-p></a>
+					<a href="https://rosuchebnik.ru/"><img src="pics/rosuchebnik.png" class=im-border></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/rosuchebnik.pdf'">Учителю</div>
                     </div>
 				</div>
+				</td>
+				<td>
 				<!-- Skyeng -->
                 <div class=pl-border style="background:#5A2497;">
                     <a href="https://skyeng.ru/"><img src="pics/skyeng.png" class=im-border-full></a>
                 </div>
+				</td>
+				</tr>
+				<tr>
+				<td>
 				<!-- Якласс -->
 				<div class=pl-border>
-					<a href="https://www.yaklass.ru/"><img src="pics/yaklass_logo_big.png" class=im-border-p></a>
+					<a href="https://www.yaklass.ru/"><img src="pics/yaklass_logo_big.png" class=im-border-p style="width:100%;"></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/yclass.pdf'">Родителю</div>
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/yclass.pdf'">Учителю</div>
                     </div>
 				</div>
+				</td>
+				<td>
 				<!-- Лекта -->
 				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
-					<a href="https://lecta.rosuchebnik.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/lecta.jpg" class=im-border-full-wh style="width:240px;"></div></a>
-				 </div>
+					<a href="https://lecta.rosuchebnik.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/lecta.jpg" class=im-border-full-wh style="width:90%"></div></a>
+				</div>
+				</td>
+				<td>
 				<!-- Фоксфорд -->
 				<div class=pl-border style="background:#333333;">
 					 <a href="https://help.foxford.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="https://distance.mosedu.ru/wp-content/themes/dtheme/pics/logo-foxford.png" class=im-border-full-wh  style="width:90%"></div></a>
 				</div>
+				</td>
+				<td>
 				<!-- Гор метод центр -->
-				<div class=pl-border style="background:white; border:1px solid #957EEE !important;">
-					 <a href="https://mosmetod.ru/sh404sef-custom-content/materialy-dlya-organizatsii-distantsionnogo-obucheniya.html"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/gmc.png" class=im-border-full-wh style="width:240px;"></div></a>
+				<div class=pl-border style="background:#004065;">
+					 <a href="https://mosmetod.ru/sh404sef-custom-content/materialy-dlya-organizatsii-distantsionnogo-obucheniya.html"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/gmc.png" class=im-border-full-wh style="width:90%"></div></a>
 				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
 				<!-- Центр пед мастерства -->
-				<div class=pl-border style="background:white;height:180px;border:1px solid #957EEE !important;">
+				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					 <a href="https://edu.olimpiada.ru/?students"><div class=im-border-full><img src="pics/banner-cpm.png"> </div></a>
 				</div>
+				</td>
+				<td>
 				<!-- Сдам гиа -->
 				<div class=pl-border style="background:#5A2497;">
 					<a href="https://sdamgia.ru/"><div class=im-border><div class = head_url style="color:white">Сдам ГИА</div></div></a>
@@ -337,6 +346,8 @@
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/gia.pdf'">Учителю</div>
                     </div>
 				</div>
+				</td>
+				<td>
 				<!-- ФИПИ -->
 				<div class=pl-border style="background:#F4F3E7;">
 					<a href="http://www.fipi.ru/"><img src="pics/fipi.jpg" class=im-border></a>
@@ -345,26 +356,42 @@
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/fipi.pdf'">Учителю</div>
                     </div>
 				</div>
+				</td>
+				<td>
 				<!-- Русское слово-->
 				<div class=pl-border>
-					<a href="https://русское-слово.рф/articles/81757/"><div class=im-border-full><img src="pics/russkoe_slovo.png" class=im-border-full-wh style="width:100%;height:100%;"></div></a>
+					<a href="https://русское-слово.рф/articles/81757/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/russkoe_slovo.png" class=im-border-full></div></a>
 				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
 				<!-- Открытая школа -->
 				<div class=pl-border style="background:#4507ca; border:1px solid #4507ca !important;">
 					<a href="https://2035school.ru"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/openschool.png" class=im-border-full-wh></div></a>
 				</div>
+				</td>
+				<td>
 				<!-- Домашняя школа InternetUrok.ru-->
-				<div class=pl-border style="background:white;height:178px;border:1px solid #957EEE !important;">
-					<a href="https://interneturok.ru/article/uroki-v-svobodnom-dostupe"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/interneturok.png" style="width:90%"></div></a>
+				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
+					<a href="https://interneturok.ru/article/uroki-v-svobodnom-dostupe"><div style="width:100%;heigt:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/interneturok.png" style="padding-top:15px;"></div></a>
 				</div>
+				</td>
+				<td>
 				<!-- Олимпиум -->
-				<div class=pl-border style="background:white;height:178px;border:1px solid #957EEE !important;">
-					<a href="https://olimpium.ru/olimpium/news/item/40/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/olimpium.png"></div></a>
+				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
+					<a href="https://olimpium.ru/olimpium/news/item/40/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/olimpium.png" style="width:90%"></div></a>
 				</div>
+				</td>
+				<td>
 				<!-- Лекториум -->
 				<div class=pl-border style="background:#fece80 !important">
 					<a href="https://project.lektorium.tv/school"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/lektorium.png" class=im-border-full-wh  style="width:90%"></div></a>
 				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
                 <!-- Маркет плейс -->
                 <div class=pl-border style="background:#5A2497;">
                     <a href="https://elducation.ru/"><div class=im-border>
@@ -374,8 +401,15 @@
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/market.pdf'">Родителю</div>
                     </div>
                 </div>
+				</td>
+				</tr>
+				</table>
             </div>
         </div>
+		</td>
+		</tr>
+		<tr>
+		<td>
         <div style="width:1120px;" >
 			<table style="width:100%;">
 				<tr>
@@ -406,6 +440,10 @@
 				</div>
             </div>
         </div>
+		</td>
+		</tr>
+		<tr>
+		<td>
         <div style="width:1120px; display: inline-block;" id=spo>
             <div class=header_block>ТЕХНИКУМЫ, КОЛЛЕДЖИ</div>
             <div>
@@ -433,7 +471,7 @@
                 </div>
                 <!-- Площадка Образовательного центра «Сириус» -->
                 <div class=pl-border>
-					<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=im-border-p></a>
+					<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=im-border-p style="width:100%"></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
                     </div>
@@ -466,7 +504,11 @@
 				</div>
             </div>
 		</div>
-        <div style="width:1120px; display: inline-block;" id=dist>
+		</td>
+		</tr>
+		<tr>
+		<td>
+        <div style="width:1120px; display: inline-block;" id=do>
             <div class=header_block>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
             <div>
                 <!-- Алгоритмика -->
@@ -507,7 +549,7 @@
                 </div -->
                 <!-- Сириус.Онлайн -->
                 <div class=pl-border>
-					<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=im-border-p></a>
+					<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=im-border-p style="width:100%"></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
                     </div>
@@ -518,19 +560,30 @@
                 </div>
             </div>
         </div>
-        <div style="width:1120px;"  id=do>
+		</td>
+		</tr>
+		<rt>
+		<td>
+        <div style="width:1120px;"  id=dist>
             <div class=header_block>ДИСТАНЦИОННОЕ ОБРАЗОВАНИЕ ОБУЧАЮЩИХСЯ С ОВЗ</div>
             <div style="font-size: 22px;text-align: justify;">С целью организационно-методической поддержки организации дистанционного образования обучающихся с ограниченными возможностями здоровья на сайте ФГБНУ «Институт коррекционной педагогики Российской академии образования» создан раздел, содержащий методические и информационные материалы для специалистов и родителей <a href="https://ikp-rao.ru/distancionnoe-obuchenie-detej-s-ovz/">https://ikp-rao.ru/distancionnoe-obuchenie-detej-s-ovz/</a>.
             </div>
         </div>
-
+		</td>
+		</tr>
+		<tr>
+		<td>
+		<center>
         <!-- подвал -->
 		<div style="padding-top:40px;">8-800-505-89-66 – служба технической поддержки ЭПОС.Школа</div>
 		<div>8-800-300-44-44 – служба технической поддержки СЭДиЖ</div>
         <div style="padding-top:10px;padding-bottom:40px;">
         ЭПОС 2020
         </div>
-
+		</center>
+		</td>
+		</tr>
+		</table>
  </CENTER>
 <script src="js/angular.min.js"></script>
 <script src="js/app.js"></script>

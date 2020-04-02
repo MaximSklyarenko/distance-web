@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="css/uikit.min.css" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+	<script>	
+		function OpenMeshMenu() 
+		{
+			document.getElementById("MeshDropdown").classList.toggle("show");
+		}
+		window.onclick = function(event) 
+		{
+			if (!event.target.matches('.dropbtn'))
+			{
+				var dropdowns = document.getElementsByClassName("dropdown-content");
+				var i;
+				for (i = 0; i < dropdowns.length; i++) 
+				{
+					var openDropdown = dropdowns[i];
+					if (openDropdown.classList.contains('show')) 
+					{
+						openDropdown.classList.remove('show');
+					}
+				}
+			}
+		}
+	</script>
     <link rel="stylesheet" id="twentyseventeen-style-css" href="style.css?ver=20190507" media="all">
 
 </head>
@@ -177,16 +199,16 @@
 	<td>
     <!-- Третий блок контента -->
     <style>
-        .pl-border
-        {
-            width:260px;
-            height:180px;
-            background-color:#FAE6FB;
-            border-radius: 15px;
-            float:left;
-            margin-right:10px;
-            margin-bottom:10px;
-        }
+    .pl-border
+    {
+        width:260px;
+        height:180px;
+        background-color:#FAE6FB;
+        border-radius: 15px;
+        float:left;
+        margin-right:10px;
+        margin-bottom:10px;
+    }
     .im-border {
         width:260px;
         height:130px;
@@ -217,6 +239,37 @@
         justify-content: center;
         align-items: center;
     }
+	.dropbtn {
+		width:400px;
+        background-color: #5A2497;
+		color:white;
+		float:left;
+        border-style: none;
+		cursor: pointer;
+		font-size: 21px;
+        text-align:left;
+        font-family: 'Roboto', sans-serif;
+		margin-left:5px;
+		margin-top:5px;
+	}
+	.dropdown-content {
+		display: none;
+		position:absolute;
+		background-color: #5A2497;
+		color:white;
+		font-family: 'Roboto', sans-serif;
+		z-index: 1;
+		margin-top:130px;
+		cursor: pointer;
+		border-radius: 15px;
+	}
+	.dropdown-content td {
+		color: white;
+		padding: 12px 16px;
+		display: block;
+		border-bottom:1px dotted white;
+	}
+	.show {display:block;}
     </style>
         <div style="width:1120px;" id=obr>
             <div class=header_block>ШКОЛЫ</div>
@@ -274,31 +327,30 @@
                 </div>
 				</td>
 				<td>
-				<!-- Библиотека МЭШ -->
-                <div class=pl-border style="background:#5A2497;">
-					<a href="https://uchebnik.mos.ru/"><div class=im-border>
-                    <div class = head_url style="color:white">Библиотека МЭШ</div>
-                    </div></a>
+                <!-- Библиотека МЭШ -->
+                <div class=pl-border>
+                    <a href="https://uchebnik.mos.ru/"><img src="pics/mesh.png" class=im-border-p style="width:100%"></a>
                     <div style="width:100%; height:50px;display: inline-flex;">
-						<div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='https://uchebnik.mos.ru/catalogue'">Учителю</div>
+                        <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/mesh.pdf'">Родителю</div>
+                        <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/mesh.pdf'">Учителю</div>
                     </div>
                 </div>
 				</td>
 				<td>
-                <!-- Российский учебник-->
-                <div class=pl-border>
+				<!-- Российский учебник-->
+				<div class=pl-border>
 					<a href="https://rosuchebnik.ru/"><img src="pics/rosuchebnik.png" class=im-border></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
-                        <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/rosuchebnik.pdf'">Учителю</div>
-                    </div>
+						<div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/rosuchebnik.pdf'">Учителю</div>
+					</div>
 				</div>
 				</td>
 				<td>
 				<!-- Skyeng -->
-                <div class=pl-border style="background:#5A2497;">
-                    <a href="https://skyeng.ru/"><img src="pics/skyeng.png" class=im-border-full></a>
-                </div>
-				</td>
+				<div class=pl-border style="background:#5A2497;">
+					<a href="https://skyeng.ru/"><img src="pics/skyeng.png" class=im-border-full></a>
+				</div>
+				</td>	
 				</tr>
 				<tr>
 				<td>
@@ -306,9 +358,9 @@
 				<div class=pl-border>
 					<a href="https://www.yaklass.ru/"><img src="pics/yaklass_logo_big.png" class=im-border-p style="width:100%;"></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
-                        <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/yclass.pdf'">Родителю</div>
-                        <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/yclass.pdf'">Учителю</div>
-                    </div>
+						<div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/yclass.pdf'">Родителю</div>
+						<div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/yclass.pdf'">Учителю</div>
+					</div>
 				</div>
 				</td>
 				<td>
@@ -340,7 +392,7 @@
 				<td>
 				<!-- Сдам гиа -->
 				<div class=pl-border style="background:#5A2497;">
-					<a href="https://sdamgia.ru/"><div class=im-border><div class = head_url style="color:white">Сдам ГИА</div></div></a>
+					<a href="https://sdamgia.ru/"><div class=im-border><div class = head_url style="color:white">Сдам ГИА: решу ВПР, ОГЭ, ЕГЭ и ЦТ</div></div></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/gia.pdf'">Родителю</div>
                         <div style="width:50%;display: flex;justify-content: center;align-items: center; background-color:#957EEE;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/teachers/gia.pdf'">Учителю</div>
@@ -392,7 +444,7 @@
 				</tr>
 				<tr>
 				<td>
-                <!-- Маркет плейс -->
+				<!-- Маркет плейс -->
                 <div class=pl-border style="background:#5A2497;">
                     <a href="https://elducation.ru/"><div class=im-border>
                     <div class = head_url style="color:white">Маркетплейс образовательных услуг</div>
@@ -401,6 +453,138 @@
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/market.pdf'">Родителю</div>
                     </div>
                 </div>
+				</td>
+				<td colspan="2">
+				<!-- Ресурсы МЭШ для учителей -->
+				<div class=pl-border style="background:#5A2497;width:410px;">
+					<button onclick="OpenMeshMenu()" class="dropbtn" style="padding-top:25px;padding-left:25px;">Ресурсы МЭШ</button>
+					<button onclick="OpenMeshMenu()" class="dropbtn" style="font-size:14px;padding-left:25px;padding-right:25px;padding-bottom:60px;">Электронные пособия для учителя, содержащие подборки проверенных электронных образовательных материалов для каждого урока</button>
+					<div id="MeshDropdown" class="dropdown-content">
+						<table cellpadding="5" cellspacing="2" width="100%" border="0">
+						<tbody>
+						<tr style="height:49px">
+						<td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
+						<td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
+						<td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/34847016/view'">
+						<td align="left">Алгебра</td><td align="center">8</td><td align="center">34847016</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40593180/view'">
+						<td align="left">Геометрия</td><td align="center">8</td><td align="center">40593180</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36639080/view'">
+						<td align="left">Русский язык</td><td align="center">9</td><td align="center">36639080</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38880978/view'">
+						<td align="left">Литература</td><td align="center">5</td><td align="center">38880978</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36761874/view'">
+						<td align="left">Биология</td><td align="center">5</td><td align="center">36761874</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39253828/view'">
+						<td align="left">Биология</td><td align="center">6</td><td align="center">39253828</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39334260/view'">
+						<td align="left" style="border-bottom:1px dotted rgba(255,255,255,0.3);">Биология</td><td align="center">7</td><td align="center">39334260</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39341803/view'">
+						<td align="left">Биология</td><td align="center">8</td><td align="center">39341803</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36716344/view'">
+						<td align="left">Информатика</td><td align="center">7</td><td align="center">36716344</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/32786764/view'">
+						<td align="left">Химия</td><td align="center">8</td><td align="center">32786764</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39089812/view'">
+						<td align="left">Химия</td><td align="center">9</td><td align="center">39089812</td>
+						</tr>
+						<tr onclick="window.locaion.href='https://uchebnik.mos.ru/composer2/document/36731749/view'">
+						<td align="left">География</td><td align="center">5</td><td align="center">36731749</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/41576862/view'">
+						<td align="left">География</td><td align="center">6</td><td align="center">41576862</d>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39668295/view'">
+						<td align="left">География</td><td align="center">7</td><td align="center">39668295</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/44615766/view'">
+						<td align="left">ИЗО</td><td align="center">1</td><td align="center">44615766</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/45465743/view'">
+						<td align="left">ИЗО</td><td align="center">3</td><td align="center">45465743</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36856630/view'">
+						<td align="left">ИЗО</td><td align="center">5</td><td align="center">36856630</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39879931/view'">
+						<td align="left">ИЗО</td><td align="center">6</td><td align="center">39879931</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39018121/view'">
+						<td align="left">ИЗО</td><td align="center">7</td><td align="center">39018121</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36631960/view'">
+						<td align="left">Английский язык</td><td align="center">5</td><td align="center">36631960</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39334574/view'">
+						<td align="left">Английский язык</td><td align="center">6</td><td align="center">39334574</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39738233/view'">
+						<td align="left">Английский язык</td><td align="center">7</td><td align="center">39738233</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39332334/view'">
+						<td align="left">Английский язык</td><td align="center">8</td><td align="center">39332334</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39668757/view'">
+						<td align="left">Английский язык</td><td align="center">9</td><td align="center">39668757</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36504349/view'">
+						<td align="left">История</td><td align="center">7</td><td align="center">36504349</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36498098/view'">
+						<td align="left">История</td><td align="center">8</td><td align="center">36504349</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36500376/view'">
+						<td align="left">Обществознание</td><td align="center">6</td><td align="center">36500376</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36636053/view'">
+						<td align="left">Обществознание</td><td align="center">7</td><td align="center">36636053</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36506002/view'">
+						<td align="left">Обществознание</td><td align="center">8</td><td align="center">36506002</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36633753/view'">
+						<td align="left">Обществознание</td><td align="center">9</td><td align="center">36633753</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38783089/view'">
+						<td align="left">Музыка</td><td align="center">5</td><td align="center">38783089</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38790628/view'">
+						<td align="left">Музыка</td><td align="center">6</td><td align="center">38790628</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40697226/view'">
+						<td align="left">Физическая культура</td><td align="center">5</td><td align="center">38790628</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/44698781/view'">
+						<td align="left">Физическая культура</td><td align="center">6</td><td align="center">38790628</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38009192/view'">
+						<td align="left">Физическая культура</td><td align="center">7</td><td align="center">38790628</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40698015/view'">
+						<td align="left">Физическая культура</td><td align="center">8</td><td align="center">38790628</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36638656/view'">
+						<td align="left">ОБЖ</td><td align="center">8</td><td align="center">38790628</td>
+						</tr>
+						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40728798/view'">
+						<td align="left">Технология</td><td align="center">7</td><td align="center">38790628</td>
+						</tr>
+						</tbody>
+						</table>
+				</div>
+				</div>
 				</td>
 				</tr>
 				</table>
@@ -429,11 +613,9 @@
 					<a href="https://www.anatomcom.ru/"><img src="pics/anatom.png" class=im-border-full></a>
                 </div>
                 <!-- Государственный Дарвиновский Университет -->
-                <div class=pl-border style="background:#5A2497;">
-                    <a href="http://www.darwinmuseum.ru/projects/separate-exp/raspisanie-videorolikov"><div class=im-border>
-                    <div class = head_url style="color:white">Государственный Дарвиновский Университет</div>
-                    </div></a>
-                </div>
+                <div class=pl-border style="background:white;border:1px solid #957EEE !important;">
+					<a href="http://www.darwinmuseum.ru/projects/separate-exp/raspisanie-videorolikov"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/darwin.png" style="width:90%"></div></a>
+				</div>
 				<!-- Уроки биологии онлайн -->
                 <div class=pl-border style="background:#fef1f5;height:180px;border:1px solid #957EEE !important;">
 					<a href="https://egebio.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/egebio.png"></div></a>
@@ -447,61 +629,92 @@
         <div style="width:1120px; display: inline-block;" id=spo>
             <div class=header_block>ТЕХНИКУМЫ, КОЛЛЕДЖИ</div>
             <div>
+				<table>
+				<tr>
+				<td>
                 <!-- Образовательные ресурсы Академии Ворлдскиллс Россия -->
                 <div class=pl-border style="background:#5A2497;">
 					<a href="https://worldskillsacademy.ru/#/programs"><img src="pics/worldskills.png" class=im-border-full></a>
                 </div>
+				</td>
+				<td>
                 <!-- Интернет-портал Московского среднего профессионального образования -->
                 <div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					<a href="https://spo.mosmetod.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/mosmetod.jpg"></div></a>
 				</div>
+				</td>
+				<td>
                 <!-- Федеральный центр электронных образовательных ресурсов -->
                 <div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					<a href="http://fcior.edu.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/fcior.jpg" style="width:90%"></div></a>
 				</div>
+				</td>
+				<td>
                 <!-- Российская электронная школа -->
                 <div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					<a href="https://resh.edu.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/resh.png" style="width:90%"></div></a>
 				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
 				<!-- Московская электронная школа -->
-                <div class=pl-border style="background:#5A2497;">
-                    <a href="https://uchebnik.mos.ru/catalogue"><div class=im-border>
-                    <div class = head_url style="color:white">Московская электронная школа</div>
-                    </div></a>
+				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
+                    <a href="https://uchebnik.mos.ru/catalogue"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/mesh.png" style="width:90%"></div></a>
                 </div>
-                <!-- Площадка Образовательного центра «Сириус» -->
+				
+				</td>
+				<td>
+				<!-- Площадка Образовательного центра «Сириус» -->
                 <div class=pl-border>
 					<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=im-border-p style="width:100%"></a>
 					<div style="width:100%; height:50px;display: inline-flex;">
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
                     </div>
 				</div>
+				</td>
+				<td>
                 <!-- Платформа «Цифровой колледж» -->
                 <div class=pl-border style="background:#e7ebee;border:1px solid #957EEE !important;">
-					<a href="https://e-learning.tspk-mo.ru/mck/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/e-learn.jpg" style="width:259px"></div></a>
+					<a href="https://e-learning.tspk-mo.ru/mck/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/e-learn.jpg" style="width:90%"></div></a>
 				</div>
+				</td>
+				<td>
                 <!-- Портал дистанционного обучения. Интерактивные курсы -->
-				<div class=pl-border style="background:#5A2497;border:1px solid #957EEE !important;">
+				<div class=pl-border style="background:#5A2497;">
 					<a href="https://do2.rcokoit.ru"><div class=im-border>
                     <div class = head_url style="color:white">Интерактивные курсы</div>
                     </div></a>
 				</div>
+				</td>
+				</tr>
+				<tr>
+				<td>
                 <!-- Интернет урок. Библиотека видеоуроков -->
 				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					<a href="https://interneturok.ru"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/interneturok.png" class=im-border-full-wh style="width:240px;"></div></a>
 				</div>
+				</td>
+				<td>
                 <!-- ЯКласс. Видеоуроки и тренажеры -->
                 <div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					<a href="https://www.yaklass.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/yaklass_logo_big.png" class=im-border-full-wh style="width:240px"></div></a>
 				</div>
+				</td>
+				<td>
                 <!-- Образовательная платформа «Юрайт» -->
 				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
 					<a href="https://urait.ru/news/1064"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/urait.jpg" class=im-border-full-wh style="width:240px;"></div></a>
-				 </div>
+				</div>
+				</td>
+				<td> 
                 <!-- СПО в ЭБС Знаниум  -->
 				<div class=pl-border style="background:#f2f2f2;border:1px solid #957EEE !important;">
 					<a href="https://new.znanium.com/collections/basic"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/znanium.jpg" class=im-border-full-wh style="width:240px;"></div></a>
 				</div>
+				</td>
+				</tr>
+				</table>
             </div>
 		</div>
 		</td>
@@ -511,42 +724,59 @@
         <div style="width:1120px; display: inline-block;" id=do>
             <div class=header_block>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
             <div>
+				<table>
+				<tr>
+				<td>
                 <!-- Алгоритмика -->
                 <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
                     <a href="https://free.algoritmika.org/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/algo.jpg" class=im-border-full-wh style="width:240px;"></div></a>
                 </div>
+				</td>
+				<td>
                 <!-- skyed -->
                 <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
                     <a href="https://edu.skyeng.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/skyed.png" class=im-border-full-wh style="width:250px;"></div></a>
                 </div>
+				</td>
+				<td>
 				<!-- Арзамас -->
                 <div class=pl-border style="background:#5A2497;">
                     <a href="https://arzamas.academy/courses"><img src="pics/arzmamas.jpg" class=im-border-full></a>
                 </div>
-                <!-- Онлайн-афишу Пермского края -->
-                <div class=pl-border style="background:#5A2497;">
-                    <a href="http://mk.permkrai.ru/neskuchnodoma/"><div class=im-border-full>
-                    <div class = head_url style="color:white">Онлайн-афиша Пермского края</div>
-                    </div></a>
+				</td>
+				<td>
+				<!-- Кванториум -->
+                <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
+                    <a href="https://kvantorium-perm.ru/timetable/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/kvantorium.jpg" class=im-border-full-wh style="width:240px;"></div></a>
                 </div>
+				<td>
+				</tr>
+				<tr>
+				<td>
                 <!-- Образовариум -->
                 <div class=pl-border style="background:#0062b9;">
                     <a href="https://obr.nd.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/obr.jpg" class=im-border-full-wh  style="width:90%"></div></a>
                 </div>
+				</td>
+				<td>
                 <!-- колонка -->
                 <div class=pl-border style="background:#5A2497;">
                     <a href="https://yandex.ru/alice/legko-skazat"><img src="pics/ya.png" class=im-border-full></a>
                 </div>
+				</td>
+				<td>
                 <!--dshi -->
                 <div class=pl-border style="background:#62A854;">
                     <a href="https://dshi-online.ru/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/dshi.jpeg" class=im-border-full-wh ></div></a>
                 </div>
+				</td>
                 <!-- ОКАЗАТЬСЯ В «ГОРЬКОВКЕ», НЕ ВЫХОДЯ ИЗ ДОМА
                 <div class=pl-border style="background:#5A2497;">
                     <a href="https://mk.permkrai.ru/press-centr/news/63843/"><div class=im-border-full>
                     <div class = head_url style="color:white">Оказаться в «ГОРЬКОВКЕ», не выходя из дома</div>
                     </div></a>
                 </div -->
+				<td>
                 <!-- Сириус.Онлайн -->
                 <div class=pl-border>
 					<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=im-border-p style="width:100%"></a>
@@ -554,10 +784,17 @@
                         <div style="width:100%;display: flex;justify-content: center;align-items: center; background-color:#D79AF1;border-bottom-left-radius:15px;border-bottom-right-radius:15px;cursor:pointer;" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
                     </div>
 				</div>
-				<!-- Кванториум -->
-                <div class=pl-border style="background:white;width:256px;height:176px;border:1px solid #957EEE !important;">
-                    <a href="https://kvantorium-perm.ru/timetable/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/kvantorium.jpg" class=im-border-full-wh style="width:240px;"></div></a>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="4">
+				<!-- Онлайн-афишу Пермского края -->
+				<div class=pl-border style="background:white;border:1px solid #957EEE !important;">
+                    <a href="http://mk.permkrai.ru/neskuchnodoma/"><div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/afisha.png" style="border-radius:15px;"></div></a>
                 </div>
+				</td>
+				</tr>
+				</table>
             </div>
         </div>
 		</td>

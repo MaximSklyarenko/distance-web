@@ -252,6 +252,7 @@
 		margin-left:5px;
 		margin-top:5px;
 	}
+	.dropbtn:active, .dropbtn:focus { outline: none; }
 	.dropdown-content {
 		display: none;
 		position:absolute;
@@ -266,7 +267,6 @@
 	.dropdown-content td {
 		color: white;
 		padding: 12px 16px;
-		display: block;
 		border-bottom:1px dotted white;
 	}
 	.show {display:block;}
@@ -457,13 +457,12 @@
 				<div class=pl-border style="background:#5A2497;width:410px;">
 					<button onclick="OpenMeshMenu()" class="dropbtn" style="padding-top:25px;padding-left:25px;">Ресурсы МЭШ</button>
 					<button onclick="OpenMeshMenu()" class="dropbtn" style="font-size:14px;padding-left:25px;padding-right:25px;padding-bottom:60px;">Электронные пособия для учителя, содержащие подборки проверенных электронных образовательных материалов для каждого урока</button>
-					<div id="MeshDropdown" class="dropdown-content">
-						<table cellpadding="5" cellspacing="2" width="100%" border="0">
-						<tbody>
-						<tr style="height:49px">
-						<td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
-						<td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
-						<td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
+					<div id="MeshDropdown" class="dropdown-content" style="width:410px;">
+						<table width="100%;la" border="0">
+						<tr style="height:49px;">
+							<td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
+							<td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
+							<td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
 						</tr>
 						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/34847016/view'">
 						<td align="left">Алгебра</td><td align="center">8</td><td align="center">34847016</td>
@@ -579,7 +578,6 @@
 						<tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40728798/view'">
 						<td align="left">Технология</td><td align="center">7</td><td align="center">38790628</td>
 						</tr>
-						</tbody>
 						</table>
 				</div>
 				</div>

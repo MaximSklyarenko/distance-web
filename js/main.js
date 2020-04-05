@@ -2,21 +2,23 @@ function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
   for (i = 0; i < panels.length; i++) {
+	var curPanel = panels[i];
+    
+	if (curPanel.getAttribute("id") != "afisha") {
+      var elemDiv = document.createElement("div");
+      elemDiv.setAttribute("class", "info-img-div");
+      elemDiv.setAttribute("onClick", "showInfo()");
 
-    var curPanel = panels[i];
 
-    var elemDiv = document.createElement("div");
-    elemDiv.setAttribute("class", "info-img-div");
-    elemDiv.setAttribute("onClick", "showInfo()");
+      var elemImg = document.createElement("img");
+      elemImg.setAttribute("src", "pics/info.svg");
+      elemImg.setAttribute("class", "info-img");
 
+      elemDiv.appendChild(elemImg);
 
-    var elemImg = document.createElement("img");
-    elemImg.setAttribute("src", "pics/info.svg");
-    elemImg.setAttribute("class", "info-img");
-
-    elemDiv.appendChild(elemImg);
-
-    curPanel.appendChild(elemDiv);
+      curPanel.appendChild(elemDiv);
+	
+	}
 
   }
 };

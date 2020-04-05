@@ -1,7 +1,7 @@
 ﻿cssVars({
   
   // Treat all browsers as legacy
-  onlyLegacy: false,
+  onlyLegacy: true,
   
   // DEMO: Toggles to see results
   // ----------------------------
@@ -13,8 +13,8 @@
   
   // Display transformed CSS
   onComplete: function(cssText, styleNodes, cssVariables, benchmark) {
-    console.log("trash")
-	console.log(cssText);
+    console.log("onComplete")
+	//console.log(cssText);
   }
 });
 

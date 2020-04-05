@@ -22,14 +22,22 @@ function addInfo() {
 };
 
 function showInfo() {
-  /*var parImageDiv = event.target.parentElement;
-  var parDiv = parImageDiv.parentElement;
-	
-  var divClass = parDiv.getAttribute("class");
-  divClass = divClass + " panel-info-show";
-  parDiv.setAttribute("class",divClass);
-  */
+  var parImageDiv = event.target.parentElement;
+  var parDiv = parImageDiv.parentElement; /*Плашка*/
+  var infoPanel = parDiv.querySelector('.panel-info-show');
+  infoPanel.setAttribute("style","display:flex;background:#5A2497!important;");  
+  event.stopPropagation();
+  event.target.setAttribute("onClick", "revertPanel()");
 }
+
+function revertPanel() {
+  var parImageDiv = event.target.parentElement;
+  var parDiv = parImageDiv.parentElement; /*Плашка*/
+  var infoPanel = parDiv.querySelector('.panel-info-show');
+  infoPanel.setAttribute("style","display:none;background:#5A2497!important;");  
+  event.stopPropagation();
+  event.target.setAttribute("onClick", "showInfo()");	
+}	
 
 function orientationChangeFunction() {
   var slidesQ = window.getComputedStyle(document.documentElement).getPropertyValue("--slides-q");

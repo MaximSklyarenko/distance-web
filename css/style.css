@@ -1,4 +1,4 @@
-html{@charset "utf-8";
+@charset "utf-8";
 
 /* CSS Document */
 
@@ -110,7 +110,6 @@ center {
 
 .flex-cont-style {
   justify-content: flex-start;
-  align-items: left;
   flex-wrap: wrap;
   display: flex;
 }
@@ -260,8 +259,7 @@ center {
 }
 
 .undo-hover:hover {
-  filter: none;
-  !important;
+  filter: none!important;
 }
 
 
@@ -293,7 +291,7 @@ center {
   text-align: left;
   font-family: 'Roboto', sans-serif;
   padding: calc(var(--basic-padding)*1.5);
-  flex:wrap;
+  flex-wrap: wrap;
 }
 
 .for-parent-label {
@@ -380,5 +378,4 @@ center {
 
 .big-img {
   width: var(--big-nav-img-w);
-}
 }

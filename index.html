@@ -51,27 +51,36 @@
           </a>
         </div>
       </div>
+	  <table>
+	  <tr>
+	  <td>
       <!-- Первый блок контента -->
-      <div style="max-width:var(--max-w); width:100%; display: none;justify-content: center;align-items: center;">
-        <!-- Коронавирус -->
-        <div style="width:500px;width:60%;padding-bottom:20px;padding-right:40px;">
-          <div style="cursor:pointer;position:relative;background-size:cover;height:60px;border-radius: 15px;" onclick="window.location.href='https://permkrai.ru/antivirus/'">
-            <div style="float:left;padding-right:10px;"><img src="pics/ill_help.svg" style="width:60px;"></div>
-            <div style="font-size: 24px;color: green;padding-top: 13px;">Коронавирус: официальная информация</div>
-          </div>
-        </div>
-        <!-- Сервисы -->
-        <div style="width:250px;padding-bottom:20px;width:30%; display:flex;">
-          <div style="cursor:pointer;position:relative;background-size:cover;height:60px;border-radius: 15px;" onclick="window.location.href='http://xn--b1ade2ahgncgk.xn--p1ai/'">
-            <div>
-              <div style="float:left; padding-right:10px;">
+      <div class="flex-cont-style" style="justify-content:center!important;">
+       		
+		<!-- Коронавирус -->
+         <div style="padding-bottom:20px;padding-right:40px;">
+             <div style="cursor:pointer;position:relative;background-size:cover;height:60px;border-radius: 15px;" class="banner-block" onclick="window.location.href=&#39;https://permkrai.ru/antivirus/&#39;">
+                 <div style="float:left;padding-right:10px;"><img src="pics/ill_help.svg" style="width:60px;"></div>
+                 <div style="font-size:24px;color:green;padding-top: 13px;">Коронавирус: официальная информация</div>
+             </div>
+         </div>		
+		
+		<!-- Сервисы -->
+         <div style="padding-bottom:20px;">
+             <div style="cursor:pointer;position:relative;background-size:cover;height:60px;border-radius:15px;" class="banner-block" onclick="window.location.href=&#39;http://xn--b1ade2ahgncgk.xn--p1ai/&#39;">
+                <div>
+                    <div style="float:left; padding-right:10px;">
                 <img src="pics/serv.svg"/> 
               </div>
-              <div style="font-size: 24px;color: #6605C6;padding-top: 13px;">#нескучнодома</div>
-            </div>
-          </div>
-        </div>
+                    <div style="font-size: 24px;color: #6605C6;padding-top: 13px;">#нескучнодома</div>
+                </div>
+             </div>
+         </div>		
+        
       </div>
+	  </tr>
+	  </td>
+	  </table>
       <!-- Слайдшоу -->
       <div class=header-block style="text-align:center;">Рекомендации по обеспечению дистанционного обучения</div>
       <div class="slide-show" ng-controller="Slideshow">

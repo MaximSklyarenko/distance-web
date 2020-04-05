@@ -26,6 +26,14 @@ a:hover {
   outline: none;
 }
 
+div.banner-block {
+    -webkit-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    border: none;
+    border-radius: 0px;
+}
+
 a {
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -293,8 +301,8 @@ center {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: #D79AF1;*/
-  background: linear-gradient(90deg, #957EEE, #D79AF1);
+  background-color: #D79AF1;
+  /*background: linear-gradient(90deg, #957EEE, #D79AF1);*/
   border-bottom-left-radius: var(--panel-border-rad);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
@@ -310,8 +318,8 @@ center {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: #957EEE;*/
-  background: linear-gradient(90deg, #957EEE, #6666ff);
+  background-color: #957EEE;
+  /*background: linear-gradient(90deg, #957EEE, #6666ff);*/
   border-bottom-right-radius: var(--panel-border-rad);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;

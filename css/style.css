@@ -3,15 +3,14 @@
 /* CSS Document */
 
 @font-face {
-  font-family: PTSans;
-  src: url(pt-sans.ttf);
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
   margin: 0px;
   padding: 0px;
   height: 100%;
-  font-family: PTSans;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.5;
   color: #333;
@@ -77,7 +76,7 @@ table#mesh-table td,
 th {
   padding: 10px;
   /* Поля вокруг содержимого таблицы */
-  font-family: 'PTSans';
+  font-family: 'Roboto', sans-serif;
   border: 1px solid white;
   /* Параметры рамки */
 }
@@ -117,7 +116,7 @@ center {
   align-items: center;
   width: var(--col1-w);
   font-size: var(--nav-block-font-size);
-  font-family: 'PTSans';
+  font-family: 'Roboto', sans-serif;
 }
 
 .nav-block-cell:hover {
@@ -298,7 +297,7 @@ center {
   background: linear-gradient(90deg, #957EEE, #D79AF1);
   border-bottom-left-radius: var(--panel-border-rad);
   cursor: pointer;
-  font-family: 'PTSans';
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 
@@ -315,7 +314,7 @@ center {
   background: linear-gradient(90deg, #957EEE, #6666ff);
   border-bottom-right-radius: var(--panel-border-rad);
   cursor: pointer;
-  font-family: 'PTSans';
+  font-family: 'Roboto', sans-serif;
   font-size: 16px;
 }
 

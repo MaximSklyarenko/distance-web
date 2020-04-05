@@ -1,4 +1,4 @@
-@charset "utf-8";
+html{@charset "utf-8";
 
 /* CSS Document */
 
@@ -381,4 +381,4 @@ center {
 .big-img {
   width: var(--big-nav-img-w);
 }
-
+}

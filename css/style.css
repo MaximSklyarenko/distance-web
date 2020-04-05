@@ -274,7 +274,7 @@ center {
   text-align: left;
 }
 
-.head_url {
+.head-url {
   font-size: var(--head-url-font-size);
   color: black;
   display: flex;

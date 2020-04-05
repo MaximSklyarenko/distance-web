@@ -28,6 +28,17 @@ function showInfo() {
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
   infoPanel.setAttribute("style","display:flex;background:#5A2497!important;");  
+  
+  
+  var children = parDiv.childNodes;               
+  for(var c=0; c < children.length; c++) {
+    if(children[c].style && 
+	   children[c].getAttribute("class") != "panel-info-show" && 
+	   children[c].getAttribute("class") != "info-img-div") {
+       children[c].style.display = 'none';
+    }
+  }
+  
   event.stopPropagation();
   event.target.setAttribute("onClick", "revertPanel()");
 }
@@ -37,6 +48,17 @@ function revertPanel() {
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
   infoPanel.setAttribute("style","display:none;background:#5A2497!important;");  
+  
+  
+  var children = parDiv.childNodes;               
+  for(var c=0; c < children.length; c++) {
+    if(children[c].style && 
+	   children[c].getAttribute("class") != "panel-info-show" && 
+	   children[c].getAttribute("class") != "info-img-div") {
+       children[c].style.display = '';
+    }
+  }
+  
   event.stopPropagation();
   event.target.setAttribute("onClick", "showInfo()");	
 }	

@@ -1,0 +1,125 @@
+@-webkit-viewport {
+  width: device-width;
+}
+
+@-moz-viewport {
+  width: device-width;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@-o-viewport {
+  width: device-width;
+}
+
+@viewport {
+  width: device-width;
+}
+
+:root {
+  --max-w: 1120px;
+  /*макс ширина рабочей области*/
+  --col1-w: 200px;
+  /*ширина плашек навигации*/
+  --col1-h: 50px;
+  /*высотка плашек навигации*/
+  
+  --big-nav-img-w: 200px;
+  --small-nav-img-w: 100px;
+  
+  --nav-block-font-size: 16px;
+  --communcation-img-padding: 20px;
+  --header-font-size: 30px;
+  --head-url-font-size: 21px;
+  --head-url-line-height:25px;
+  --basic-padding: 20px;
+  /*размеры плашек*/
+  --panel-w: 260px;
+  --panel-h: 180px;
+  --img-w: 256x;
+  --img-h: 130px;
+  --panel-bottom-h: 50px;
+  --panel-border-rad: 15px;
+  /*---------------*/
+  /*---Отступы заголовочного блока-----------*/
+  --header-block-top-pad: 20px;
+  --header-block-bottom-pad: 10px;
+  /*---Рзамер слайдов при показе------------*/
+  --slide_w: 1120px;
+  --info-img-h: 24px;
+  
+  --dist-edu-font-size: 22px;
+  
+  --slides-q:6;
+  /*Количество слайдеров в Preview*/
+}
+
+@media all and (max-width: 1120px) {
+   :root {
+	--col1-w: 45%;
+    --communcation-img-padding: 5px;
+    --header-font-size: 16px;
+    --head-url-font-size: 15px;
+	--head-url-line-height:12px;
+    --basic-padding: 1.78vw;
+    /*размеры плашек*/
+    --panel-w: 30.16vw;
+    --panel-h: 20.89vw;
+    --img-w: 29.71vw;
+    --img-h: 15.09vw;
+    --panel-bottom-h: 5.8wv;
+    --info-img-h: 2.786vw;
+	--dist-edu-font-size: 15px;   
+    --slides-q:4;
+    /*Количество слайдеров в Preview*/
+  }
+}
+
+
+
+@media all and (max-width: 800px) {
+   :root {
+    --col1-w: 45%;
+    --communcation-img-padding: 5px;
+    --header-font-size: 16px;
+    --head-url-font-size: 15px;
+	--head-url-line-height:12px;
+    --basic-padding: 1.78vw;
+    /*размеры плашек*/
+    --panel-w: 23.2vw;
+    --panel-h: 16.07vw;
+    --img-w: 22.857vw;
+    --img-h: 11.61vw;
+    --panel-bottom-h: 4.46vw;
+    --info-img-h: 2.143vw;
+	--dist-edu-font-size: 15px;
+	--slides-q:3;
+    /*Количество слайдеров в Preview*/
+  }
+}
+
+@media all and (max-width: 500px) {
+   :root {
+    --col1-w: 45%;
+    --nav-block-font-size: 12px;
+    --communcation-img-padding: 2px;
+    --header-font-size: 13px;
+    --head-url-font-size: 13px;
+	--head-url-line-height:13px;
+    --basic-padding: 1.78vw;
+    /*размеры плашек*/
+    --panel-w: 45vw;
+    --panel-h: 31.15vw;
+    --img-w: 44vw;
+    --img-h: 21.46vw;
+    --panel-bottom-h: 9.69vw;
+    --info-img-h: 5.867vw;
+	--big-nav-img-w: calc(17.857vw*1.5);
+    --small-nav-img-w: calc(8.929vw*1.5);
+	--dist-edu-font-size: 13px;  
+	--slides-q:2;
+    /*Количество слайдеров в Preview*/
+  }
+}

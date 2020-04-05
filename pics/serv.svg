@@ -1,0 +1,16 @@
+<svg width="40" height="49" viewBox="0 0 40 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 20.4285L20.7143 15.4285V32.492L0 37.5713V20.4285Z" fill="#5300A6"></path>
+                  <path d="M20.7139 15.4285L39.9996 19.7142V37.5713L20.7139 32.4285V15.4285Z" fill="#6305BF"></path>
+                  <path d="M38.5716 21.5511L18.6736 26.8572L1.42871 22.8777L21.3267 17.5715L38.5716 21.5511Z" fill="url(#paint0_radial)"></path>
+                  <path d="M0 20.4285L19.2857 25.4285V43.9999L0 38.2663V20.4285Z" fill="#9866FF"></path>
+                  <path d="M19.2861 25.4286L40.0004 19.7144V37.6091L19.2861 44.0001V25.4286Z" fill="#7318F2"></path>
+                  <rect x="18.5713" y="0.428467" width="2.85714" height="12.1429" fill="#FFA307"></rect>
+                  <rect x="35.2568" y="3.28564" width="2.85714" height="12.1429" transform="rotate(33.5437 35.2568 3.28564)" fill="#FFA307"></rect>
+                  <rect x="2.14258" y="4.7207" width="2.85714" height="12.1429" transform="rotate(-30.1463 2.14258 4.7207)" fill="#FFA307"></rect>
+                  <defs>
+                    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(20.0001 33.2858) rotate(-90) scale(14.2857 22.2948)">
+                      <stop stop-color="#FFA307"></stop>
+                      <stop offset="1" stop-color="#FFA307" stop-opacity="0"></stop>
+                    </radialGradient>
+                  </defs>
+</svg>

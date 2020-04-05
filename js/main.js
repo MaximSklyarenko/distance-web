@@ -3,7 +3,6 @@
         onlyLegacy: false, 
     });
 
-
 function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;

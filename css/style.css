@@ -46,14 +46,15 @@ a {
   outline: none;
 }
 
-.mesh-button {
-	padding-top:calc(var(--basic-padding)*1.25);
-	padding-left:calc(var(--basic-padding)*1.25);
+.mesh-button-pad {
+  padding-left:calc(var(--basic-padding)*1.25);
+  padding-top:calc(var(--basic-padding)*1.25);
 }
 
 .dropdown-content {
   display: none;
   position: relative;
+  left:0;
   background-color: #5A2497;
   color: white;
   font-family: 'Roboto', sans-serif;

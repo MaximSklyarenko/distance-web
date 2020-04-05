@@ -1,8 +1,4 @@
-﻿cssVars({
-  rootElement   : document
-});
-
-function addInfo() {
+﻿function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
   for (i = 0; i < panels.length; i++) {

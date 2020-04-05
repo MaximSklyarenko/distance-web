@@ -1,5 +1,5 @@
 ﻿cssVars({
-  // Options...
+  rootElement   : document
 });
 
 function addInfo() {

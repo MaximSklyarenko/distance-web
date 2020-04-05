@@ -1,4 +1,10 @@
-﻿function addInfo() {
+﻿cssVars({ 
+        // Treat all browsers as legacy
+        onlyLegacy: false, 
+    });
+
+
+function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
   for (i = 0; i < panels.length; i++) {

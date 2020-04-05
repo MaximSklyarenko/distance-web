@@ -1,3 +1,7 @@
+﻿cssVars({
+  // Options...
+});
+
 function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;

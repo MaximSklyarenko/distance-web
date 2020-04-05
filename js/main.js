@@ -95,6 +95,8 @@ function orientationChangeFunction() {
 };
 
 function render() {
+  cssVars();
+  
   orientationChangeFunction();
   addInfo();
 

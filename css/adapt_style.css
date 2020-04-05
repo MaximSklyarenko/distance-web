@@ -54,6 +54,8 @@
   
   --slides-q:6;
   /*Количество слайдеров в Preview*/
+  
+  --label-font-size:16px;
 }
 
 @media all and (max-width: 1100px) {
@@ -109,6 +111,7 @@
     --head-url-font-size: 13px;
 	--head-url-line-height:13px;
     --basic-padding: 1.78vw;
+	
     /*размеры плашек*/
     --panel-w: 45vw;
     --panel-h: 31.15vw;
@@ -121,5 +124,6 @@
 	--dist-edu-font-size: 13px;  
 	--slides-q:2;
     /*Количество слайдеров в Preview*/
+	--label-font-size:13px;
   }
 }

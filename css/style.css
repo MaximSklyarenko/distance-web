@@ -304,7 +304,7 @@ center {
   border-bottom-left-radius: var(--panel-border-rad);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: var(--label-font-size);
 }
 
 .for-parent-label:hover {
@@ -321,7 +321,7 @@ center {
   border-bottom-right-radius: var(--panel-border-rad);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: var(--label-font-size);
 }
 
 .for-teacher-label:hover {
@@ -378,4 +378,18 @@ center {
 
 .big-img {
   width: var(--big-nav-img-w);
+}
+ 
+.m-width {
+	max-width:var(--max-w);
+	width:100%;
+	width: auto !important; /* IE max-width hack */
+    width: var(--max-w);           /* width value for IE */
+}
+
+.m-width1120 {
+	max-width:1120px;
+	width:100%;
+	width: auto !important; /* IE max-width hack */
+    width: 1120px;           /* width value for IE */
 }

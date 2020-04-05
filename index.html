@@ -25,12 +25,12 @@
   
   <body ng-app="app" onLoad="render()">
     <center>
-      <div class="m-width" style="display:flex;display:flex;height:auto;padding-bottom:var(--basic-padding);">
+      <div class="m-width header">
         <!-- шапка -->
-        <img src="pics/header.svg" alt="Generic placeholder image" style="width:100%;height:auto;"/>
+        <img src="pics/header.svg" alt="Дистанционное обучение" style="width:100%;height:auto;"/>
       </div>
       <!--Навигация -->
-      <div class="m-width" style="display:flex;justify-content: center;align-items: center;padding-bottom: var(--basic-padding); flex-wrap: wrap;">
+      <div class="m-width nav-container">
         <div class="nav-block-cell">
           <a href="#obr">
             <div class="nav-block-cell-label">
@@ -118,7 +118,7 @@
             </div>
         </div>
         <div id="slide-modal" class="uk-flex-top" uk-modal>
-            <div class="uk-modal-dialog uk-margin-auto-vertical" style="width:var(--max-w)">
+            <div class="uk-modal-dialog uk-margin-auto-vertical m-width-slider">
                 <div id="slideshow1"
                      class="uk-position-relative uk-visible-toggle uk-light"
                      tabindex="-1"
@@ -211,7 +211,7 @@
 			</div>
 			<a href="https://school.yandex.ru/"><img src="pics/yschool.png" class=panel-img></a>
             <div class="panel-bottom-div">
-              <div class="for-teacher-label" style="width:100%; border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);" onclick="window.location.href='files/teachers/yschool.pdf'">Учителю</div>
+              <div class="for-teacher-label left-round-border" onclick="window.location.href='files/teachers/yschool.pdf'">Учителю</div>
             </div>
           </div>          
           <!-- Просвещение -->
@@ -223,7 +223,7 @@
               <div style="align-items:center;justify-content:center;display:flex;" class=panel-img><img src="pics/logo-ipro.png" style="width:90%;"></div>
             </a>
             <div class="panel-bottom-div">
-              <div class="for-teacher-label" style="width:100%; border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);" onclick="window.location.href='files/teachers/prosv.pdf'">Учителю</div>
+              <div class="for-teacher-label left-round-border" onclick="window.location.href='files/teachers/prosv.pdf'">Учителю</div>
             </div>
           </div>
           <!-- Библиотека МЭШ -->
@@ -244,7 +244,7 @@
 			</div>
 			<a href="https://rosuchebnik.ru"><img src="pics/rosuchebnik.png" class=panel-img></a>
             <div class="panel-bottom-div">
-              <div class="for-teacher-label" style="width:100%; border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);" onclick="window.location.href='files/teachers/rosuchebnik.pdf'">Учителю</div>
+              <div class="for-teacher-label left-round-border" onclick="window.location.href='files/teachers/rosuchebnik.pdf'">Учителю</div>
             </div>
           </div>
           <!-- Skyeng -->
@@ -373,7 +373,7 @@
               </div>
             </a>
             <div class="panel-bottom-div">
-              <div class="for-parent-label" style="width:100%; border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);" onclick="window.location.href='files/parents/market.pdf'">Родителю</div>
+              <div class="for-parent-label left-round-border" onclick="window.location.href='files/parents/market.pdf'">Родителю</div>
             </div>
           </div>
           <!-- Ресурсы МЭШ для учителей -->
@@ -381,8 +381,8 @@
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
 			<div class=head-url style="color:white">Бесплатный сервис</div>
 			</div>
-			<div class="head-url mesh-button" style="color:white;padding-top:calc(var(--basic-padding)*1.25);padding-left:calc(var(--basic-padding)*1.25);">Ресурсы МЭШ</div>
-            <div class="mesh-button" style="color:white;font-size:14px;padding-left:calc(var(--basic-padding)*1.25);padding-right:calc(var(--basic-padding)*1.25);">Электронные пособия для учителя, содержащие подборки проверенных электронных образовательных материалов для каждого урока</div>
+			<div class="head-url mesh-button" style="color:white;">Ресурсы МЭШ</div>
+            <div class="mesh-button" style="color:white;font-size:14px;">Электронные пособия для учителя, содержащие подборки проверенных электронных образовательных материалов для каждого урока</div>
             <div id="MeshDropdown" class="dropdown-content" style="width:410px;">
               <table id="mesh-table" width="100%;la">
                 <tr style="height:49px;">
@@ -586,7 +586,7 @@
         </div>
         <div class="flex-cont-style" style="justify-content:space-between;position:relative">
           <div class=header-block style="float:left;width:60%">Цифровые ресурсы для учителей биологии</div>
-          <div class="teacher-grad do-teacher-hover" style="font-size:14px;color:white;align-items:center;width:20%;height:50px;display:flex;justify-content:center;align-items:center;border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);border-top-left-radius:var(--panel-border-rad);border-top-right-radius:var(--panel-border-rad);cursor:pointer;margin-right: 10px;margin-bottom: 10px;" onclick="window.location.href='files/teachers/biology.pdf'">Учителю</div>
+          <div class="teacher-grad do-teacher-hover teacher-button" onclick="window.location.href='files/teachers/biology.pdf'">Учителю</div>
         </div>
         <div class="flex-cont-style">
           <!-- theanimalworld. -->
@@ -678,7 +678,7 @@
 			</div>
 			<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=panel-img-p style="width:100%"></a>
             <div class="panel-bottom-div">
-              <div class="for-parent-label" style="width:100%; border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
+              <div class="for-parent-label left-round-border" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
             </div>
           </div>
           <!-- Платформа «Цифровой колледж» -->
@@ -770,7 +770,7 @@
           <!-- Образовариум -->
           <div class="panel do-hover" style="background:#0062b9;">
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
-			<div class=head-url style="color:white;font-size:calc(var(--head-url-font-size)/1.3)">Бесплатный доступ в период дистанционного обучения к «Робоборику» и «Информатике». Платные курсы по другим предметам.</div>
+			<div class="head-url obrazovarium-small-font">Бесплатный доступ в период дистанционного обучения к «Робоборику» и «Информатике». Платные курсы по другим предметам.</div>
 			</div>
 			<a href="https://obr.nd.ru/">
               <div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/obr.jpg" class="panel-img-full-wh undo-hover" style="width:90%"></div>
@@ -799,7 +799,7 @@
 			</div>
 			<a href="https://edu.sirius.online/"><img src="pics/sirius.png" class=panel-img-p style="width:100%"></a>
             <div class="panel-bottom-div">
-              <div class="for-parent-label" style="width:100%; border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
+              <div class="for-parent-label left-round-border" onclick="window.location.href='files/parents/sirius.pdf'">Родителю</div>
             </div>
           </div>
           <!-- Онлайн-афиша Пермского края -->

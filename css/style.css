@@ -46,6 +46,11 @@ a {
   outline: none;
 }
 
+.mesh-button {
+	padding-top:calc(var(--basic-padding)*1.25);
+	padding-left:calc(var(--basic-padding)*1.25);
+}
+
 .dropdown-content {
   display: none;
   position: relative;
@@ -106,6 +111,21 @@ center {
   padding-bottom: var(--basic-padding);
   padding-left: var(--basic-padding);
   padding-right: var(--basic-padding);
+}
+
+.header {
+  display:flex;
+  height:auto;
+  padding-bottom:var(--basic-padding);
+}
+
+.nav-container
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: var(--basic-padding); 
+  flex-wrap: wrap;
 }
 
 .flex-cont-style {
@@ -379,6 +399,10 @@ center {
 .big-img {
   width: var(--big-nav-img-w);
 }
+
+.m-width-slider {
+  width:var(--max-w);
+}
  
 .m-width {
 	max-width:var(--max-w);
@@ -392,4 +416,19 @@ center {
 	width:100%;
 	width: auto !important; /* IE max-width hack */
     width: 1120px;           /* width value for IE */
+}
+
+.left-round-border {
+	width:100%!important; 
+	border-bottom-left-radius:var(--panel-border-rad);
+	border-bottom-right-radius:var(--panel-border-rad);
+}
+
+.teacher-button {
+	font-size:14px;color:white;align-items:center;width:20%;height:50px;display:flex;justify-content:center;align-items:center;border-bottom-left-radius:var(--panel-border-rad);border-bottom-right-radius:var(--panel-border-rad);border-top-left-radius:var(--panel-border-rad);border-top-right-radius:var(--panel-border-rad);cursor:pointer;margin-right: 10px;margin-bottom: 10px;
+}
+
+.obrazovarium-small-font {
+	color:white!important;
+	font-size:calc(var(--head-url-font-size)/1.3)!important;
 }

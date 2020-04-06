@@ -26,13 +26,21 @@ a:hover {
   outline: none;
 }
 
-div.banner-block {
-    -webkit-transition: all 0.2s ease;
-    -o-transition: all 0.2s ease;
-    -moz-transition: all 0.2s ease;
-    border: none;
-    border-radius: 0px;
+div.banner-block{
+	-webkit-transition: all 0.2s ease;-o-transition: all 0.2s ease;-moz-transition: all 0.2s ease;
+	border:none;
+	border-radius:0px;
 }
+
+/*div.banner-block:hover{
+	box-shadow:20px 20px 20px rgba(0,0,0,0.4);
+	border-radius:7px;
+}*/
+
+div.banner-block:hover {
+            box-shadow: none !important;
+            border-radius: 7px;
+        }
 
 a {
   -webkit-transition: all 0.2s ease;

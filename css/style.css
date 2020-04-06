@@ -14,6 +14,7 @@ body {
   font-size: 14px;
   line-height: 1.5;
   color: #333;
+  margin-top: 0; 
 }
 
 img {
@@ -480,7 +481,7 @@ center {
 .corona {
   font-size: var(--corona-font-size);
   font-weight: normal;
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   display:inline-flex;
   justify-content:flex-start;
   /*padding-top:13px;*/

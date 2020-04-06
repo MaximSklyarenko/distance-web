@@ -24,7 +24,7 @@ function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
   
-  /*alert(supportsTouch);*/
+  alert(supportsTouch);
   
   for (i = 0; i < panels.length; i++) {
 	var curPanel = panels[i];

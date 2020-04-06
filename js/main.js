@@ -40,7 +40,7 @@ function addInfo() {
 	  }
 
       var elemImg = document.createElement("img");
-	  console.log(curPanel.classList);
+	  //console.log(curPanel.classList);
 	  
       if (curPanel.classList.contains("free-cont")) {
         elemImg.setAttribute("src", "pics/info-f.svg");

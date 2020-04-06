@@ -55,6 +55,7 @@ function addInfo() {
 };
 
 function showInfo() {
+  event.stopPropagation();	
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
@@ -68,15 +69,15 @@ function showInfo() {
 	   children[c].getAttribute("class") != "info-img-div") {
        children[c].style.display = 'none';
     }
-  }
+  }  
   
-  event.stopPropagation();
   if (supportsTouch) {
     elemDiv.setAttribute("onClick", "revertPanel()"); 
   }
 }
 
 function revertPanel() {
+  event.stopPropagation();
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
@@ -91,8 +92,7 @@ function revertPanel() {
        children[c].style.display = '';
     }
   }
-  
-  event.stopPropagation();
+    
   if (supportsTouch) {
     elemDiv.setAttribute("onClick", "showInfo()"); 
   }

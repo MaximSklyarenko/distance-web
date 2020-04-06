@@ -125,7 +125,6 @@ center {
 }
 
 .header {
-  display: flex;
   height: auto;
   padding-bottom: var(--basic-padding);
   top: 0px;

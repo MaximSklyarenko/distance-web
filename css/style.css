@@ -478,7 +478,7 @@ center {
 .corona {
   font-size: var(--corona-font-size);
   font-weight: normal;
-  font-family: 'PTSans';
+  font-family: 'Roboto';
   display:inline-flex;
   justify-content:flex-start;
   /*padding-top:13px;*/

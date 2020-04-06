@@ -286,7 +286,7 @@ center {
 }
 
 .do-hover:hover {
-  filter: invert(25%);
+  /*filter: invert(25%);*/
 }
 
 .undo-hover:hover {

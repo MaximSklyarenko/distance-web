@@ -95,7 +95,7 @@ function revertPanel() {
   }
   
   event.stopPropagation();
-  if (!(supportsTouch == null)) {
+  if (supportsTouch) {
     elemDiv.setAttribute("onClick", "showInfo()"); 
   }
 }	

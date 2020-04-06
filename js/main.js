@@ -18,13 +18,13 @@
   }
 });
 
+var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
 function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
   
-  var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
-  alert(supportsTouch);
+  /*alert(supportsTouch);*/
   
   for (i = 0; i < panels.length; i++) {
 	var curPanel = panels[i];
@@ -32,9 +32,14 @@ function addInfo() {
 	if (curPanel.getAttribute("id") != "afisha") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
-      elemDiv.setAttribute("onMouseOver", "showInfo()");
-	  elemDiv.setAttribute("onMouseOut","revertPanel()");
-
+      
+	  if (supportsTouch == null) {
+		elemDiv.setAttribute("onMouseOver", "showInfo()");
+	    elemDiv.setAttribute("onMouseOut","revertPanel()");
+	  }	
+      else {
+		elemDiv.setAttribute("onClick", "showInfo()"); 
+	  }
 
       var elemImg = document.createElement("img");
       elemImg.setAttribute("src", "pics/info.svg");
@@ -66,7 +71,9 @@ function showInfo() {
   }
   
   event.stopPropagation();
-  //event.target.setAttribute("onMouseOver", "revertPanel()");
+  if (!(supportsTouch == null)) {
+    elemDiv.setAttribute("onClick", "revertPanel()"); 
+  }
 }
 
 function revertPanel() {
@@ -87,7 +94,9 @@ function revertPanel() {
   }
   
   event.stopPropagation();
-  //event.target.setAttribute("onMouseOver", "showInfo()");	
+  if (!(supportsTouch == null)) {
+    elemDiv.setAttribute("onClick", "showInfo()"); 
+  }
 }	
 
 function orientationChangeFunction() {

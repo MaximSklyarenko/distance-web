@@ -24,8 +24,6 @@ function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
   
-  alert(supportsTouch);
-  
   for (i = 0; i < panels.length; i++) {
 	var curPanel = panels[i];
     
@@ -56,6 +54,7 @@ function addInfo() {
 
 function showInfo() {
   event.stopPropagation();	
+  alert("showInfo");
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
@@ -78,6 +77,7 @@ function showInfo() {
 
 function revertPanel() {
   event.stopPropagation();
+  alert("revertPanel");
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');

@@ -54,7 +54,7 @@ function addInfo() {
 
 function showInfo() {
   event.stopPropagation();	
-  alert("showInfo");
+  //alert("showInfo");
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
@@ -71,14 +71,14 @@ function showInfo() {
   }  
   
   if (supportsTouch) {
-	alert("changeEvent");  
+	//alert("changeEvent");  
     event.target.setAttribute("onClick", "revertPanel()"); 
   }
 }
 
 function revertPanel() {
   event.stopPropagation();
-  alert("revertPanel");
+  //alert("revertPanel");
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
@@ -95,7 +95,7 @@ function revertPanel() {
   }
     
   if (supportsTouch) {
-	alert("changeEvent");   
+	//alert("changeEvent");   
     event.target.setAttribute("onClick", "showInfo()"); 
   }
 }	

@@ -71,7 +71,8 @@ function showInfo() {
   }  
   
   if (supportsTouch) {
-    elemDiv.setAttribute("onClick", "revertPanel()"); 
+	alert("changeEvent");  
+    event.target.setAttribute("onClick", "revertPanel()"); 
   }
 }
 
@@ -94,7 +95,8 @@ function revertPanel() {
   }
     
   if (supportsTouch) {
-    elemDiv.setAttribute("onClick", "showInfo()"); 
+	alert("changeEvent");   
+    event.target.setAttribute("onClick", "showInfo()"); 
   }
 }	
 

@@ -87,26 +87,20 @@ function revertPanel() {
 function orientationChangeFunction() {
   var slidesQ = window.getComputedStyle(document.documentElement).getPropertyValue("--slides-q");
   var classSliderPreview;
-
-  switch (slidesQ) {
-    case '2':
-      classSliderPreview = "uk-slider-items uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-2@m uk-grid";
-      break;
-    case '3':
-      classSliderPreview = "uk-slider-items uk-child-width-1-3 uk-child-width-1-3@s uk-child-width-1-3@m uk-grid";
-      break;
-    case '4':
-      classSliderPreview = "uk-slider-items uk-child-width-1-4 uk-child-width-1-4@s uk-child-width-1-4@m uk-grid";
-      break;
-    case '6':
-      classSliderPreview = "uk-slider-items uk-child-width-1-6 uk-child-width-1-6@s uk-child-width-1-6@m uk-grid";
-      break;
-    default:
-      classSliderPreview = "uk-slider-items uk-child-width-1-6 uk-child-width-1-6@s uk-child-width-1-6@m uk-grid";
-      break;
-  };
-
+  
+  /*alert("Slides");
+  alert(slidesQ);
+  */
+  
+  classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-child-width-1-" + slidesQ.trim() +
+  "@s uk-child-width-1-".trim() +"@m uk-grid";
+  
   var elem = document.getElementById("slider-preview");
+  
+  /*alert(elem);
+  alert(elem.getAttribute("id"));
+  alert(classSliderPreview);*/
+  
   elem.setAttribute("class", classSliderPreview);
 
 };

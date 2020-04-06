@@ -88,18 +88,18 @@ function orientationChangeFunction() {
   var slidesQ = window.getComputedStyle(document.documentElement).getPropertyValue("--slides-q");
   var classSliderPreview;
   
-  /*alert("Slides");
+  alert("Slides");
   alert(slidesQ);
-  */
+  
   
   classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-child-width-1-" + slidesQ.trim() +
   "@s uk-child-width-1-".trim() +"@m uk-grid";
   
   var elem = document.getElementById("slider-preview");
   
-  /*alert(elem);
+  alert(elem);
   alert(elem.getAttribute("id"));
-  alert(classSliderPreview);*/
+  alert(classSliderPreview);
   
   elem.setAttribute("class", classSliderPreview);
 

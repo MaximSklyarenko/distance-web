@@ -40,7 +40,14 @@ function addInfo() {
 	  }
 
       var elemImg = document.createElement("img");
-      elemImg.setAttribute("src", "pics/info.svg");
+	  console.log(curPanel.classList);
+	  
+      if (curPanel.classList.contains("free-cont")) {
+        elemImg.setAttribute("src", "pics/info-f.svg");
+	  }		  
+      else {	  
+	    elemImg.setAttribute("src", "pics/info-p.svg");
+	  }
       elemImg.setAttribute("class", "info-img");
 
       elemDiv.appendChild(elemImg);

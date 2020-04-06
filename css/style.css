@@ -529,3 +529,8 @@ center {
   text-align:left;
   align-items:center;
 }
+
+/*хак для работы в IE*/
+.hack-slides-q {
+  width:var(--slides-q);	
+} 

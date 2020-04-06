@@ -479,13 +479,50 @@ center {
   font-size: var(--corona-font-size);
   font-weight: normal;
   font-family: 'PTSans';
+  display:inline-flex;
+  justify-content:flex-start;
+  /*padding-top:13px;*/
+  text-align:left;
+  align-items:center;
+}
+
+.corona-main-div {
+  width:auto;
+  padding-bottom:var(--basic-padding);
+  padding-right:40px!important;
+  position:relative;
+  display:inline-flex;
+  justify-content:flex-start;
+}
+
+.corona-inner-div {
+	cursor:pointer;
+	background-size:cover;
+	border-radius: 15px;
+	width:auto;
+	position:relative;	
+	display:inline-flex;
+	justify-content:flex-start;
+	text-align:left;
+}
+
+.neskucho-main-div {
+	padding-bottom:var(--basic-padding);
+	width:auto;
+	position:relative;
+	display:inline-flex;
+	justify-content:flex-start;
 }
 
 .neskucho-block {
-  cursor: pointer;
-  position: relative;
-  background-size: cover;
-  height: 60px;
-  width: 250px;
-  border-radius: 15px;
+  cursor:pointer;
+  background-size:cover;
+  height:60px;
+  border-radius:15px;
+  position:relative;
+  width:auto;
+  display:inline-flex;
+  justify-content:flex-start;
+  text-align:left;
+  align-items:center;
 }

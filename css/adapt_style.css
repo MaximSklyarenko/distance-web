@@ -98,6 +98,9 @@
     /*Количество слайдеров в Preview*/
     --corona-font-size: 20px;
     --corona-w: 400px;
+	 /*---Отступы заголовочного блока-----------*/
+  --header-block-top-pad: 16px;
+  --header-block-bottom-pad: 8x;
   }
 }
 
@@ -126,5 +129,8 @@
     --footer-font-size: 12.5px;
     --corona-font-size: 14px;
     --corona-w: 280px;
+	 /*---Отступы заголовочного блока-----------*/
+  --header-block-top-pad: 10px;
+  --header-block-bottom-pad: 5px;
   }
 }

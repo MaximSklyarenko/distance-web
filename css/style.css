@@ -238,7 +238,7 @@ center {
 }
 
 .panel-img:hover {
-  filter: invert(25%);
+  /*filter: invert(25%);*/
 }
 
 .panel-img-p {
@@ -253,7 +253,7 @@ center {
 }
 
 .panel-img-p:hover {
-  filter: invert(25%);
+  /*filter: invert(25%);*/
 }
 
 .panel-img-full {
@@ -268,7 +268,7 @@ center {
 }
 
 .panel-img-full:hover {
-  filter: invert(25%);
+  /*filter: invert(25%);*/
 }
 
 .panel-img-full-wh {
@@ -282,7 +282,7 @@ center {
 }
 
 .panel-img-full-wh:hover {
-  filter: invert(25%);
+  /*filter: invert(25%);*/
 }
 
 .do-hover:hover {

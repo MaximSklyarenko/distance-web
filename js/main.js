@@ -58,8 +58,6 @@ function showInfo() {
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
-  infoPanel.setAttribute("style","display:flex;background:#5A2497!important;");  
-  
   
   var children = parDiv.childNodes;               
   for(var c=0; c < children.length; c++) {
@@ -69,6 +67,12 @@ function showInfo() {
        children[c].style.display = 'none';
     }
   }  
+  
+  
+  infoPanel.setAttribute("style","display:flex;background:#5A2497!important;");  
+  
+  
+
   
   if (supportsTouch) {
 	//alert("changeEvent");  

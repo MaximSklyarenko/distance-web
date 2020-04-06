@@ -33,7 +33,7 @@ function addInfo() {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
       
-	  if (supportsTouch == null) {
+	  if (!(supportsTouch)) {
 		elemDiv.setAttribute("onMouseOver", "showInfo()");
 	    elemDiv.setAttribute("onMouseOut","revertPanel()");
 	  }	
@@ -71,7 +71,7 @@ function showInfo() {
   }
   
   event.stopPropagation();
-  if (!(supportsTouch == null)) {
+  if (supportsTouch) {
     elemDiv.setAttribute("onClick", "revertPanel()"); 
   }
 }

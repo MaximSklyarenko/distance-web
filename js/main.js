@@ -22,6 +22,10 @@
 function addInfo() {
   var panels = document.getElementsByClassName("panel");
   var i;
+  
+  var supportsTouch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+  alert(supportsTouch);
+  
   for (i = 0; i < panels.length; i++) {
 	var curPanel = panels[i];
     

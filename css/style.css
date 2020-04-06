@@ -489,9 +489,9 @@ center {
 }
 
 .corona-main-div {
+  padding-left:40px!important;
   width:auto;
   padding-bottom:var(--basic-padding);
-  padding-right:40px!important;
   position:relative;
   display:inline-flex;
   justify-content:flex-start;
@@ -509,6 +509,7 @@ center {
 }
 
 .neskucho-main-div {
+	padding-left:40px!important;
 	padding-bottom:var(--basic-padding);
 	width:auto;
 	position:relative;

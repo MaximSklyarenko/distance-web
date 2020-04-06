@@ -37,7 +37,6 @@ function addInfo() {
 		elemDiv.setAttribute("onClick", "showInfo()"); 
 	  }	
       else {
-		elemDiv.setAttribute("onClick", "showInfo()"); 
 		elemDiv.setAttribute("onMouseOver", "showInfo()");
 	    elemDiv.setAttribute("onMouseOut","revertPanel()");
 	  }
@@ -78,7 +77,6 @@ function showInfo() {
 }
 
 function revertPanel() {
-  console.log("out of focus");	
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');

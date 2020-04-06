@@ -33,12 +33,13 @@ function addInfo() {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
       
-	  if (!(supportsTouch)) {
-		elemDiv.setAttribute("onMouseOver", "showInfo()");
-	    elemDiv.setAttribute("onMouseOut","revertPanel()");
+	  if (supportsTouch) {
+		elemDiv.setAttribute("onClick", "showInfo()"); 
 	  }	
       else {
 		elemDiv.setAttribute("onClick", "showInfo()"); 
+		elemDiv.setAttribute("onMouseOver", "showInfo()");
+	    elemDiv.setAttribute("onMouseOut","revertPanel()");
 	  }
 
       var elemImg = document.createElement("img");

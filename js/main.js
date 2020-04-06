@@ -28,7 +28,8 @@ function addInfo() {
 	if (curPanel.getAttribute("id") != "afisha") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
-      elemDiv.setAttribute("onClick", "showInfo()");
+      elemDiv.setAttribute("onMouseOver", "showInfo()");
+	  elemDiv.setAttribute("onMouseOut","revertPanel()");
 
 
       var elemImg = document.createElement("img");
@@ -61,10 +62,11 @@ function showInfo() {
   }
   
   event.stopPropagation();
-  event.target.setAttribute("onClick", "revertPanel()");
+  //event.target.setAttribute("onMouseOver", "revertPanel()");
 }
 
 function revertPanel() {
+  console.log("out of focus");	
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
   var infoPanel = parDiv.querySelector('.panel-info-show');
@@ -81,7 +83,7 @@ function revertPanel() {
   }
   
   event.stopPropagation();
-  event.target.setAttribute("onClick", "showInfo()");	
+  //event.target.setAttribute("onMouseOver", "showInfo()");	
 }	
 
 function orientationChangeFunction() {

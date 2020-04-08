@@ -51,7 +51,7 @@
   --slide_w: 1120px;
   --info-img-h: 24px;
   --dist-edu-font-size: 22px;
-  --slides-q: 6;
+  --slides-q:6;
   /*Количество слайдеров в Preview*/
   --label-font-size: 16px;
   --footer-font-size: 16px;
@@ -75,12 +75,13 @@
     --panel-bottom-h: 5.8vw;
     --info-img-h: 2.786vw;
     --dist-edu-font-size: 15px;
-    --slides-q: 4;
     /*Количество слайдеров в Preview*/
+	--slides-q:4; 	
+	--trash:100vw;
   }
 }
 
-@media all and (max-width: 850px) {
+@media all and (max-width: 849px) {
    :root {
     --nav-col-w: 45%;
     --communcation-img-padding: 5px;
@@ -89,15 +90,15 @@
     --head-url-line-height: 12px;
     --basic-padding: 1.78vw;
     /*размеры плашек*/
-    --panel-w: ((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3;
-    --panel-h: var(--panel-w)/180*260;
-	--img-w: var(--panel-w)/256*260;
-    --img-h: var(--panel-w)*0.5;
-    --panel-bottom-h: (var(--panel-h))-(var(--img-h));
+    --panel-w: calc((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3);
+    --panel-h: calc(var(--panel-w)*180/260);
+	--img-w: calc(var(--panel-w)*256/260);
+    --img-h: calc(var(--panel-w)*0.5);
+    --panel-bottom-h: calc((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3*(50/260));
     --info-img-h: 2.143vw;
     --dist-edu-font-size: 15px;
     --footer-font-size: 15px;
-    --slides-q: 3;
+    --slides-q:3;
     /*Количество слайдеров в Preview*/
     --corona-font-size: 20px;
     --corona-w: 400px;
@@ -126,7 +127,7 @@
     --big-nav-img-w: calc(17.857vw*1.5);
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
-    --slides-q: 2;
+    --slides-q:2;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
@@ -157,14 +158,14 @@
     --big-nav-img-w: calc(17.857vw*1.5);
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
-    --slides-q: 2;
+    --slides-q:2;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
     --corona-font-size: 14px;
     --corona-w: 280px;
 	 /*---Отступы заголовочного блока-----------*/
-  --header-block-top-pad: 10px;
-  --header-block-bottom-pad: 5px;
+    --header-block-top-pad: 10px;
+    --header-block-bottom-pad: 5px;
   }
 }

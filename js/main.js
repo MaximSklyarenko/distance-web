@@ -121,6 +121,8 @@ function orientationChangeFunction() {
   var elem = document.getElementById("slider-preview");
   
   elem.setAttribute("class", classSliderPreview);
+  
+  //alert(slidesQ); 
 
 };
 

@@ -14,7 +14,10 @@
    version="1.1"
    inkscape:version="0.91 r13725"
    sodipodi:docname="favicon.svg"
-   style="fill:none">
+   style="fill:none"
+   inkscape:export-filename="C:\Users\Администратор\Desktop\epos\distance-dfs-git\pics\favicon.png"
+   inkscape:export-xdpi="12000"
+   inkscape:export-ydpi="12000">
   <metadata
      id="metadata18">
     <rdf:RDF>
@@ -23,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -47,7 +50,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="28.34121"
-     inkscape:cx="2.4953392"
+     inkscape:cx="-3.8558363"
      inkscape:cy="5.9910992"
      inkscape:window-x="-8"
      inkscape:window-y="-8"

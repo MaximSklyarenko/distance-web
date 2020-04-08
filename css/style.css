@@ -69,7 +69,7 @@ a {
   background-color: #5A2497;
   color: white;
   font-family: 'Roboto', sans-serif;
-  z-index: 100;
+  z-index: 1000;
   cursor: pointer;
   border-radius: 15px;
 }
@@ -144,8 +144,6 @@ center {
   justify-content: flex-start;
   flex-wrap: wrap;
   display: flex;
-  position:relative;
-  background-color: transparent; 
 }
 
 .nav-block-cell {
@@ -183,7 +181,6 @@ center {
   margin-right: var(--panel-margin-right);
   margin-bottom: var(--panel-margin-bottom);
   position: relative; 
-  z-index: 1;  
 }
 
 .panel-border {  

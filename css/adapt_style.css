@@ -21,9 +21,9 @@
 :root {
   --max-w: 1120px;
   /*макс ширина рабочей области*/
-  --col1-w: 200px;
+  --nav-col-w: 200px;
   /*ширина плашек навигации*/
-  --col1-h: 50px;
+  --nav-col-h: 50px;
   /*высотка плашек навигации*/
   --big-nav-img-w: 200px;
   --small-nav-img-w: 100px;
@@ -36,6 +36,9 @@
   /*размеры плашек*/
   --panel-w: 260px;
   --panel-h: 180px;
+  --panel-margin-right:  10px;
+  --panel-margin-bottom: 10px;
+  
   --img-w: 256x;
   --img-h: 130px;
   --panel-bottom-h: 50px;
@@ -58,7 +61,7 @@
 
 @media all and (max-width: 1100px) {
    :root {
-    --col1-w: 45%;
+    --nav-col-w: 45%;
     --communcation-img-padding: 5px;
     --header-font-size: 16px;
     --head-url-font-size: 15px;
@@ -67,7 +70,7 @@
     /*размеры плашек*/
     --panel-w: 30.16vw;
     --panel-h: 20.89vw;
-    --img-w: 29.71vw;
+	--img-w: 29.71vw;
     --img-h: 15.09vw;
     --panel-bottom-h: 5.8vw;
     --info-img-h: 2.786vw;
@@ -79,7 +82,7 @@
 
 @media all and (max-width: 800px) {
    :root {
-    --col1-w: 45%;
+    --nav-col-w: 45%;
     --communcation-img-padding: 5px;
     --header-font-size: 16px;
     --head-url-font-size: 15px;
@@ -88,7 +91,7 @@
     /*размеры плашек*/
     --panel-w: 23.2vw;
     --panel-h: 16.07vw;
-    --img-w: 22.857vw;
+	 --img-w: 22.843vw;
     --img-h: 11.61vw;
     --panel-bottom-h: 4.46vw;
     --info-img-h: 2.143vw;
@@ -99,14 +102,14 @@
     --corona-font-size: 20px;
     --corona-w: 400px;
 	 /*---Отступы заголовочного блока-----------*/
-  --header-block-top-pad: 16px;
-  --header-block-bottom-pad: 8x;
+    --header-block-top-pad: 16px;
+    --header-block-bottom-pad: 8x;
   }
 }
 
 @media all and (max-width: 500px) {
    :root {
-    --col1-w: 45%;
+    --nav-col-w: 45%;
     --nav-block-font-size: 12px;
     --communcation-img-padding: 2px;
     --header-font-size: 13px;
@@ -116,9 +119,9 @@
     /*размеры плашек*/
     --panel-w: 45vw;
     --panel-h: 31.15vw;
-    --img-w: 44vw;
-    --img-h: 21.46vw;
-    --panel-bottom-h: 9.69vw;
+    --img-w: 44.307vw;
+    --img-h: 22.5vw;
+    --panel-bottom-h: 8.65vw;
     --info-img-h: 5.867vw;
     --big-nav-img-w: calc(17.857vw*1.5);
     --small-nav-img-w: calc(8.929vw*1.5);

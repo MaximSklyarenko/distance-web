@@ -58,8 +58,7 @@ a {
 
 .mesh-button-pad {
   padding-left: calc(var(--basic-padding)*1.25);
-  padding-right: calc(var(--basic-padding)*1.25);
-  padding-top: 0px;
+  padding-top: calc(var(--basic-padding)*1.25);
 }
 
 .dropdown-content {
@@ -148,12 +147,12 @@ center {
 
 .nav-block-cell {
   background: linear-gradient(90deg, #A546CC, #64169B);
-  height: var(--col1-h);
+  height: var(--nav-col-h);
   border-radius: 15px;
   margin-right: 10px;
   margin-bottom: 10px;
   align-items: center;
-  width: var(--col1-w);
+  width: var(--nav-col-w);
   font-size: var(--nav-block-font-size);
   font-family: 'Roboto', sans-serif;
 }
@@ -163,7 +162,7 @@ center {
 }
 
 .nav-block-cell-label {
-  height: var(--col1-h);
+  height: var(--nav-col-h);
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -178,16 +177,28 @@ center {
   background-color: #FAE6FB;
   border-radius: 15px;
   float: left;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  position: relative;
+  margin-right: var(--panel-margin-right);
+  margin-bottom: var(--panel-margin-bottom);
+  position: relative; 
+  z-index: 1;
 }
 
-.panel-border {
-  background: white!important;
-  box-shadow: inset 0px 0px 0px 1px #957EEE!important;
-  position: relative;
+.panel-border {  
+  background-color: white; 	
 }
+
+.panel-border::after {  
+  box-shadow: inset 0px 0px 0px 1px #957EEE!important;
+  border-radius: 15px;
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;  
+  content:"";  
+  z-index:1; 
+  pointer-events:none;  
+}	
 
 .panel-border-open-school {
   background: #4507ca;

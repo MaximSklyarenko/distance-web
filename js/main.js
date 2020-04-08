@@ -30,7 +30,7 @@ function addInfo() {
 	if (curPanel.getAttribute("id") != "afisha") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
-      
+	  
 	  if (supportsTouch) {
 		elemDiv.setAttribute("onClick", "showInfo()"); 
 	  }	
@@ -64,6 +64,10 @@ function showInfo() {
   //alert("showInfo");
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
+  
+  
+  
+  
   var infoPanel = parDiv.querySelector('.panel-info-show');
   
   var children = parDiv.childNodes;               
@@ -73,14 +77,13 @@ function showInfo() {
 	   children[c].getAttribute("class") != "info-img-div") {
        children[c].style.display = 'none';
     }
-  }  
+  }    
   
-  
-  infoPanel.setAttribute("style","display:flex;background:#5A2497!important;");  
-  
+  infoPanel.style.display="flex";   
   
 
-  
+  //alert("showInfo"); 
+ 
   if (supportsTouch) {
 	//alert("changeEvent");  
     event.target.setAttribute("onClick", "revertPanel()"); 
@@ -88,10 +91,11 @@ function showInfo() {
 }
 
 function revertPanel() {
+	
   event.stopPropagation();
   //alert("revertPanel");
   var parImageDiv = event.target.parentElement;
-  var parDiv = parImageDiv.parentElement; /*Плашка*/
+  var parDiv = parImageDiv.parentElement; //Плашка
   var infoPanel = parDiv.querySelector('.panel-info-show');
   infoPanel.setAttribute("style","display:none;background:#5A2497!important;");  
   
@@ -103,12 +107,15 @@ function revertPanel() {
 	   children[c].getAttribute("class") != "info-img-div") {
        children[c].style.display = '';
     }
-  }
+  } 
     
+  //alert("revertPanel"); 	
+	
   if (supportsTouch) {
 	//alert("changeEvent");   
     event.target.setAttribute("onClick", "showInfo()"); 
   }
+  
 }	
 
 function orientationChangeFunction() {

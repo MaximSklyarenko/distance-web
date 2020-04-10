@@ -32,10 +32,10 @@
     <link rel="stylesheet" href="css/swing.css" media="all">
 	<script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-    <script src="js/mesh.js"></script>    
+    <script src="js/mesh.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/main.js"></script>		    
+    <script src="js/main.js"></script>
   </head>
   <body ng-app="app" onLoad="render()">
     <!-- Yandex.Metrika counter -->
@@ -43,7 +43,7 @@
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      
+
       ym(61679847, "init", {
            clickmap:true,
            trackLinks:true,
@@ -54,14 +54,14 @@
     <noscript>
       <div><img src="https://mc.yandex.ru/watch/61679847" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
-    <!-- /Yandex.Metrika counter --> 
+    <!-- /Yandex.Metrika counter -->
     <center style="position:relative;">
       <div class="m-width header">
         <!-- шапка -->
         <img src="pics/header.svg" alt="Дистанционное обучение" style="width:100%;height:auto;"/>
       </div>
       <!--Навигация -->
-      <div class="m-width nav-container">
+      <div class="m-width nav-container sticky" id="nav-elem">
         <div class="nav-block-cell">
           <a href="#obr">
             <div class="nav-block-cell-label">
@@ -84,7 +84,7 @@
           </a>
         </div>
         <div class="nav-block-cell">
-          <a href="#dist">
+          <a href="#dist"">
             <div class="nav-block-cell-label">
               <div style="color:white;">ДЕТЯМ С ОВЗ</div>
             </div>
@@ -103,8 +103,8 @@
         <!-- Сервисы -->
         <div class="m-width neskucho-main-div">
           <div class="banner-block neskucho-block " onclick="window.location.href=&#39;http://xn--b1ade2ahgncgk.xn--p1ai/&#39;">
-            <div style="float:left;padding-right:10px;">                   
-              <img src="pics/serv.svg"/> 
+            <div style="float:left;padding-right:10px;">
+              <img src="pics/serv.svg"/>
             </div>
             <div class="corona" style="color: #6605C6;left:0px;position:relative;white-space:nowrap;">#нескучнодома</div>
           </div>
@@ -187,7 +187,9 @@
         </div>
       </div>
       <!-- Третий блок контента -->
-      <div class="m-width" style="align-items:center;" id=obr>
+      <div class="m-width" style="align-items:center;position:relative;">
+		<div class="ref-div" id=obr>
+	    </div>
         <div class=header-block>ШКОЛЫ</div>
         <div class="flex-container">
 		  <!-- Моя школа в онлайн -->
@@ -210,12 +212,23 @@
               <div class="for-teacher-label" onclick="window.location.href='files/teachers/resh.pdf'">Учителю</div>
             </div>
           </div>
+		  <!-- Интеллектуальная школа -->
+          <div class="panel free-cont">
+            <div class="panel-info-show" style="display:none;background:#5A2497!important;">
+              <div class="head-url" style="color:white">БЕСПЛАТНО</div>
+            </div>
+            <a href="http://stratum.ac.ru/enter/"><img src="pics/stratum.png" class=panel-img></a>            
+            <div class="panel-bottom-div">
+              <div class="for-parent-label" onclick="window.location.href='files/parents/stratum.pdf'">Родителю</div>
+              <div class="for-teacher-label" onclick="window.location.href='files/teachers/stratum.pdf'">Учителю</div>
+            </div>
+          </div>
           <!-- Учи ру -->
           <div class="panel free-cont">
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
               <div class="head-url obrazovarium-small-font" style="color:white">БЕСПЛАТНО до 16.00 по местному времени для занятий с учителем в дистанционном формате</div>
             </div>
-            <a href="https://uchi.ru"><img src="pics/uchiru.png" class=panel-img></a>            
+            <a href="https://uchi.ru"><img src="pics/uchiru.png" class=panel-img></a>
             <div class="panel-bottom-div">
               <div class="for-parent-label" onclick="window.location.href='files/parents/uchi.pdf'">Родителю</div>
               <div class="for-teacher-label" onclick="window.location.href='files/teachers/uchi.pdf'">Учителю</div>
@@ -656,8 +669,10 @@
           </div>
         </div>
       </div>
-      <div class="m-width" id=spo>
-        <div class=header-block>ТЕХНИКУМЫ, КОЛЛЕДЖИ</div>
+      <div class="m-width" style="position:relative;">
+        <div class="ref-div" id=spo>
+	    </div>
+		<div class=header-block>ТЕХНИКУМЫ, КОЛЛЕДЖИ</div>
         <div class="flex-container">
           <!-- Образовательные ресурсы Академии Ворлдскиллс Россия -->
           <div class="panel free-cont" style="background:#5A2497;">
@@ -758,8 +773,10 @@
           </div>
         </div>
       </div>
-      <div class="m-width" style="display: inline-block; width:auto;" id=do>
-        <div class=header-block>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
+      <div class="m-width" style="display: inline-block; width:auto;position:relative;">
+        <div class="ref-div" id=do>
+	    </div>
+		<div class=header-block>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</div>
         <div class="flex-container">
           <!-- Алгоритмика -->
           <div class="panel do-hover panel-border free-cont">
@@ -838,8 +855,10 @@
           </div>
         </div>
       </div>
-      <div class="m-width" id=dist>
-        <div class=header-block>ДИСТАНЦИОННОЕ ОБРАЗОВАНИЕ ОБУЧАЮЩИХСЯ С ОВЗ</div>
+      <div class="m-width" style="position:relative;">
+        <div class="ref-div" id=dist>
+	    </div>
+		<div class=header-block>ДИСТАНЦИОННОЕ ОБРАЗОВАНИЕ ОБУЧАЮЩИХСЯ С ОВЗ</div>
         <div class=dist-edu-text>С целью организационно-методической поддержки организации дистанционного образования обучающихся с ограниченными возможностями здоровья на сайте ФГБНУ «Институт коррекционной педагогики Российской академии образования» создан раздел, содержащий методические и информационные материалы для специалистов и родителей <a href="https://ikp-rao.ru/distancionnoe-obuchenie-detej-s-ovz">https://ikp-rao.ru/distancionnoe-obuchenie-detej-s-ovz</a>.
         </div>
       </div>

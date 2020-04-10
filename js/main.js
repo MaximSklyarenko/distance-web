@@ -130,7 +130,16 @@ function orientationChangeFunction() {
   elem.setAttribute("class", classSliderPreview);
   
   //alert(slidesQ); 
-
+  
+  var refDivs = document.getElementsByClassName("ref-div");
+  var i;
+  
+  for (i = 0; i < refDivs.length; i++) {
+	  
+	refDivs[i].style.height = getComputedStyle(document.getElementById("nav-elem")).height;
+	//alert(refDivs[i].style.height);
+  };
+   
 };
 
 function render() {

@@ -27,6 +27,7 @@ function addInfo() {
   for (i = 0; i < panels.length; i++) {
 	var curPanel = panels[i];
     
+	// Добавление подсказки о стоимости ресурса
 	if (curPanel.getAttribute("id") != "afisha") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
@@ -40,7 +41,6 @@ function addInfo() {
 	  }
 
       var elemImg = document.createElement("img");
-	  //console.log(curPanel.classList);
 	  
       if (curPanel.classList.contains("free-cont")) {
         elemImg.setAttribute("src", "pics/info-f.svg");
@@ -55,6 +55,24 @@ function addInfo() {
       curPanel.appendChild(elemDiv);
 	
 	}
+	
+	// Добавление иконки для просмотра видеоролика
+	if (curPanel.getAttribute("id") == "stratum") {
+      var elemDiv = document.createElement("div");
+      elemDiv.setAttribute("class", "video-img-div");
+	  var elemA = document.createElement("a");
+	  elemA.setAttribute("href", "https://www.youtube.com/watch?v=uDZkbw2ch4Q");
+	  elemDiv.appendChild(elemA);
+	  
+	  var elemImg = document.createElement("img");
+	  elemImg.setAttribute("src", "pics/video.svg");
+	  elemImg.setAttribute("class", "video-img");
+
+      elemA.appendChild(elemImg);
+
+      curPanel.appendChild(elemDiv);
+	
+	}
 
   }
 };
@@ -64,9 +82,6 @@ function showInfo() {
   //alert("showInfo");
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; /*Плашка*/
-  
-  
-  
   
   var infoPanel = parDiv.querySelector('.panel-info-show');
   

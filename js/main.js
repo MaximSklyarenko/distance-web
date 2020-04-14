@@ -60,15 +60,21 @@ function addInfo() {
 	if (curPanel.getAttribute("id") == "stratum") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "video-img-div");
+	  
+	  var videoDiv = document.createElement("div");
+	  videoDiv.setAttribute("uk-lightbox", "");
+	  
 	  var elemA = document.createElement("a");
 	  elemA.setAttribute("href", "https://www.youtube.com/watch?v=uDZkbw2ch4Q");
-	  elemDiv.appendChild(elemA);
 	  
 	  var elemImg = document.createElement("img");
 	  elemImg.setAttribute("src", "pics/video.svg");
 	  elemImg.setAttribute("class", "video-img");
-
       elemA.appendChild(elemImg);
+	  
+	  videoDiv.appendChild(elemA);
+	  
+	  elemDiv.appendChild(videoDiv);
 
       curPanel.appendChild(elemDiv);
 	

@@ -244,7 +244,22 @@ center {
   height: var(--info-img-h);
 }
 
+.video-img-div {
+  float: right!important;
+  position: absolute!important;
+  right: 5px;
+  bottom: calc(var(--panel-bottom-h)*1.1);
+  z-index: 10!important;
+  cursor: pointer!important;
+  justify-content: center!important;
+  height: var(--info-img-h);
+}
+
 .info-img {
+  height: var(--info-img-h);
+}
+
+.video-img {
   height: var(--info-img-h);
 }
 
@@ -254,6 +269,12 @@ center {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   filter: sepia(90%);
+}
+
+.video-img-div:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .panel-img {

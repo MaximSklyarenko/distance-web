@@ -17,6 +17,16 @@ body {
   margin-top: 0px!important;
 }
 
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc((var(--footer-font-size))+4px);
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: calc((var(--footer-font-size))+3px);
+}
+
 img {
   border: none;
 }
@@ -111,9 +121,10 @@ table#mesh-table tr:hover {
 
 .sticky {
   position: sticky;
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky;
+  /* Safari */
   top: 0px;
-  background:white;
+  background: white;
   z-index: 3;
   border: 2px solid white;
 }
@@ -122,14 +133,14 @@ center {
   padding-bottom: var(--basic-padding);
   padding-left: var(--basic-padding);
   padding-right: var(--basic-padding);
-  position:absolute;
+  position: absolute;
 }
 
 .header {
   height: auto;
   padding-bottom: var(--basic-padding);
   top: 0px;
-  width:100%;
+  width: 100%;
 }
 
 .nav-container {
@@ -156,7 +167,7 @@ center {
   width: var(--nav-col-w);
   font-size: var(--nav-block-font-size);
   font-family: 'Roboto', sans-serif;
-  position:relative;
+  position: relative;
 }
 
 .nav-block-cell:hover {
@@ -190,6 +201,7 @@ center {
   border-radius: 15px;
 }
 
+
 /*.panel-border::after {
   box-shadow: inset 0px 0px 0px 1px #957EEE!important;
   border-radius: 15px;
@@ -217,7 +229,7 @@ center {
   margin-right: 10px;
   margin-bottom: 10px;
   z-index: 1;
-  position:absolute;
+  position: absolute;
 }
 
 .info-img-div {
@@ -343,8 +355,8 @@ center {
 }
 
 #sdam-gia {
-  color:white!important;
-  justify-content:center!important;
+  color: white!important;
+  justify-content: center!important;
   padding-top: calc(5px + var(--info-img-h));
 }
 
@@ -504,116 +516,115 @@ center {
   font-size: var(--corona-font-size);
   font-weight: normal;
   font-family: 'Roboto', sans-serif;
-  display:inline-flex;
-  justify-content:flex-start;
+  display: inline-flex;
+  justify-content: flex-start;
   /*padding-top:13px;*/
-  text-align:left;
-  align-items:center;
+  text-align: left;
+  align-items: center;
 }
 
 .corona-main-div {
-  padding-left:20px!important;
-  padding-right:20px!important;
-  width:auto;
-  padding-bottom:var(--basic-padding);
-  position:relative;
-  display:inline-flex;
-  justify-content:flex-start;
+  padding-left: 20px!important;
+  padding-right: 20px!important;
+  width: auto;
+  padding-bottom: var(--basic-padding);
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
 }
 
 .corona-inner-div {
-	cursor:pointer;
-	background-size:cover;
-	border-radius: 15px;
-	width:auto;
-	position:relative;
-	display:inline-flex;
-	justify-content:flex-start;
-	text-align:left;
+  cursor: pointer;
+  background-size: cover;
+  border-radius: 15px;
+  width: auto;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .neskucho-main-div {
-	padding-left:20px!important;
-	padding-right:20px!important;
-	padding-bottom:var(--basic-padding);
-	width:auto;
-	position:relative;
-	display:inline-flex;
-	justify-content:flex-start;
+  padding-left: 20px!important;
+  padding-right: 20px!important;
+  padding-bottom: var(--basic-padding);
+  width: auto;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
 }
 
 .neskucho-block {
-  cursor:pointer;
-  background-size:cover;
-  height:60px;
-  border-radius:15px;
-  position:relative;
-  width:auto;
-  display:inline-flex;
-  justify-content:flex-start;
-  text-align:left;
-  align-items:center;
+  cursor: pointer;
+  background-size: cover;
+  height: 60px;
+  border-radius: 15px;
+  position: relative;
+  width: auto;
+  display: inline-flex;
+  justify-content: flex-start;
+  text-align: left;
+  align-items: center;
 }
+
 
 /*хак для работы в IE*/
+
 .hack-slides-q {
-  width:var(--slides-q);
+  width: var(--slides-q);
 }
 
-.free-cont {
+.free-cont {}
 
-}
-
-.pay-cont {
-
-}
+.pay-cont {}
 
 .ref-div {
-  position:absolute!important;
-  width:100%!important;
-  bottom:100%!important;
+  position: absolute!important;
+  width: 100%!important;
+  bottom: 100%!important;
   /*background-color:red!important;*/
-  border:none;
+  border: none;
 }
 
-@keyframes phone-ring{
-	0%{transform: scale(1.40, 1.40)}
-	10%{transform: scale(1.35, 1.35)}
-	20%{transform: scale(1.30, 1.30)}
-    30%{transform: scale(1.25, 1.25)}
-	40%{transform: scale(1.20, 1.20)}
-	50%{transform: scale(1.15, 1.15)}
-	60%{transform: scale(1.10, 1.10)}
-	70%{transform: scale(1.05, 1.05)}
-	80%{transform: scale(1.00, 1.00)}
-	90%{transform: scale(0.95, 0.95)}
-    100%{transform: scale(0.90, 0.90)}
+@keyframes phone-ring {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.15);
+    filter: hue-rotate(30deg);
+  }
+  55% {
+    transform: scale(1.155);
+    filter: hue-rotate(45deg);
+  }
+  100% {
+    transform: scale(1.0);
+    filter: hue-rotate(-30deg);
+  }
 }
 
 .phones {
   position: sticky;
-  position: -webkit-sticky; /* Safari */
-  bottom: 50px;
-  right:0px;
-  float:right;
-  background:white;
+  position: -webkit-sticky;
+  /* Safari */
+  bottom: calc((var(--basic-padding))*2);
+  right: calc((var(--basic-padding))*2);
+  float: right;
+  background: white;
   z-index: 2;
-
-  width:64px;
-  height:64px;
-
+  width: var(--phone-size);
+  height: var(--phone-size);
   cursor: pointer;
-
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   display: inline-block;
-  border: 2px solid #957EEE;
-
+  border: none;
 }
 
-.phones:hover{
+.phones:hover {
   animation-name: phone-ring;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }

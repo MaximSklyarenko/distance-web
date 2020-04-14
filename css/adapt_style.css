@@ -36,9 +36,8 @@
   /*размеры плашек*/
   --panel-w: 260px;
   --panel-h: 180px;
-  --panel-margin-right:  10px;
+  --panel-margin-right: 10px;
   --panel-margin-bottom: 10px;
-
   --img-w: 256x;
   --img-h: 130px;
   --panel-bottom-h: 50px;
@@ -51,12 +50,13 @@
   --slide_w: 1120px;
   --info-img-h: 24px;
   --dist-edu-font-size: 22px;
-  --slides-q:6;
+  --slides-q: 6;
   /*Количество слайдеров в Preview*/
   --label-font-size: 16px;
   --footer-font-size: 16px;
   --corona-font-size: 22px;
   --corona-w: 500px;
+  --phone-size: 64px;
 }
 
 @media all and (max-width: 1100px) {
@@ -70,14 +70,15 @@
     /*размеры плашек*/
     --panel-w: 30.16vw;
     --panel-h: 20.89vw;
-	--img-w: 29.71vw;
+    --img-w: 29.71vw;
     --img-h: 15.09vw;
     --panel-bottom-h: 5.8vw;
     --info-img-h: 2.786vw;
     --dist-edu-font-size: 15px;
     /*Количество слайдеров в Preview*/
-	--slides-q:4;
-	--trash:100vw;
+    --slides-q: 4;
+    --trash: 100vw;
+    --phone-size: 60px;
   }
 }
 
@@ -92,19 +93,20 @@
     /*размеры плашек*/
     --panel-w: calc((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3);
     --panel-h: calc(var(--panel-w)*180/260);
-	--img-w: calc(var(--panel-w)*256/260);
+    --img-w: calc(var(--panel-w)*256/260);
     --img-h: calc(var(--panel-w)*0.5);
     --panel-bottom-h: calc((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3*(50/260));
     --info-img-h: 2.143vw;
     --dist-edu-font-size: 15px;
     --footer-font-size: 15px;
-    --slides-q:3;
+    --slides-q: 3;
     /*Количество слайдеров в Preview*/
     --corona-font-size: 20px;
     --corona-w: 400px;
-	 /*---Отступы заголовочного блока-----------*/
+    /*---Отступы заголовочного блока-----------*/
     --header-block-top-pad: 16px;
     --header-block-bottom-pad: 8x;
+    --phone-size: 50px;
   }
 }
 
@@ -127,15 +129,16 @@
     --big-nav-img-w: calc(17.857vw*1.5);
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
-    --slides-q:2;
+    --slides-q: 2;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
     --corona-font-size: 14px;
     --corona-w: 280px;
-	 /*---Отступы заголовочного блока-----------*/
+    /*---Отступы заголовочного блока-----------*/
     --header-block-top-pad: 10px;
     --header-block-bottom-pad: 5px;
+    --phone-size: 45px;
   }
 }
 
@@ -158,14 +161,15 @@
     --big-nav-img-w: calc(17.857vw*1.5);
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
-    --slides-q:2;
+    --slides-q: 2;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
     --corona-font-size: 14px;
     --corona-w: 280px;
-	 /*---Отступы заголовочного блока-----------*/
+    /*---Отступы заголовочного блока-----------*/
     --header-block-top-pad: 10px;
     --header-block-bottom-pad: 5px;
+    --phone-size: 32px;
   }
 }

@@ -589,20 +589,19 @@ center {
 
 @keyframes phone-ring {
   0% {
-    transform: scale(1.0);	
-  } 
+    transform: scale(1.0);
+  }
   50% {
     transform: scale(1.15);
-	filter: hue-rotate(30deg);
-  } 
+    filter: hue-rotate(30deg);
+  }
   55% {
     transform: scale(1.155);
-	filter: hue-rotate(45deg);
-	
-  }     
+    filter: hue-rotate(45deg);
+  }
   100% {
     transform: scale(1.0);
-	filter: hue-rotate(-30deg);
+    filter: hue-rotate(-30deg);
   }
 }
 
@@ -615,14 +614,14 @@ center {
   float: right;
   background: white;
   z-index: 2;
-  width: 64px;
-  height: 64px;
+  width: var(--phone-size);
+  height: var(--phone-size);
   cursor: pointer;
   border-radius: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   display: inline-block;
-  border: 2px solid #957EEE;
+  border: none;
 }
 
 .phones:hover {

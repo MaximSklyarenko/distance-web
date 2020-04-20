@@ -106,7 +106,7 @@ table#mesh-table3 td,
 th,
 table#mesh-table4 td,
 th {
-  padding: 10px;
+  padding: 4px;
   /* Поля вокруг содержимого таблицы */
   font-family: 'Roboto', sans-serif;
   border: 1px solid white;
@@ -123,6 +123,12 @@ table#mesh-table4 tr:not(:nth-child(1)):hover {
   cursor: pointer;
 }
 
+.mesh-slide-show {
+  height: var(--height-mesh);
+  width:100%;
+  padding-left:0px;
+}	
+
 .mesh-header {
   color: white;
   display: flex;
@@ -130,13 +136,13 @@ table#mesh-table4 tr:not(:nth-child(1)):hover {
   align-items: center;
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  padding: calc((var(--basic-padding))*0.5);
+  padding: 10px;
   flex-wrap: wrap;
   font-size: var(--footer-font-size);
 }
 
 .mesh-body {
-  padding: var(--basic-padding)!important;
+  padding: 10px!important;
 }
 
 .sticky {

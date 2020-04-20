@@ -64,33 +64,22 @@ a {
 
 .mesh-button:active .mesh-button:focus {
   outline: none;
-}
-
-.mesh-button-pad {
-  padding-left: calc(var(--basic-padding)*1.25);
-  padding-top: calc(var(--basic-padding)*1.25);
-}
-
-.dropdown-content {
-  display: none;
-  position: relative;
-  left: 0;
-  background-color: #5A2497;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  z-index: 1000;
   cursor: pointer;
-  border-radius: 15px;
 }
 
-.dropdown-content td {
-  color: white;
-  padding: 12px 16px;
-  border-bottom: 1px dotted white;
+.mesh-button:hover {
+  outline: none;
+  cursor: pointer;
 }
 
-.show {
-  display: block;
+.mesh-button: {
+  cursor: pointer!important;
+}
+
+.mesh-button-padding {
+  padding-left: calc(var(--basic-padding)*1.25);
+  padding-right: calc(var(--basic-padding)*1.25);
+  padding-top: 0px;
 }
 
 a,
@@ -101,22 +90,53 @@ a:focus {
   text-decoration: none;
 }
 
-table#mesh-table {
+table#mesh-table1,
+table#mesh-table2,
+table#mesh-table3,
+table#mesh-table4 {
   border-collapse: collapse;
   /* Убираем двойные линии между ячейками */
 }
 
-table#mesh-table td,
+table#mesh-table1 td,
+th,
+table#mesh-table2 td,
+th,
+table#mesh-table3 td,
+th,
+table#mesh-table4 td,
 th {
   padding: 10px;
   /* Поля вокруг содержимого таблицы */
   font-family: 'Roboto', sans-serif;
   border: 1px solid white;
   /* Параметры рамки */
+  color: white;
+  font-size: var(--footer-font-size);
 }
 
-table#mesh-table tr:hover {
+table#mesh-table1 tr:not(:nth-child(1)):hover,
+table#mesh-table2 tr:not(:nth-child(1)):hover,
+table#mesh-table3 tr:not(:nth-child(1)):hover,
+table#mesh-table4 tr:not(:nth-child(1)):hover {
   background-color: #D79AF1;
+  cursor: pointer;
+}
+
+.mesh-header {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  padding: calc((var(--basic-padding))*0.5);
+  flex-wrap: wrap;
+  font-size: var(--footer-font-size);
+}
+
+.mesh-body {
+  padding: var(--basic-padding)!important;
 }
 
 .sticky {
@@ -248,7 +268,7 @@ center {
   position: absolute!important;
   left: 5px;
   bottom: calc(var(--panel-bottom-h)*1.05);
-  z-index: 10!important;
+  z-index: 2!important;
   cursor: pointer!important;
   justify-content: center!important;
   height: var(--info-img-h);
@@ -359,6 +379,21 @@ center {
   padding-top: var(--header-block-top-pad);
   padding-bottom: var(--header-block-bottom-pad);
   text-align: left;
+}
+
+.news-block {
+  font-size: var(--head-url-font-size);
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  padding-bottom: var(--header-block-bottom-pad);
+  text-align: left;
+  color: #5A2497;
+}
+
+.news-block-info {
+  font-size: calc(var(--head-url-font-size)*0.8);
+  color: black;
+  margin-left: 10px;
 }
 
 .head-url {

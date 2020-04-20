@@ -32,7 +32,6 @@
     <link rel="stylesheet" href="css/swing.css" media="all">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
-    <script src="js/mesh.js"></script>
     <script src="js/angular.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
@@ -197,28 +196,8 @@
       <div class="m-width" style="align-items:center;position:relative;">
         <div class="ref-div" id=obr>
         </div>
-        <div class=header-block>ШКОЛЫ</div>
+        <div class=header-block>ШКОЛЫ (для школьников и учителей Пермского края)</div>
         <div class="flex-container">
-          <!-- Моя школа в онлайн -->
-          <div class="panel do-hover panel-border free-cont" style="background:white;">
-            <div class="panel-info-show" style="display:none;background:#5A2497!important;">
-              <div class="head-url" style="color:white">БЕСПЛАТНО</div>
-            </div>
-            <a href="https://cifra.school">
-              <div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/myschool.png" class=panel-img-full-wh style="padding:2px;"></div>
-            </a>
-          </div>
-          <!-- РЭШ -->
-          <div class="panel free-cont">
-            <div class="panel-info-show" style="display:none;background:#5A2497!important;">
-              <div class=head-url style="color:white">БЕСПЛАТНО</div>
-            </div>
-            <a href="https://resh.edu.ru/"><img src="pics/resh.png" class=panel-img-p style="width:100%;"></a>
-            <div class="panel-bottom-div">
-              <div class="for-parent-label" onclick="window.location.href='files/parents/resh.pdf'">Родителю</div>
-              <div class="for-teacher-label" onclick="window.location.href='files/teachers/resh.pdf'">Учителю</div>
-            </div>
-          </div>
           <!-- Интеллектуальная школа -->
           <div class="panel free-cont" id=stratum>
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
@@ -231,7 +210,7 @@
             </div>
           </div>
           <!-- Марафон каменного города -->
-          <div class="panel panel-border free-cont">
+          <div class="panel panel-border pay-cont">
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
               <div class=head-url style="color:white">Бесплатный доступ частичный</div>
             </div>
@@ -239,6 +218,44 @@
             <div class="panel-bottom-div">
               <div class="for-parent-label" onclick="window.location.href='files/parents/kamgorod.pdf'">Родителю</div>
               <div class="for-teacher-label" onclick="window.location.href='files/teachers/kamgorod.pdf'">Учителю</div>
+            </div>
+          </div>
+          <!-- ИРО -->
+          <div class="panel panel-border free-cont">
+            <div class="panel-info-show" style="display:none;background:#5A2497!important;">
+              <div class=head-url style="color:white">БЕСПЛАТНО</div>
+            </div>
+            <a href="http://iro.perm.ru/"><img src="pics/iro.jpg" class=panel-img style="padding:8px;"></a>
+            <div class="panel-bottom-div">
+              <div class="for-teacher-label left-round-border" onclick="window.location.href='files/teachers/iro.pdf'">Учителю</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-container" style="justify-content:space-between;position:relative">
+          <div class=header-block style="float:left;width:60%">ШКОЛЫ</div>
+        </div>
+        <div class="flex-container" style="justify-content:space-between;position:relative">
+          <div class=news-block><b style="text-decoration: underline;">Новости:</b><a class="news-block-info" href="https://fipi.ru/o-nas/novosti/varianty-yege-dosrochnogo-perioda-2020-goda">ФИПИ публикует варианты КИМ ЕГЭ-2020</a></div>
+        </div>
+        <div class="flex-container">
+          <!-- Моя школа в онлайн -->
+          <div class="panel do-hover panel-border free-cont" style="background:white;">
+            <div class="panel-info-show" style="display:none;background:#5A2497!important;">
+              <div class="head-url" style="color:white">БЕСПЛАТНО</div>
+            </div>
+            <a href="https://cifra.school">
+              <div style="width:100%;height:100%;align-items: center;justify-content: center;display: flex;"><img src="pics/myschool.png" class=panel-img-full-wh style="padding:2px;"></div>
+            </a>
+          </div>
+          <!-- РЭШ -->
+          <div class="panel panel-border free-cont">
+            <div class="panel-info-show" style="display:none;background:#5A2497!important;">
+              <div class=head-url style="color:white">БЕСПЛАТНО</div>
+            </div>
+            <a href="https://resh.edu.ru/"><img src="pics/resh.png" class=panel-img style="padding:2px;"></a>
+            <div class="panel-bottom-div">
+              <div class="for-parent-label" onclick="window.location.href='files/parents/resh.pdf'">Родителю</div>
+              <div class="for-teacher-label" onclick="window.location.href='files/teachers/resh.pdf'">Учителю</div>
             </div>
           </div>
           <!-- Учи ру -->
@@ -436,211 +453,12 @@
             </a>
           </div>
           <!-- Ресурсы МЭШ для учителей -->
-          <div class="panel mesh-button free-cont" style="background:#5A2497;width:410px;position:relative;" onclick="OpenMeshMenu()">
+          <div class="panel free-cont" style="background:#5A2497;width:410px;">
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
-              <div class=head-url style="color:white">БЕСПЛАТНО</div>
+              <div class=head-url style="color:white;">БЕСПЛАТНО</div>
             </div>
-            <div class="head-url mesh-button" style="color:white;">Ресурсы МЭШ</div>
-            <div class="mesh-button mesh-button-pad" style="text-align:left;color:white;font-size:14px;">Электронные пособия для учителя, содержащие подборки проверенных электронных образовательных материалов для каждого урока</div>
-            <div id="MeshDropdown" class="dropdown-content" style="width:100%;padding-left:0px">
-              <table id="mesh-table" width="100%;la">
-                <tr style="height:49px;">
-                  <td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
-                  <td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
-                  <td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/34847016/view'">
-                  <td align="left">Алгебра</td>
-                  <td align="center">8</td>
-                  <td align="center">34847016</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40593180/view'">
-                  <td align="left">Геометрия</td>
-                  <td align="center">8</td>
-                  <td align="center">40593180</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36639080/view'">
-                  <td align="left">Русский язык</td>
-                  <td align="center">9</td>
-                  <td align="center">36639080</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38880978/view'">
-                  <td align="left">Литература</td>
-                  <td align="center">5</td>
-                  <td align="center">38880978</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36761874/view'">
-                  <td align="left">Биология</td>
-                  <td align="center">5</td>
-                  <td align="center">36761874</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39253828/view'">
-                  <td align="left">Биология</td>
-                  <td align="center">6</td>
-                  <td align="center">39253828</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39334260/view'">
-                  <td align="left">Биология</td>
-                  <td align="center">7</td>
-                  <td align="center">39334260</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39341803/view'">
-                  <td align="left">Биология</td>
-                  <td align="center">8</td>
-                  <td align="center">39341803</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36716344/view'">
-                  <td align="left">Информатика</td>
-                  <td align="center">7</td>
-                  <td align="center">36716344</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/32786764/view'">
-                  <td align="left">Химия</td>
-                  <td align="center">8</td>
-                  <td align="center">32786764</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39089812/view'">
-                  <td align="left">Химия</td>
-                  <td align="center">9</td>
-                  <td align="center">39089812</td>
-                </tr>
-                <tr onclick="window.locaion.href='https://uchebnik.mos.ru/composer2/document/36731749/view'">
-                  <td align="left">География</td>
-                  <td align="center">5</td>
-                  <td align="center">36731749</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/41576862/view'">
-                  <td align="left">География</td>
-                  <td align="center">6</td>
-                  <td align="center">41576862</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39668295/view'">
-                  <td align="left">География</td>
-                  <td align="center">7</td>
-                  <td align="center">39668295</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/44615766/view'">
-                  <td align="left">ИЗО</td>
-                  <td align="center">1</td>
-                  <td align="center">44615766</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/45465743/view'">
-                  <td align="left">ИЗО</td>
-                  <td align="center">3</td>
-                  <td align="center">45465743</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36856630/view'">
-                  <td align="left">ИЗО</td>
-                  <td align="center">5</td>
-                  <td align="center">36856630</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39879931/view'">
-                  <td align="left">ИЗО</td>
-                  <td align="center">6</td>
-                  <td align="center">39879931</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39018121/view'">
-                  <td align="left">ИЗО</td>
-                  <td align="center">7</td>
-                  <td align="center">39018121</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36631960/view'">
-                  <td align="left">Английский язык</td>
-                  <td align="center">5</td>
-                  <td align="center">36631960</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39334574/view'">
-                  <td align="left">Английский язык</td>
-                  <td align="center">6</td>
-                  <td align="center">39334574</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39738233/view'">
-                  <td align="left">Английский язык</td>
-                  <td align="center">7</td>
-                  <td align="center">39738233</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39332334/view'">
-                  <td align="left">Английский язык</td>
-                  <td align="center">8</td>
-                  <td align="center">39332334</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39668757/view'">
-                  <td align="left">Английский язык</td>
-                  <td align="center">9</td>
-                  <td align="center">39668757</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36504349/view'">
-                  <td align="left">История</td>
-                  <td align="center">7</td>
-                  <td align="center">36504349</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36498098/view'">
-                  <td align="left">История</td>
-                  <td align="center">8</td>
-                  <td align="center">36504349</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36500376/view'">
-                  <td align="left">Обществознание</td>
-                  <td align="center">6</td>
-                  <td align="center">36500376</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36636053/view'">
-                  <td align="left">Обществознание</td>
-                  <td align="center">7</td>
-                  <td align="center">36636053</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36506002/view'">
-                  <td align="left">Обществознание</td>
-                  <td align="center">8</td>
-                  <td align="center">36506002</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36633753/view'">
-                  <td align="left">Обществознание</td>
-                  <td align="center">9</td>
-                  <td align="center">36633753</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38783089/view'">
-                  <td align="left">Музыка</td>
-                  <td align="center">5</td>
-                  <td align="center">38783089</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38790628/view'">
-                  <td align="left">Музыка</td>
-                  <td align="center">6</td>
-                  <td align="center">38790628</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40697226/view'">
-                  <td align="left">Физическая культура</td>
-                  <td align="center">5</td>
-                  <td align="center">38790628</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/44698781/view'">
-                  <td align="left">Физическая культура</td>
-                  <td align="center">6</td>
-                  <td align="center">38790628</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38009192/view'">
-                  <td align="left">Физическая культура</td>
-                  <td align="center">7</td>
-                  <td align="center">38790628</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40698015/view'">
-                  <td align="left">Физическая культура</td>
-                  <td align="center">8</td>
-                  <td align="center">38790628</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36638656/view'">
-                  <td align="left">ОБЖ</td>
-                  <td align="center">8</td>
-                  <td align="center">38790628</td>
-                </tr>
-                <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40728798/view'">
-                  <td align="left">Технология</td>
-                  <td align="center">7</td>
-                  <td align="center">38790628</td>
-                </tr>
-              </table>
-            </div>
+            <div class="head-url mesh-button" style="color:white;" uk-toggle="target: #MeshDropdown">Ресурсы МЭШ</div>
+            <div class="mesh-button mesh-button-padding" style="text-align:left;color:white;font-size:14px;" uk-toggle="target: #MeshDropdown">Электронные пособия для учителя, содержащие подборки проверенных электронных образовательных материалов для каждого урока</div>
           </div>
         </div>
         <div class="flex-container" style="justify-content:space-between;position:relative">
@@ -1109,6 +927,254 @@
       <div class="m-width footer-tel"><a href="tel:+7-800-300-44-44">8-800-300-44-44 – служба технической поддержки СЭДиЖ</a></div>
       <div class="m-width footer-epos">
         ЭПОС 2020
+      </div>
+      <div id="MeshDropdown" class="uk-flex-top" uk-modal>
+        <div  class="uk-modal-dialog uk-margin-auto-vertical" style="background: linear-gradient(90deg, #957EEE, #6666ff);" tabindex="-1" uk-slideshow="animation:fade">
+          <button class="uk-modal-close-default" type="button" uk-close></button>
+          <div class="uk-modal-title mesh-header">
+            Ресурсы МЭШ
+          </div>
+          <div  class="uk-modal-body uk-position-relative mesh-body">
+            <div class="uk-position-relative uk-visible-toggle uk-light">
+              <ul class="uk-slideshow-items" style="width:100%;height:450px; padding-left:0px;">
+                <li>
+                  <table id="mesh-table1" width="100%;la">
+                    <tr style="height:49px;">
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/34847016/view'">
+                      <td align="left">Алгебра</td>
+                      <td align="center">8</td>
+                      <td align="center">34847016</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40593180/view'">
+                      <td align="left">Геометрия</td>
+                      <td align="center">8</td>
+                      <td align="center">40593180</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36639080/view'">
+                      <td align="left">Русский язык</td>
+                      <td align="center">9</td>
+                      <td align="center">36639080</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38880978/view'">
+                      <td align="left">Литература</td>
+                      <td align="center">5</td>
+                      <td align="center">38880978</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36761874/view'">
+                      <td align="left">Биология</td>
+                      <td align="center">5</td>
+                      <td align="center">36761874</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39253828/view'">
+                      <td align="left">Биология</td>
+                      <td align="center">6</td>
+                      <td align="center">39253828</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39334260/view'">
+                      <td align="left">Биология</td>
+                      <td align="center">7</td>
+                      <td align="center">39334260</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39341803/view'">
+                      <td align="left">Биология</td>
+                      <td align="center">8</td>
+                      <td align="center">39341803</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36716344/view'">
+                      <td align="left">Информатика</td>
+                      <td align="center">7</td>
+                      <td align="center">36716344</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>
+                  <table id="mesh-table2" width="100%;la">
+                    <tr style="height:49px;">
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/32786764/view'">
+                      <td align="left">Химия</td>
+                      <td align="center">8</td>
+                      <td align="center">32786764</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39089812/view'">
+                      <td align="left">Химия</td>
+                      <td align="center">9</td>
+                      <td align="center">39089812</td>
+                    </tr>
+                    <tr onclick="window.locaion.href='https://uchebnik.mos.ru/composer2/document/36731749/view'">
+                      <td align="left">География</td>
+                      <td align="center">5</td>
+                      <td align="center">36731749</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/41576862/view'">
+                      <td align="left">География</td>
+                      <td align="center">6</td>
+                      <td align="center">41576862</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39668295/view'">
+                      <td align="left">География</td>
+                      <td align="center">7</td>
+                      <td align="center">39668295</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/44615766/view'">
+                      <td align="left">ИЗО</td>
+                      <td align="center">1</td>
+                      <td align="center">44615766</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/45465743/view'">
+                      <td align="left">ИЗО</td>
+                      <td align="center">3</td>
+                      <td align="center">45465743</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36856630/view'">
+                      <td align="left">ИЗО</td>
+                      <td align="center">5</td>
+                      <td align="center">36856630</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39879931/view'">
+                      <td align="left">ИЗО</td>
+                      <td align="center">6</td>
+                      <td align="center">39879931</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39018121/view'">
+                      <td align="left">ИЗО</td>
+                      <td align="center">7</td>
+                      <td align="center">39018121</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>
+                  <table id="mesh-table3" width="100%;la">
+                    <tr style="height:49px;">
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36631960/view'">
+                      <td align="left">Английский язык</td>
+                      <td align="center">5</td>
+                      <td align="center">36631960</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39334574/view'">
+                      <td align="left">Английский язык</td>
+                      <td align="center">6</td>
+                      <td align="center">39334574</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39738233/view'">
+                      <td align="left">Английский язык</td>
+                      <td align="center">7</td>
+                      <td align="center">39738233</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39332334/view'">
+                      <td align="left">Английский язык</td>
+                      <td align="center">8</td>
+                      <td align="center">39332334</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/39668757/view'">
+                      <td align="left">Английский язык</td>
+                      <td align="center">9</td>
+                      <td align="center">39668757</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36504349/view'">
+                      <td align="left">История</td>
+                      <td align="center">7</td>
+                      <td align="center">36504349</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36498098/view'">
+                      <td align="left">История</td>
+                      <td align="center">8</td>
+                      <td align="center">36504349</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36500376/view'">
+                      <td align="left">Обществознание</td>
+                      <td align="center">6</td>
+                      <td align="center">36500376</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36636053/view'">
+                      <td align="left">Обществознание</td>
+                      <td align="center">7</td>
+                      <td align="center">36636053</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36506002/view'">
+                      <td align="left">Обществознание</td>
+                      <td align="center">8</td>
+                      <td align="center">36506002</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36633753/view'">
+                      <td align="left">Обществознание</td>
+                      <td align="center">9</td>
+                      <td align="center">36633753</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>
+                  <table id="mesh-table4" width="100%;la">
+                    <tr style="height:49px;">
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:150px;">Предмет</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:15px;">Класс</td>
+                      <td align="center" style="background:rgba(0,0,0,0.3);width:100px;">ID в МЭШ</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38783089/view'">
+                      <td align="left">Музыка</td>
+                      <td align="center">5</td>
+                      <td align="center">38783089</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38790628/view'">
+                      <td align="left">Музыка</td>
+                      <td align="center">6</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40697226/view'">
+                      <td align="left">Физическая культура</td>
+                      <td align="center">5</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/44698781/view'">
+                      <td align="left">Физическая культура</td>
+                      <td align="center">6</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/38009192/view'">
+                      <td align="left">Физическая культура</td>
+                      <td align="center">7</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40698015/view'">
+                      <td align="left">Физическая культура</td>
+                      <td align="center">8</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/36638656/view'">
+                      <td align="left">ОБЖ</td>
+                      <td align="center">8</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                    <tr onclick="window.location.href='https://uchebnik.mos.ru/composer2/document/40728798/view'">
+                      <td align="left">Технология</td>
+                      <td align="center">7</td>
+                      <td align="center">38790628</td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="uk-modal-footer uk-position-relative" style="background: linear-gradient(90deg, #957EEE, #6666ff);">
+            <ul class="uk-pagination uk-position-relative uk-position-bottom-center">
+              <li uk-slideshow-item="0"><a href="#">1</a></li>
+              <li uk-slideshow-item="1"><a href="#">2</a></li>
+              <li uk-slideshow-item="2"><a href="#">3</a></li>
+              <li uk-slideshow-item="3"><a href="#">4</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </center>
   </body>

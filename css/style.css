@@ -388,18 +388,27 @@ center {
 }
 
 .news-block {
-  font-size: var(--head-url-font-size);
-  font-weight: 600;
-  font-family: 'Roboto', sans-serif;
-  padding-bottom: var(--header-block-bottom-pad);
-  text-align: left;
-  color: #5A2497;
-}
-
-.news-block-info {
   font-size: calc(var(--head-url-font-size)*0.8);
   color: black;
-  margin-left: 10px;
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  vertical-align:top;
+  padding-right:5px;
+  padding-bottom: 10px;
+  width:100%;
+}
+
+.news-block-dt {
+  font-size: var(--head-url-font-size);
+}
+
+.news-block-img {
+  padding-right:10px;
+  float:left;
+}
+
+.news-block-main {
+  color:#5A2497;
 }
 
 .head-url {
@@ -478,7 +487,7 @@ center {
 
 .communication-flex-container {
   max-width: var(--max-w);
-  padding-bottom: calc(var(--basic-padding)*2);
+  padding-bottom: calc(--var(basic-padding)*2)!important;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -537,11 +546,11 @@ center {
 }
 
 .teacher-button {
-  font-size: 14px;
+  font-size: var(--nav-block-font-size);
   color: white;
   align-items: center;
-  width: 20%;
-  height: 50px;
+  height: var(--panel-bottom-h);
+  min-width: calc(var(--panel-w)*0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -550,8 +559,10 @@ center {
   border-top-left-radius: var(--panel-border-rad);
   border-top-right-radius: var(--panel-border-rad);
   cursor: pointer;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-top: var(--header-block-top-pad);
+  margin-bottom: var(--header-block-bottom-pad);
+  padding-left:15px;
+  padding-right:15px;
 }
 
 .obrazovarium-small-font {

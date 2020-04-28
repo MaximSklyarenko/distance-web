@@ -53,5 +53,14 @@
 
     }]);
 
+	app.controller('Newshow', ['$scope', function ($scope) {
+        $scope.selectedNews = $scope.news[0];
+
+        $scope.$on('selectNews', function(event, args) {
+            $scope.selectedNews = $scope.news[args];
+            $scope.$apply();
+        });
+		
+    }]);
 
 })();

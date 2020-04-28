@@ -141,14 +141,21 @@ function revertPanel() {
 
 function orientationChangeFunction() {
   var slidesQ = window.getComputedStyle(document.documentElement).getPropertyValue("--slides-q");
+  var newsQ = window.getComputedStyle(document.documentElement).getPropertyValue("--news-q");
   var classSliderPreview;
-      
+  var classNewsPreview;
+
   classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-child-width-1-" + slidesQ.trim() +
   "@s uk-child-width-1-" + slidesQ.trim() +"@m uk-grid";
   
+  classNewsPreview="uk-slider-items uk-child-width-1-" + newsQ.trim() + " uk-child-width-1-" + newsQ.trim() +
+  "@s uk-child-width-1-" + newsQ.trim() +"@m uk-grid";
+  
   var elem = document.getElementById("slider-preview");
+  var news = document.getElementById("news-preview");
   
   elem.setAttribute("class", classSliderPreview);
+  news.setAttribute("class", classNewsPreview);
   
   //alert(slidesQ); 
   

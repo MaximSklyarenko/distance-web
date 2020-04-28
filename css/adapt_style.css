@@ -51,6 +51,7 @@
   --info-img-h: 24px;
   --dist-edu-font-size: 22px;
   --slides-q: 6;
+  --news-q: 3;
   /*Количество слайдеров в Preview*/
   --label-font-size: 16px;
   --footer-font-size: 16px;
@@ -67,7 +68,7 @@
     --header-font-size: 16px;
     --head-url-font-size: 15px;
     --head-url-line-height: 12px;
-    --basic-padding: 1.78vw;
+    --basic-padding: 0vw;
     /*размеры плашек*/
     --panel-w: 30.16vw;
     --panel-h: 20.89vw;
@@ -78,6 +79,7 @@
     --dist-edu-font-size: 15px;
     /*Количество слайдеров в Preview*/
     --slides-q: 4;
+	--news-q: 3;
     --trash: 100vw;
     --phone-size: 60px;
   }
@@ -101,6 +103,7 @@
     --dist-edu-font-size: 15px;
     --footer-font-size: 15px;
     --slides-q: 3;
+	--news-q: 2;
     /*Количество слайдеров в Preview*/
     --corona-font-size: 20px;
     --corona-w: 400px;
@@ -131,6 +134,7 @@
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
     --slides-q: 2;
+	--news-q: 2;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
@@ -164,6 +168,7 @@
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
     --slides-q: 2;
+	--news-q: 2;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;

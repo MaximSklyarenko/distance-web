@@ -60,7 +60,7 @@
   --corona-w: 500px;
   --phone-size: 64px;
 }
-
+ 
 @media all and (max-width: 1100px) {
    :root {
     --nav-col-w: 45%;
@@ -79,7 +79,7 @@
     --dist-edu-font-size: 15px;
     /*Количество слайдеров в Preview*/
     --slides-q: 4;
-	--news-q: 3;
+	--news-q: 2;
     --trash: 100vw;
     --phone-size: 60px;
   }
@@ -134,7 +134,7 @@
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
     --slides-q: 2;
-	--news-q: 2;
+	--news-q: 1;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
@@ -168,7 +168,7 @@
     --small-nav-img-w: calc(8.929vw*1.5);
     --dist-edu-font-size: 13px;
     --slides-q: 2;
-	--news-q: 2;
+	--news-q: 1;
     /*Количество слайдеров в Preview*/
     --label-font-size: 13px;
     --footer-font-size: 12.5px;

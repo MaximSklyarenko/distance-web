@@ -81,6 +81,7 @@ function addInfo() {
 	}
 
   }
+   
 };
 
 function showInfo() {

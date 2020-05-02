@@ -43,12 +43,6 @@ div.banner-block {
   border-radius: 0px;
 }
 
-
-/*div.banner-block:hover{
-	box-shadow:20px 20px 20px rgba(0,0,0,0.4);
-	border-radius:7px;
-}*/
-
 div.banner-block:hover {
   box-shadow: none !important;
   border-radius: 7px;
@@ -187,8 +181,8 @@ center {
   background: linear-gradient(90deg, #A546CC, #64169B);
   height: var(--nav-col-h);
   border-radius: 15px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: var(--nav-block-margin);
+  margin-bottom: var(--nav-block-margin);
   align-items: center;
   width: var(--nav-col-w);
   font-size: var(--nav-block-font-size);
@@ -214,7 +208,7 @@ center {
   width: var(--panel-w);
   height: var(--panel-h);
   background-color: #FAE6FB;
-  border-radius: 15px;
+  border-radius: var(--panel-border-radius);
   float: left;
   margin-right: var(--panel-margin-right);
   margin-bottom: var(--panel-margin-bottom);
@@ -224,22 +218,8 @@ center {
 .panel-border {
   background-color: white;
   box-shadow: inset 0px 0px 0px 1px #957EEE!important;
-  border-radius: 15px;
+  border-radius: var(--panel-border-radius);
 }
-
-
-/*.panel-border::after {
-  box-shadow: inset 0px 0px 0px 1px #957EEE!important;
-  border-radius: 15px;
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  content:"";
-  z-index:1;
-  pointer-events:none;
-}*/
 
 .panel-border-open-school {
   background: #4507ca;
@@ -250,7 +230,7 @@ center {
   width: var(--panel-w);
   height: var(--panel-h);
   background-color: #FAE6FB;
-  border-radius: 15px;
+  border-radius: var(--panel-border-radius);
   float: right;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -305,8 +285,8 @@ center {
 .panel-img {
   width: var(--panel-w);
   height: var(--img-h);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: var(--panel-border-radius);
+  border-top-left-radius: var(--panel-border-radius);
   justify-content: center;
   align-items: center;
   position: relative;
@@ -320,8 +300,8 @@ center {
 .panel-img-p {
   width: var(--img-w);
   height: var(--img-h);
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: var(--panel-border-radius);
+  border-top-left-radius: var(--panel-border-radius);
   border-top: 1px solid #957EEE;
   border-left: 1px solid #957EEE;
   border-right: 1px solid #957EEE;
@@ -335,7 +315,7 @@ center {
 .panel-img-full {
   width: var(--panel-w);
   height: var(--panel-h);
-  border-radius: 15px;
+  border-radius: var(--panel-border-radius);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,7 +329,7 @@ center {
 
 .panel-img-full-wh {
   width: var(--panel-w);
-  border-radius: 15px;
+  border-radius: var(--panel-border-radius);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -459,7 +439,7 @@ a.news-block-main, a.news-block-main:hover {
   align-items: center;
   background-color: #D79AF1;
   /*background: linear-gradient(90deg, #957EEE, #D79AF1);*/
-  border-bottom-left-radius: var(--panel-border-rad);
+  border-bottom-left-radius: var(--panel-border-radius);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: var(--label-font-size);
@@ -476,7 +456,7 @@ a.news-block-main, a.news-block-main:hover {
   align-items: center;
   background-color: #957EEE;
   /*background: linear-gradient(90deg, #957EEE, #6666ff);*/
-  border-bottom-right-radius: var(--panel-border-rad);
+  border-bottom-right-radius: var(--panel-border-radius);
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: var(--label-font-size);
@@ -562,8 +542,8 @@ a.news-block-main, a.news-block-main:hover {
 
 .left-round-border {
   width: 100%!important;
-  border-bottom-left-radius: var(--panel-border-rad);
-  border-bottom-right-radius: var(--panel-border-rad);
+  border-bottom-left-radius: var(--panel-border-radius);
+  border-bottom-right-radius: var(--panel-border-radius);
 }
 
 .teacher-button {
@@ -575,10 +555,10 @@ a.news-block-main, a.news-block-main:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius: var(--panel-border-rad);
-  border-bottom-right-radius: var(--panel-border-rad);
-  border-top-left-radius: var(--panel-border-rad);
-  border-top-right-radius: var(--panel-border-rad);
+  border-bottom-left-radius: var(--panel-border-radius);
+  border-bottom-right-radius: var(--panel-border-radius);
+  border-top-left-radius: var(--panel-border-radius);
+  border-top-right-radius: var(--panel-border-radius);
   cursor: pointer;
   margin-top: var(--header-block-top-pad);
   margin-bottom: var(--header-block-bottom-pad);

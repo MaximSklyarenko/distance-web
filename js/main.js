@@ -146,11 +146,9 @@ function orientationChangeFunction() {
   var classSliderPreview;
   var classNewsPreview;
 
-  classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-child-width-1-" + slidesQ.trim() +
-  "@s uk-child-width-1-" + slidesQ.trim() +"@m uk-grid";
+  classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-grid";
   
-  classNewsPreview="uk-slider-items uk-child-width-1-" + newsQ.trim() + " uk-child-width-1-" + newsQ.trim() +
-  "@s uk-child-width-1-" + newsQ.trim() +"@m uk-grid";
+  classNewsPreview="uk-slider-items uk-child-width-1-" + newsQ.trim() + " uk-grid";
   
   var elem = document.getElementById("slider-preview");
   var news = document.getElementById("news-preview");

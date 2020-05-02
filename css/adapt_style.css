@@ -25,6 +25,7 @@
   /*ширина плашек навигации*/
   --nav-col-h: 50px;
   /*высотка плашек навигации*/
+  --nav-block-margin: 10px;
   --big-nav-img-w: 200px;
   --small-nav-img-w: 100px;
   --nav-block-font-size: 16px;
@@ -38,6 +39,7 @@
   --panel-h: 180px;
   --panel-margin-right: 10px;
   --panel-margin-bottom: 10px;
+  --panel-border-radius: 15px;
   --img-w: 256x;
   --img-h: 130px;
   --panel-bottom-h: 50px;
@@ -68,10 +70,11 @@
     --header-font-size: 16px;
     --head-url-font-size: 15px;
     --head-url-line-height: 12px;
-    --basic-padding: 0vw;
+    --basic-padding: 1.78vw;
     /*размеры плашек*/
     --panel-w: 30.16vw;
     --panel-h: 20.89vw;
+	--panel-border-radius:1.74vw;
     --img-w: 29.71vw;
     --img-h: 15.09vw;
     --panel-bottom-h: 5.8vw;
@@ -96,6 +99,7 @@
     /*размеры плашек*/
     --panel-w: calc((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3);
     --panel-h: calc(var(--panel-w)*180/260);
+	--panel-border-radius:calc(var(--panel-w)*15/260);
     --img-w: calc(var(--panel-w)*256/260);
     --img-h: calc(var(--panel-w)*0.5);
     --panel-bottom-h: calc((100vw - var(--basic-padding)*2 - (var(--panel-margin-right))*3)/3*(50/260));
@@ -126,6 +130,7 @@
     /*размеры плашек*/
     --panel-w: 45vw;
     --panel-h: 31.15vw;
+	--panel-border-radius:calc(var(--panel-w)*15/260);
     --img-w: 44.307vw;
     --img-h: 22.5vw;
     --panel-bottom-h: 8.65vw;
@@ -152,6 +157,8 @@
    :root {
     --nav-col-w: 45%;
     --nav-block-font-size: 12px;
+	--nav-col-h: 36px;
+	--nav-block-margin: 6px;
     --communcation-img-padding: 2px;
     --header-font-size: 13px;
     --head-url-font-size: 13px;
@@ -160,6 +167,7 @@
     /*размеры плашек*/
     --panel-w: 45vw;
     --panel-h: 31.15vw;
+	--panel-border-radius:calc(var(--panel-w)*15/260);
     --img-w: 44.307vw;
     --img-h: 22.5vw;
     --panel-bottom-h: 8.65vw;

@@ -414,7 +414,11 @@ a.news-block-main, a.news-block-main:hover {
 
 .news-preview {
   max-height:400px;	
-  height:auto!important;  
+  height:100%;
+  height:auto!important; 
+  /* IE max-height hack */
+  height: 400px;
+  /* width value for IE */  
 }	
 
 .head-url {

@@ -373,7 +373,6 @@ center {
   font-family: 'Roboto', sans-serif;
   text-align: left;
   vertical-align:top;
-  width:100%;
 }
 
 .news-block-dt {
@@ -384,7 +383,6 @@ center {
   vertical-align:top;
   padding-bottom:5px;
   padding-top:5px;
-  width:100%;
 }
 
 .news-block-img {
@@ -404,7 +402,6 @@ a.news-block-main, a.news-block-main:hover {
   /*box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset; */
   cursor:pointer;
   padding:10px;
-  height:100%;
   position:relative;
 }
 

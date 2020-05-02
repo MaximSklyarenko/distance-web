@@ -43,12 +43,6 @@ div.banner-block {
   border-radius: 0px;
 }
 
-
-/*div.banner-block:hover{
-	box-shadow:20px 20px 20px rgba(0,0,0,0.4);
-	border-radius:7px;
-}*/
-
 div.banner-block:hover {
   box-shadow: none !important;
   border-radius: 7px;
@@ -187,8 +181,8 @@ center {
   background: linear-gradient(90deg, #A546CC, #64169B);
   height: var(--nav-col-h);
   border-radius: 15px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: var(--nav-block-margin);
+  margin-bottom: var(--nav-block-margin);
   align-items: center;
   width: var(--nav-col-w);
   font-size: var(--nav-block-font-size);

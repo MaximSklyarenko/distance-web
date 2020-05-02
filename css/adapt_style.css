@@ -25,6 +25,7 @@
   /*ширина плашек навигации*/
   --nav-col-h: 50px;
   /*высотка плашек навигации*/
+  --nav-block-margin: 10px;
   --big-nav-img-w: 200px;
   --small-nav-img-w: 100px;
   --nav-block-font-size: 16px;
@@ -152,6 +153,8 @@
    :root {
     --nav-col-w: 45%;
     --nav-block-font-size: 12px;
+	--nav-col-h: 36px;
+	--nav-block-margin: 6px;
     --communcation-img-padding: 2px;
     --header-font-size: 13px;
     --head-url-font-size: 13px;

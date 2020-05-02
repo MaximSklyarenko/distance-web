@@ -402,7 +402,6 @@ a.news-block-main, a.news-block-main:hover {
   /*box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset; */
   cursor:pointer;
   padding:10px;
-  height:100%;
   position:relative;
 }
 

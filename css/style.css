@@ -373,7 +373,6 @@ center {
   font-family: 'Roboto', sans-serif;
   text-align: left;
   vertical-align:top;
-  width:100%;
 }
 
 .news-block-dt {
@@ -384,7 +383,6 @@ center {
   vertical-align:top;
   padding-bottom:5px;
   padding-top:5px;
-  width:100%;
 }
 
 .news-block-img {

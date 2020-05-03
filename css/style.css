@@ -589,20 +589,21 @@ a.news-block-main, a.news-block-main:hover {
   font-family: 'Roboto', sans-serif;
   display: inline-flex;
   justify-content: flex-start;
-  /*padding-top:13px;*/
   text-align: left;
-  align-items: center;
+  align-items: center;  
+  position: relative;
 }
 
 .corona-img {
   float:left;
-  padding-right:10px;
+  padding-right:calc((var(--basic-padding))*0.5);
+  align-items: center;
+  display: inline-flex;
 }
 
 .corona-main-div {
-  padding-left: 20px!important;
-  padding-right: 20px!important;
-  width: auto;
+  padding-left: var(--basic-padding)!important;
+  padding-right: var(--basic-padding)!important;
   padding-bottom: var(--basic-padding);
   position: relative;
   display: inline-flex;
@@ -613,7 +614,6 @@ a.news-block-main, a.news-block-main:hover {
   cursor: pointer;
   background-size: cover;
   border-radius: 15px;
-  width: auto;
   position: relative;
   display: inline-flex;
   justify-content: flex-start;
@@ -621,10 +621,9 @@ a.news-block-main, a.news-block-main:hover {
 }
 
 .neskucho-main-div {
-  padding-left: 20px!important;
-  padding-right: 20px!important;
+  padding-left: var(--basic-padding)!important;
+  padding-right: var(--basic-padding)!important;
   padding-bottom: var(--basic-padding);
-  width: auto;
   position: relative;
   display: inline-flex;
   justify-content: flex-start;
@@ -633,21 +632,12 @@ a.news-block-main, a.news-block-main:hover {
 .neskucho-block {
   cursor: pointer;
   background-size: cover;
-  height: 60px;
   border-radius: 15px;
   position: relative;
-  width: auto;
   display: inline-flex;
   justify-content: flex-start;
   text-align: left;
   align-items: center;
-}
-
-
-/*хак для работы в IE*/
-
-.hack-slides-q {
-  width: var(--slides-q);
 }
 
 .free-cont {}

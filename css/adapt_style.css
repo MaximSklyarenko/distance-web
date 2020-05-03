@@ -178,10 +178,16 @@
     --label-font-size: 13px;
     --footer-font-size: 12.5px;
 	--height-mesh: 290px;
-    --corona-font-size: 14px;
+    --corona-font-size: 12px;
     /*---Отступы заголовочного блока-----------*/
     --header-block-top-pad: 10px;
     --header-block-bottom-pad: 5px;
     --phone-size: 32px;
+  }
+}
+
+@media all and (max-width: 321px) {
+   :root {  
+    --corona-font-size: 10px;
   }
 }

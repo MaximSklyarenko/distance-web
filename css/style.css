@@ -594,6 +594,11 @@ a.news-block-main, a.news-block-main:hover {
   align-items: center;
 }
 
+.corona-img {
+  float:left;
+  padding-right:10px;
+}
+
 .corona-main-div {
   padding-left: 20px!important;
   padding-right: 20px!important;

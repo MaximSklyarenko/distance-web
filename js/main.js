@@ -28,7 +28,7 @@ function addInfo() {
 	var curPanel = panels[i];
     
 	// Добавление подсказки о стоимости ресурса
-	if (curPanel.getAttribute("id") != "afisha") {
+	if (curPanel.getAttribute("data-hide-pay-info") != "y") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
 	  

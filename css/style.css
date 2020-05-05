@@ -202,6 +202,7 @@ center {
   display: flex;
   white-space: normal;
   line-height: normal;
+  color: white;
 }
 
 .panel {
@@ -214,6 +215,14 @@ center {
   margin-bottom: var(--panel-margin-bottom);
   position: relative;
 }
+
+.panel-full {
+  width:100%;
+  height:100%;
+  align-items:center;
+  justify-content:center;
+  display:flex;
+}	
 
 .panel-border {
   background-color: white;
@@ -421,6 +430,20 @@ a.news-block-main, a.news-block-main:hover {
   font-family: 'Roboto', sans-serif;
   padding: calc(var(--basic-padding)*1.5);
   flex-wrap: wrap;
+}
+
+.head-url-white {
+  font-size: var(--head-url-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: var(--head-url-line-height);
+  padding-bottom: var(--basic-padding);
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  padding: calc(var(--basic-padding)*1.5);
+  flex-wrap: wrap;
+  color:white;
 }
 
 #sdam-gia {

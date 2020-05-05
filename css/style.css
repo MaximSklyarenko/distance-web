@@ -581,7 +581,7 @@ a.news-block-main, a.news-block-main:hover {
   border-top-right-radius: var(--panel-border-radius);
   cursor: pointer;
   margin-top: var(--header-block-top-pad);
-  margin-bottom: var(--header-block-bottom-pad);
+  margin-bottom: var(--header-block-bottom-pad)!important;
   padding-left:15px;
   padding-right:15px;
 }

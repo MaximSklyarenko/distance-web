@@ -516,11 +516,11 @@ a.news-block-main, a.news-block-main:hover {
   align-items: center;
 }
 
-.communcation-img {
-  padding: var(--communcation-img-padding);
+.communication-img {
+  padding: var(--communication-img-padding);
 }
 
-.communcation-img:hover {
+.communication-img:hover {
   filter: hue-rotate(30deg);
 }
 

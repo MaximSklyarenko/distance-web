@@ -146,7 +146,7 @@ function orientationChangeFunction() {
   var classSliderPreview;
   var classNewsPreview;
 
-  classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-grid";
+  classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-grid uk-grid-small";
   
   classNewsPreview="uk-slider-items uk-child-width-1-" + newsQ.trim() + " uk-grid uk-grid-match";
   

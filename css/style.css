@@ -166,10 +166,8 @@ center {
 
 .header-mobile {
   padding-bottom: var(--basic-padding);
-  top: 0px;
   display:var(--header-small-display);
   background: white;
-  z-index: 4;
   border: 0px 2px 2px 2px solid white;
 }
 

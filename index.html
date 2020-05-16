@@ -57,8 +57,30 @@
   
    <div class="header-mobile" uk-sticky="show-on-up: true">
         <!-- шапка -->
-        <img src="pics/header_small.svg" class="header-img" alt="Дистанционное обучение"/>
+        <img src="pics/header_small.svg" class="header-img" alt="Дистанционное обучение"/ uk-toggle="target:#mobile-menu" type="button">
    </div> 
+   
+   <div class="nav-mobile" id="mobile-menu" uk-offcanvas>
+   <div class="uk-offcanvas-bar">
+   <ul>
+				<li>
+					<a href="#obr">ШКОЛЫ</a>
+				</li>
+				<li>
+					<a href="#spo">ТЕХНИКУМЫ, КОЛЛЕДЖИ</a>
+				</li>
+				<li>
+					<a href="#do">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>
+				</li>
+				<li>
+					<a href="#dist">ДЕТЯМ С ОВЗ</a>
+				</li>
+				<li>
+					<a href="#situ">ШКОЛЬНЫЕ<br/>ТРАЕКТОРИИ В ИТ</a>
+				</li>
+			</ul>
+   </div>
+   </div>
 
    <center style="position:relative;">
       <div class="m-width header">

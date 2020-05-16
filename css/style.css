@@ -165,10 +165,8 @@ center {
 }
 
 .header-mobile {
-  height: auto;
   padding-bottom: var(--basic-padding);
   top: 0px;
-  width: 100%;
   display:var(--header-small-display);
   background: white;
   z-index: 4;

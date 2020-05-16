@@ -170,16 +170,19 @@ center {
   top: 0px;
   width: 100%;
   display:var(--header-small-display);
-  /*position: sticky;
-  position: -webkit-sticky;
-  top: 0px;
   background: white;
   z-index: 4;
-  border: 0px 2px 2px 2px solid white;*/
+  border: 0px 2px 2px 2px solid white;
 }
 
+.header-img {
+  width:100%;
+  height:auto;
+  position:relative;
+}	
+
 .nav-container {
-  display: flex;/*var(--nav-cont-display);*/
+  display: var(--nav-cont-display);
   justify-content: center;
   align-items: center;
   padding-bottom: var(--basic-padding);

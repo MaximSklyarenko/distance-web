@@ -26,15 +26,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
     <title>Дистанционное обучение</title>
     <script src="js/css-vars-ponyfill.js"></script>
-    <link rel="stylesheet" href="css/adapt_style.css?v=1.4" media="all">
+    <link rel="stylesheet" href="css/adapt_style.css?v=1.5" media="all">
     <link rel="stylesheet" href="css/uikit.min.css" media="all"/>
-    <link rel="stylesheet" href="css/style.css?v=1.4" media="all">
-    <link rel="stylesheet" href="css/swing.css?v=1.3" media="all">
+    <link rel="stylesheet" href="css/style.css?v=1.5" media="all">
+    <link rel="stylesheet" href="css/swing.css?v=1.5" media="all">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/angular.min.js"></script>
-    <script src="js/app.js?v=1.3"></script>
-    <script src="js/main.js?v=1.3"></script>
+    <script src="js/app.js?v=1.5"></script>
+    <script src="js/main.js?v=1.5"></script>
   </head>
   <body ng-app="app" onLoad="render()">
     <!-- Yandex.Metrika counter -->
@@ -55,30 +55,20 @@
     </noscript>
     <!-- /Yandex.Metrika counter -->
   
-   <div class="header-mobile" uk-sticky="show-on-up: true">
+   <div class="header-mobile" id="header-mobile" uk-sticky="show-on-up:true">
         <!-- шапка -->
-        <img src="pics/header_small.svg" class="header-img" alt="Дистанционное обучение"/ uk-toggle="target:#mobile-menu" type="button">
+        <img src="pics/header_small.svg" class="header-img" alt="Дистанционное обучение" uk-toggle="target:#mobile-menu" type="button"/>
    </div> 
    
-   <div class="nav-mobile" id="mobile-menu" uk-offcanvas>
-   <div class="uk-offcanvas-bar">
-   <ul>
-				<li>
-					<a href="#obr">ШКОЛЫ</a>
-				</li>
-				<li>
-					<a href="#spo">ТЕХНИКУМЫ, КОЛЛЕДЖИ</a>
-				</li>
-				<li>
-					<a href="#do">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>
-				</li>
-				<li>
-					<a href="#dist">ДЕТЯМ С ОВЗ</a>
-				</li>
-				<li>
-					<a href="#situ">ШКОЛЬНЫЕ<br/>ТРАЕКТОРИИ В ИТ</a>
-				</li>
-			</ul>
+   <div id="mobile-menu" uk-offcanvas="overlay:true">   
+   <div class="uk-offcanvas-bar nav-mobile">
+   <div class="nav-mobile-txt">
+   <a class="nav-block-cell-label-mobile" href="#obr">ШКОЛЫ</a>
+   <a class="nav-block-cell-label-mobile" href="#spo">ТЕХНИКУМЫ, КОЛЛЕДЖИ</a>
+   <a class="nav-block-cell-label-mobile" href="#do">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>
+   <a class="nav-block-cell-label-mobile" href="#dist">ДЕТЯМ С ОВЗ</a>
+   <a class="nav-block-cell-label-mobile" href="#situ">ШКОЛЬНЫЕ ТРАЕКТОРИИ В ИТ</a>	
+   </div>
    </div>
    </div>
 

@@ -165,6 +165,9 @@ function orientationChangeFunction() {
 	  
 	refDivs[i].style.height = getComputedStyle(document.getElementById("nav-elem")).height;
 	//alert(refDivs[i].style.height);
+	if (refDivs[i].style.height == "auto") {
+	   refDivs[i].style.height="0px";//getComputedStyle(document.getElementById("header-mobile")).height;
+	};
   };
    
 };

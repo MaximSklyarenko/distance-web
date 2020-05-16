@@ -161,10 +161,26 @@ center {
   padding-bottom: var(--basic-padding);
   top: 0px;
   width: 100%;
+  display:var(--header-big-display);
+}
+
+.header-mobile {
+  height: auto;
+  padding-bottom: var(--basic-padding);
+  top: 0px;
+  width: 100%;
+  display:var(--header-small-display);
+   position: sticky;
+  position: -webkit-sticky;
+  /* Safari */
+  top: 0px;
+  background: white;
+  z-index: 4;
+  border: 0px 2px 2px 2px solid white;
 }
 
 .nav-container {
-  display: flex;
+  display: var(--nav-cont-display);
   justify-content: center;
   align-items: center;
   padding-bottom: var(--basic-padding);

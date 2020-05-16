@@ -180,7 +180,7 @@ center {
 }
 
 .nav-container {
-  display: var(--nav-cont-display);
+  display: flex;/*var(--nav-cont-display);*/
   justify-content: center;
   align-items: center;
   padding-bottom: var(--basic-padding);

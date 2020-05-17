@@ -177,23 +177,28 @@ function orientationChangeFunction() {
    
 };
 
+function nav() {
+  var elem = document.getElementById("header-mobile");  
+  elem.setAttribute("uk-sticky","show-on-up:false;animation:uk-animation-fade;");
+  setTimeout(function (elem)
+            {
+			  elem.setAttribute("uk-sticky","show-on-up:true;animation:uk-animation-fade;");
+			}, 0, elem);
+	
+};	
+
 function render() {
 	
-  UIkit.util.on("#header-mobile", "active", function () {
+  /*UIkit.util.on("#header-mobile", "active", function () {
     var refDivs = document.getElementsByClassName("ref-div");
     var i;
     for (i = 0; i < refDivs.length; i++) {	  
 	  refDivs[i].style.height=getComputedStyle(this).height;	
     };  
-  });	
-  
-   UIkit.util.on("#header-mobile", "inactive", function () {
-    var refDivs = document.getElementsByClassName("ref-div");
-    var i;
-    for (i = 0; i < refDivs.length; i++) {	  
-	  refDivs[i].style.height="0px";	
-    };  
+	
   });
+  */  
+  
   
   orientationChangeFunction();
   addInfo();

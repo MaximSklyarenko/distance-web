@@ -127,6 +127,8 @@
     --header-big-display:none;
 	--nav-cont-display:none;
 	--off-canv-display:block;
+	--mob-menu-font-size:30px;
+	--nav-mobile-txt-flex-dir: column;
   }
 }
 
@@ -165,6 +167,7 @@
     --header-big-display:none;
 	--nav-cont-display:none;
 	--off-canv-display:block;
+	--mob-menu-font-size:20px;
   }
 }
 
@@ -201,8 +204,16 @@
     --header-block-top-pad: 10px;
     --header-block-bottom-pad: 5px;
     --phone-size: 32px;
+	--mob-menu-font-size:16px;
   }
 }
+
+@media all and (max-height: 500px) {
+   :root {
+	 --mob-menu-font-size:16px;  
+	 --nav-mobile-txt-flex-dir: row;
+   }
+}  
 
 @media all and (max-width: 321px) {
    :root {  

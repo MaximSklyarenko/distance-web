@@ -174,6 +174,9 @@ function orientationChangeFunction() {
   if (getComputedStyle(document.getElementById("mobile-menu")).display == "none") {
     UIkit.offcanvas(document.getElementById("mobile-menu-cont")).hide();
   };
+  
+  var navMob = document.getElementById("nav-mob");
+  navMob.style.top = getComputedStyle(document.getElementById("header-mobile")).height; 
    
 };
 

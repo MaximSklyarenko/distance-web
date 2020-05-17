@@ -28,7 +28,7 @@
     <script src="js/css-vars-ponyfill.js"></script>
     <link rel="stylesheet" href="css/adapt_style.css?v=1.7" media="all">
     <link rel="stylesheet" href="css/uikit.min.css" media="all"/>
-    <link rel="stylesheet" href="css/style.css?v=1.7" media="all">
+    <link rel="stylesheet" href="css/style.css?v=1.8" media="all">
     <link rel="stylesheet" href="css/swing.css?v=1.7" media="all">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
@@ -61,12 +61,14 @@
     </div>
     <div id="mobile-menu-cont" uk-offcanvas="overlay:true" style="display:none;">
       <div id="mobile-menu" class="uk-offcanvas-bar nav-mobile">
-        <div class="nav-mobile-txt">
+	    <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <div class="nav-mobile-txt" id="nav-mob">
           <a class="nav-block-cell-label-mobile" href="#obr"  onClick="nav()">ШКОЛЫ</a>
           <a class="nav-block-cell-label-mobile" href="#spo"  onClick="nav()">ТЕХНИКУМЫ, КОЛЛЕДЖИ</a>
           <a class="nav-block-cell-label-mobile" href="#do"   onClick="nav()">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>
           <a class="nav-block-cell-label-mobile" href="#dist" onClick="nav()">ДЕТЯМ С ОВЗ</a>
           <a class="nav-block-cell-label-mobile" href="#situ" onClick="nav()">ШКОЛЬНЫЕ ТРАЕКТОРИИ В ИТ</a>	
+		  <a class="nav-block-cell-label-mobile" href="#situ" onClick="nav()" uk-toggle="target: #phones-dialog">КОНТАКТЫ</a>	
         </div>
       </div>
     </div>

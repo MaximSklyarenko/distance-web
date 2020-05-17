@@ -178,7 +178,23 @@ function orientationChangeFunction() {
 };
 
 function render() {
-    
+	
+  UIkit.util.on("#header-mobile", "active", function () {
+    var refDivs = document.getElementsByClassName("ref-div");
+    var i;
+    for (i = 0; i < refDivs.length; i++) {	  
+	  refDivs[i].style.height=getComputedStyle(this).height;	
+    };  
+  });	
+  
+   UIkit.util.on("#header-mobile", "inactive", function () {
+    var refDivs = document.getElementsByClassName("ref-div");
+    var i;
+    for (i = 0; i < refDivs.length; i++) {	  
+	  refDivs[i].style.height="0px";	
+    };  
+  });
+  
   orientationChangeFunction();
   addInfo();
 

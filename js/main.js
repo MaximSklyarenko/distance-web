@@ -179,10 +179,10 @@ function orientationChangeFunction() {
 
 function nav() {
   var elem = document.getElementById("header-mobile");  
-  elem.setAttribute("uk-sticky","show-on-up:false;animation:uk-animation-fade;");
+  elem.setAttribute("uk-sticky","show-on-up:false;");
   setTimeout(function (elem)
             {
-			  elem.setAttribute("uk-sticky","show-on-up:true;animation:uk-animation-fade;");
+			  elem.setAttribute("uk-sticky","show-on-up:true;");
 			}, 0, elem);
 	
 };	

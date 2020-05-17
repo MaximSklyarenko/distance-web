@@ -169,6 +169,11 @@ function orientationChangeFunction() {
 	   refDivs[i].style.height="0px";//getComputedStyle(document.getElementById("header-mobile")).height;
 	};
   };
+  
+   
+  if (getComputedStyle(document.getElementById("mobile-menu")).display == "none") {
+    UIkit.offcanvas(document.getElementById("mobile-menu-cont")).hide();
+  };
    
 };
 

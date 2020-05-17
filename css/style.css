@@ -199,6 +199,7 @@ center {
   border-bottom-right-radius:15%;
   width:100%;
   height:100%;
+  display:var(--off-canv-display)!important;
 }	
 
 .nav-mobile-txt { 

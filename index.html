@@ -26,15 +26,15 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
     <title>Дистанционное обучение</title>
     <script src="js/css-vars-ponyfill.js"></script>
-    <link rel="stylesheet" href="css/adapt_style.css?v=1.7" media="all">
+    <link rel="stylesheet" href="css/adapt_style.css?v=1.10" media="all">
     <link rel="stylesheet" href="css/uikit.min.css" media="all"/>
-    <link rel="stylesheet" href="css/style.css?v=1.8" media="all">
-    <link rel="stylesheet" href="css/swing.css?v=1.7" media="all">
+    <link rel="stylesheet" href="css/style.css?v=1.10" media="all">
+    <link rel="stylesheet" href="css/swing.css?v=1.10" media="all">
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
     <script src="js/angular.min.js"></script>
-    <script src="js/app.js?v=1.7"></script>
-    <script src="js/main.js?v=1.7"></script>
+    <script src="js/app.js?v=1.10"></script>
+    <script src="js/main.js?v=1.10"></script>
   </head>
   <body ng-app="app" onLoad="render()">
     <!-- Yandex.Metrika counter -->
@@ -42,7 +42,7 @@
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
       m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-      
+
       ym(61679847, "init", {
            clickmap:true,
            trackLinks:true,
@@ -53,23 +53,31 @@
     <noscript>
       <div><img src="https://mc.yandex.ru/watch/61679847" style="position:absolute; left:-9999px;" alt="" /></div>
     </noscript>
-    <!-- /Yandex.Metrika counter -->  
-	
+    <!-- /Yandex.Metrika counter -->
+
     <div class="header-mobile" id="header-mobile" uk-sticky="show-on-up:true;">
       <!-- шапка -->
-      <div class="header-mobile-menu-ico-div"><img src="pics/menu-ico.svg" style="width:100%;" onClick="openMenu()" type="button"/></div>
+      <div id="main-menu-button" class="header-mobile-menu-ico-div"/>
+	  <svg id="menu-ico" class="menu-ico" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+          <g>
+            <line class="menu-ico-svg" x1="13" y1="16.5" x2="37" y2="16.5"/>
+            <line class="menu-ico-svg" x1="13" y1="24.5" x2="37" y2="24.5"/>
+            <line class="menu-ico-svg" x1="13" y1="24.5" x2="37" y2="24.5"/>
+            <line class="menu-ico-svg" x1="13" y1="32.5" x2="37" y2="32.5"/>
+          </g>
+        </svg>
+	  </div>
 	  <div class="header-small-div"><img src="pics/header_small.svg" class="header-img" alt="Дистанционное обучение"/></div>
     </div>
-    <div id="mobile-menu-cont" uk-offcanvas="overlay:true;" style="display:none;">
+    <div id="mobile-menu-cont" uk-offcanvas="overlay:true" style="display:none;">
       <div id="mobile-menu" class="uk-offcanvas-bar nav-mobile uk-animation-scale-up">
-	    <button class="uk-offcanvas-close uk-close-large" type="button" uk-close></button>
-        <div class="nav-mobile-txt" id="nav-mob">
+	    <div class="nav-mobile-txt" id="nav-mob">
           <a class="nav-block-cell-label-mobile" href="#obr"  onClick="nav()">ШКОЛЫ</a>
           <a class="nav-block-cell-label-mobile" href="#spo"  onClick="nav()">ТЕХНИКУМЫ, КОЛЛЕДЖИ</a>
           <a class="nav-block-cell-label-mobile" href="#do"   onClick="nav()">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>
           <a class="nav-block-cell-label-mobile" href="#dist" onClick="nav()">ДЕТЯМ С ОВЗ</a>
-          <a class="nav-block-cell-label-mobile" href="#situ" onClick="nav()">ШКОЛЬНЫЕ ТРАЕКТОРИИ В ИТ</a>	
-		  <a class="nav-block-cell-label-mobile" href="#situ" onClick="nav()" uk-toggle="target: #phones-dialog">КОНТАКТЫ</a>	
+          <a class="nav-block-cell-label-mobile" href="#situ" onClick="nav()">ШКОЛЬНЫЕ ТРАЕКТОРИИ В ИТ</a>
+		  <a class="nav-block-cell-label-mobile" href="#situ" onClick="nav()" uk-toggle="target: #phones-dialog">КОНТАКТЫ</a>
         </div>
       </div>
     </div>
@@ -229,9 +237,9 @@
                 <li>
                   <div class="news">
                     <div class="news-block-dt">28.04.2020</div>
-                    <div class="news-block"><b>«Мобильное Электронное Образование»</b> приглашает педагогов и руководителей образовательных организаций <b>29 апреля в 13.00 (мск.)</b> на онлайн-встречу 
+                    <div class="news-block"><b>«Мобильное Электронное Образование»</b> приглашает педагогов и руководителей образовательных организаций <b>29 апреля в 13.00 (мск.)</b> на онлайн-встречу
                       <a class="news-block-main" href="http://b40347.vr.mirapolis.ru/mira/#&doaction=Go&s=AjQn2Tf4j88w7BdDmMPn&id=16226&type=studentcourse&utm_campaign=Vebinar+%22Skola+budusego+-+v+nastoasem.+Iz+opyta+raboty%22232278022&utm_medium=email&utm_source=UniSender&utm_content=232278022">«Школа будущего – в настоящем»</a>
-                      , трансляция вебинара также будет доступна для тех, кто не успел зарегистрироваться или не смог войти в Мираполис, в прямом эфире на нашем 
+                      , трансляция вебинара также будет доступна для тех, кто не успел зарегистрироваться или не смог войти в Мираполис, в прямом эфире на нашем
                       <a class="news-block-main" href="https://www.youtube.com/watch?v=Qrej44WXUto&feature=youtu.be&utm_medium=email&utm_source=UniSender&utm_campaign=Vebinar+%22Skola+budusego+-+v+nastoasem.+Iz+opyta+raboty%22232278022&utm_content=232278022">YouTube</a> канале.<br/>
                       Расписание других вебинаров МЭО <a class="news-block-main" href="https://metod.mob-edu.ru/vebinary/?utm_medium=email&utm_source=UniSender&utm_campaign=Vebinar+%22Skola+budusego+-+v+nastoasem.+Iz+opyta+raboty%22232278022&utm_content=232278022">здесь</a>.
                     </div>
@@ -308,7 +316,7 @@
             <div class="panel-info-show" style="display:none;background:#5A2497!important;">
               <div class=head-url-white>БЕСПЛАТНО</div>
             </div>
-            <a href="http://stratum.ac.ru/enter/"><img src="pics/stratum.png" class=panel-img></a>            
+            <a href="http://stratum.ac.ru/enter/"><img src="pics/stratum.png" class=panel-img></a>
             <div class="panel-bottom-div">
               <div class="for-parent-label" onclick="window.location.href='files/parents/stratum.pdf?v=1.2'">Родителю</div>
               <div class="for-teacher-label" onclick="window.location.href='files/teachers/stratum.pdf?v=1.2'">Учителю</div>
@@ -1037,7 +1045,7 @@
               <h3 style="color:white;">Службы технической поддержки:</h3>
               <div class="footer-tel" style="color:white;"><a href="tel:+7-800-505-89-66" style="color:white;">8-800-505-89-66 – служба технической поддержки ЭПОС.Школа</a>
               </div>
-              <div class="footer-tel" style="color:white;"><a href="tel:+7-800-300-44-44" style="color:white;">8-800-300-44-44 – служба технической поддержки СЭДиЖ</a>		 
+              <div class="footer-tel" style="color:white;"><a href="tel:+7-800-300-44-44" style="color:white;">8-800-300-44-44 – служба технической поддержки СЭДиЖ</a>
               </div>
             </div>
           </div>

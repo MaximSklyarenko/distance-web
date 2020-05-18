@@ -226,8 +226,16 @@ function render() {
   UIkit.util.on("#mobile-menu-cont", "hide", function () {
     var ico = document.getElementById("menu-ico");
     ico.setAttribute("rotatedSign","0");;  
+	var elem = document.getElementById("nav-mob");
+    elem.style.display="none";
 	
   }); 
+  
+   UIkit.util.on("#mobile-menu-cont", "shown", function () {
+    var elem = document.getElementById("nav-mob");
+    elem.style.display="flex";
+	
+  });
   
   var btn = document.getElementById("main-menu-button");
   btn.setAttribute("onClick", "showMenu()");

@@ -57,13 +57,21 @@
 	
     <div class="header-mobile" id="header-mobile" uk-sticky="show-on-up:true;">
       <!-- шапка -->
-      <div class="header-mobile-menu-ico-div"><img src="pics/menu-ico.svg" style="width:100%;" uk-toggle="target:#mobile-menu-cont" type="button"/></div>
+      <div id="main-menu-button" class="header-mobile-menu-ico-div"/>
+	  <svg id="menu-ico" class="menu-ico" style="width:100%;" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">          
+          <g>
+            <line class="menu-ico-svg" x1="13" y1="16.5" x2="37" y2="16.5"/>
+            <line class="menu-ico-svg" x1="13" y1="24.5" x2="37" y2="24.5"/>
+            <line class="menu-ico-svg" x1="13" y1="24.5" x2="37" y2="24.5"/>
+            <line class="menu-ico-svg" x1="13" y1="32.5" x2="37" y2="32.5"/>
+          </g>
+        </svg>
+	  </div>
 	  <div class="header-small-div"><img src="pics/header_small.svg" class="header-img" alt="Дистанционное обучение"/></div>
     </div>
     <div id="mobile-menu-cont" uk-offcanvas="overlay:true" style="display:none;">
-      <div id="mobile-menu" class="uk-offcanvas-bar nav-mobile">
-	    <button class="uk-offcanvas-close uk-close-large" type="button" uk-close></button>
-        <div class="nav-mobile-txt" id="nav-mob">
+      <div id="mobile-menu" class="uk-offcanvas-bar nav-mobile uk-animation-scale-up">
+	    <div class="nav-mobile-txt uk-animation-slide-right" id="nav-mob">
           <a class="nav-block-cell-label-mobile" href="#obr"  onClick="nav()">ШКОЛЫ</a>
           <a class="nav-block-cell-label-mobile" href="#spo"  onClick="nav()">ТЕХНИКУМЫ, КОЛЛЕДЖИ</a>
           <a class="nav-block-cell-label-mobile" href="#do"   onClick="nav()">ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</a>

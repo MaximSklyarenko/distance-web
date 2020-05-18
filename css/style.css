@@ -166,6 +166,8 @@ center {
 .header-mobile {
   padding-bottom: var(--basic-padding);
   display:var(--header-small-display); 
+  position:relative;
+  z-index:1001;
 }
 
 .header-small-div {
@@ -173,11 +175,48 @@ center {
   position:relative;
 }	
 
+.menu-ico-svg {
+  fill:none;
+  stroke: currentColor;
+  stroke-width:3;
+  stroke-linecap:round; 
+  transform: rotate(0deg);
+  transform-origin:50% 50%;
+  transition: transform .25s ease-in-out;  
+}	
+
+.menu-ico {
+  transform:rotate(0deg);
+  transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+  display:block;
+  cursor:pointer;
+  color: white;
+}
+
+.menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(2){
+  transform: rotate(45deg);  
+}
+
+.menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(3){
+  transform: rotate(-45deg);  
+}
+
+.menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(1){
+  opacity:0;  
+}
+.menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(4){
+  opacity:0;  
+}
+
+.menu-ico[rotatedSign="1"]  {
+  color:white;
+  transform:rotate(180deg);
+}
+
 .header-mobile-menu-ico-div {	
-  margin-top: calc((var(--basic-padding))*1.5);
+  margin-top: calc((var(--basic-padding))*1.25);
   margin-left: calc((var(--basic-padding))*2);
-  padding: calc((var(--basic-padding))*1);
-  width: 5.625vw;
+  width: 11.25vw;
   top:0px;
   left:0px;
   z-index:2;

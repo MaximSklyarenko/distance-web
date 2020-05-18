@@ -190,18 +190,47 @@ function nav() {
 	
 };	
 
+function showMenu() {
+  console.log("showMenu");
+  event.stopPropagation();
+
+  var ico = document.getElementById("menu-ico");
+  ico.setAttribute("rotatedSign","1");
+ 
+  var btn = document.getElementById("main-menu-button");
+  btn.setAttribute("onClick", "hideMenu()");
+  
+  
+  var elem = document.getElementById("mobile-menu-cont")
+  UIkit.offcanvas(elem).show();
+  
+}	
+
+function hideMenu() {
+  event.stopPropagation();
+
+  var ico = document.getElementById("menu-ico");
+  ico.setAttribute("rotatedSign","0");
+  
+  var btn = document.getElementById("main-menu-button");
+  btn.setAttribute("onClick", "showMenu()");
+  
+  
+  var elem = document.getElementById("mobile-menu-cont")
+  UIkit.offcanvas(elem).hide();
+  
+}	
+
 function render() {
 	
-  /*UIkit.util.on("#header-mobile", "active", function () {
-    var refDivs = document.getElementsByClassName("ref-div");
-    var i;
-    for (i = 0; i < refDivs.length; i++) {	  
-	  refDivs[i].style.height=getComputedStyle(this).height;	
-    };  
+  UIkit.util.on("#mobile-menu-cont", "hide", function () {
+    var ico = document.getElementById("menu-ico");
+    ico.setAttribute("rotatedSign","0");;  
 	
-  });
-  */  
+  }); 
   
+  var btn = document.getElementById("main-menu-button");
+  btn.setAttribute("onClick", "showMenu()");
   
   orientationChangeFunction();
   addInfo();

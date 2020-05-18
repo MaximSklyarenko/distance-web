@@ -190,18 +190,20 @@ function nav() {
 	
 };	
 
+function openMenu() {
+  var elem = document.getElementById("header-mobile");  
+  elem.style.visibility = "hidden";
+  
+  var elem2 = document.getElementById("mobile-menu-cont");
+  UIkit.offcanvas(elem2).show();
+};	
+
 function render() {
 	
-  /*UIkit.util.on("#header-mobile", "active", function () {
-    var refDivs = document.getElementsByClassName("ref-div");
-    var i;
-    for (i = 0; i < refDivs.length; i++) {	  
-	  refDivs[i].style.height=getComputedStyle(this).height;	
-    };  
-	
-  });
-  */  
-  
+  UIkit.util.on("#mobile-menu-cont", "hidden", function () {
+    var elem = document.getElementById("header-mobile");  
+    elem.style.visibility = "visible";
+    });
   
   orientationChangeFunction();
   addInfo();

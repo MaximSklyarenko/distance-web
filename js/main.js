@@ -190,8 +190,7 @@ function nav() {
 
 };
 
-function showMenu() {
-  console.log("showMenu");
+function showMenu() {  
   event.stopPropagation();
 
   var ico = document.getElementById("menu-ico");

@@ -173,6 +173,7 @@ center {
 .header-small-div {
   z-index:1;
   position:relative;
+  pointer-events:none;
 }	
 
 .menu-ico-svg {

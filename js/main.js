@@ -205,22 +205,23 @@ function showMenu() {
 
 function hideMenu() {
   event.stopPropagation();
-
-  var ico = document.getElementById("menu-ico");
-  ico.setAttribute("rotatedSign","0");
-
-  var btn = document.getElementById("main-menu-button");
-  btn.setAttribute("onClick", "showMenu()");
-
-  var elem = document.getElementById("mobile-menu-cont")
+  var elem = document.getElementById("mobile-menu-cont");
+  
   UIkit.offcanvas(elem).hide();
 }
 
 function render() {
-
-  UIkit.util.on("#mobile-menu-cont", "hide", function () {
+	
+   UIkit.util.on("#mobile-menu-cont", "hide", function () {
     var ico = document.getElementById("menu-ico");
-    ico.setAttribute("rotatedSign","0");;
+    ico.setAttribute("rotatedSign","0");
+  });	
+
+  UIkit.util.on("#mobile-menu-cont", "hidden", function () {
+   
+	
+	var btn = document.getElementById("main-menu-button");
+    btn.setAttribute("onClick", "showMenu()");
 
   });
 

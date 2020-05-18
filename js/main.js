@@ -199,10 +199,8 @@ function showMenu() {
   var btn = document.getElementById("main-menu-button");
   btn.setAttribute("onClick", "hideMenu()");
 
-
   var elem = document.getElementById("mobile-menu-cont")
   UIkit.offcanvas(elem).show();
-
 }
 
 function hideMenu() {
@@ -214,10 +212,8 @@ function hideMenu() {
   var btn = document.getElementById("main-menu-button");
   btn.setAttribute("onClick", "showMenu()");
 
-
   var elem = document.getElementById("mobile-menu-cont")
   UIkit.offcanvas(elem).hide();
-
 }
 
 function render() {
@@ -233,7 +229,6 @@ function render() {
 
   orientationChangeFunction();
   addInfo();
-
 
   // Listen for orientation changes
   window.addEventListener("orientationchange", orientationChangeFunction, false);

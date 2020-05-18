@@ -190,6 +190,7 @@ center {
   transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
   cursor:pointer;
   color: white;
+  width: 11.25vw;
 }
 
 .menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(2){

@@ -168,6 +168,22 @@ center {
   display:var(--header-small-display); 
 }
 
+.header-small-div {
+  z-index:1;
+  position:relative;
+}	
+
+.header-mobile-menu-ico-div {	
+  margin-top: calc((var(--basic-padding))*1.5);
+  margin-left: calc((var(--basic-padding))*2);
+  padding: calc((var(--basic-padding))*1);
+  width: 5.625vw;
+  top:0px;
+  left:0px;
+  z-index:2;
+  position:absolute;
+}
+
 .header-img {
   width:100%;
   height:auto;

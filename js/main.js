@@ -12,9 +12,9 @@
   // ----------------------------
 
   // Display transformed CSS
-  onComplete: function(cssText, styleNodes, cssVariables, benchmark) {
+  onComplete: function (cssText, styleNodes, cssVariables, benchmark) {
     console.log("onComplete")
-	//console.log(cssText);
+    //console.log(cssText);
   }
 });
 
@@ -25,60 +25,58 @@ function addInfo() {
   var i;
 
   for (i = 0; i < panels.length; i++) {
-	var curPanel = panels[i];
+    var curPanel = panels[i];
 
-	// Добавление подсказки о стоимости ресурса
-	if (curPanel.getAttribute("data-hide-pay-info") != "y") {
+    // Добавление подсказки о стоимости ресурса
+    if (curPanel.getAttribute("data-hide-pay-info") != "y") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "info-img-div");
 
-	  if (supportsTouch) {
-		elemDiv.setAttribute("onClick", "showInfo()");
-	  }
-      else {
-		elemDiv.setAttribute("onMouseOver", "showInfo()");
-	    elemDiv.setAttribute("onMouseOut","revertPanel()");
-	  }
+      if (supportsTouch) {
+        elemDiv.setAttribute("onClick", "showInfo()");
+      } else {
+        elemDiv.setAttribute("onMouseOver", "showInfo()");
+        elemDiv.setAttribute("onMouseOut", "revertPanel()");
+      }
 
       var elemImg = document.createElement("img");
 
       if (curPanel.classList.contains("free-cont")) {
         elemImg.setAttribute("src", "pics/info-f.svg");
-	  }
-      else {
-	    elemImg.setAttribute("src", "pics/info-p.svg");
-	  }
+      } else {
+        elemImg.setAttribute("src", "pics/info-p.svg");
+      }
       elemImg.setAttribute("class", "info-img");
 
       elemDiv.appendChild(elemImg);
 
       curPanel.appendChild(elemDiv);
 
-	}
+    }
 
-	// Добавление иконки для просмотра видеоролика
-	if (curPanel.getAttribute("id") == "stratum") {
+    // Добавление иконки для просмотра видеоролика
+    if (curPanel.getAttribute("id") == "stratum") {
       var elemDiv = document.createElement("div");
       elemDiv.setAttribute("class", "video-img-div");
 
-	  var videoDiv = document.createElement("div");
-	  videoDiv.setAttribute("uk-lightbox", "");
+      var videoDiv = document.createElement("div");
+      videoDiv.setAttribute("uk-lightbox", "");
 
-	  var elemA = document.createElement("a");
-	  elemA.setAttribute("href", "https://www.youtube.com/watch?v=uDZkbw2ch4Q");
+      var elemA = document.createElement("a");
+      elemA.setAttribute("href", "https://www.youtube.com/watch?v=uDZkbw2ch4Q");
 
-	  var elemImg = document.createElement("img");
-	  elemImg.setAttribute("src", "pics/video.svg");
-	  elemImg.setAttribute("class", "video-img");
+      var elemImg = document.createElement("img");
+      elemImg.setAttribute("src", "pics/video.svg");
+      elemImg.setAttribute("class", "video-img");
       elemA.appendChild(elemImg);
 
-	  videoDiv.appendChild(elemA);
+      videoDiv.appendChild(elemA);
 
-	  elemDiv.appendChild(videoDiv);
+      elemDiv.appendChild(videoDiv);
 
       curPanel.appendChild(elemDiv);
 
-	}
+    }
 
   }
 
@@ -93,21 +91,21 @@ function showInfo() {
   var infoPanel = parDiv.querySelector('.panel-info-show');
 
   var children = parDiv.childNodes;
-  for(var c=0; c < children.length; c++) {
-    if(children[c].style &&
-	   children[c].getAttribute("class") != "panel-info-show" &&
-	   children[c].getAttribute("class") != "info-img-div") {
-       children[c].style.display = 'none';
+  for (var c = 0; c < children.length; c++) {
+    if (children[c].style &&
+      children[c].getAttribute("class") != "panel-info-show" &&
+      children[c].getAttribute("class") != "info-img-div") {
+      children[c].style.display = 'none';
     }
   }
 
-  infoPanel.style.display="flex";
+  infoPanel.style.display = "flex";
 
 
   //alert("showInfo");
 
   if (supportsTouch) {
-	//alert("changeEvent");
+    //alert("changeEvent");
     event.target.setAttribute("onClick", "revertPanel()");
   }
 }
@@ -119,22 +117,22 @@ function revertPanel() {
   var parImageDiv = event.target.parentElement;
   var parDiv = parImageDiv.parentElement; //Плашка
   var infoPanel = parDiv.querySelector('.panel-info-show');
-  infoPanel.setAttribute("style","display:none;background:#5A2497!important;");
+  infoPanel.setAttribute("style", "display:none;background:#5A2497!important;");
 
 
   var children = parDiv.childNodes;
-  for(var c=0; c < children.length; c++) {
-    if(children[c].style &&
-	   children[c].getAttribute("class") != "panel-info-show" &&
-	   children[c].getAttribute("class") != "info-img-div") {
-       children[c].style.display = '';
+  for (var c = 0; c < children.length; c++) {
+    if (children[c].style &&
+      children[c].getAttribute("class") != "panel-info-show" &&
+      children[c].getAttribute("class") != "info-img-div") {
+      children[c].style.display = '';
     }
   }
 
   //alert("revertPanel");
 
   if (supportsTouch) {
-	//alert("changeEvent");
+    //alert("changeEvent");
     event.target.setAttribute("onClick", "showInfo()");
   }
 
@@ -146,9 +144,9 @@ function orientationChangeFunction() {
   var classSliderPreview;
   var classNewsPreview;
 
-  classSliderPreview="uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-grid uk-grid-small";
+  classSliderPreview = "uk-slider-items uk-child-width-1-" + slidesQ.trim() + " uk-grid uk-grid-small";
 
-  classNewsPreview="uk-slider-items uk-child-width-1-" + newsQ.trim() + " uk-grid uk-grid-match";
+  classNewsPreview = "uk-slider-items uk-child-width-1-" + newsQ.trim() + " uk-grid uk-grid-match";
 
   var elem = document.getElementById("slider-preview");
   var news = document.getElementById("news-preview");
@@ -163,11 +161,11 @@ function orientationChangeFunction() {
 
   for (i = 0; i < refDivs.length; i++) {
 
-	refDivs[i].style.height = getComputedStyle(document.getElementById("nav-elem")).height;
-	//alert(refDivs[i].style.height);
-	if (refDivs[i].style.height == "auto") {
-	   refDivs[i].style.height="0px";//getComputedStyle(document.getElementById("header-mobile")).height;
-	};
+    refDivs[i].style.height = getComputedStyle(document.getElementById("nav-elem")).height;
+    //alert(refDivs[i].style.height);
+    if (refDivs[i].style.height == "auto") {
+      refDivs[i].style.height = "0px"; //getComputedStyle(document.getElementById("header-mobile")).height;
+    };
   };
 
 
@@ -182,53 +180,52 @@ function orientationChangeFunction() {
 
 function nav() {
   var elem = document.getElementById("header-mobile");
-  elem.setAttribute("uk-sticky","show-on-up:false;");
-  setTimeout(function (elem)
-            {
-			  elem.setAttribute("uk-sticky","show-on-up:true;");
-			}, 0, elem);
+  elem.setAttribute("uk-sticky", "show-on-up:false;");
+  setTimeout(function (elem) {
+    elem.setAttribute("uk-sticky", "show-on-up:true;");
+  }, 0, elem);
 
 };
 
-function showMenu() {  
+function showMenu() {
   event.stopPropagation();
 
   var ico = document.getElementById("menu-ico");
-  ico.setAttribute("rotatedSign","1");
+  ico.setAttribute("rotatedSign", "1");
 
   var btn = document.getElementById("main-menu-button");
   btn.setAttribute("onClick", "hideMenu()");
-  
+
   var elemM = document.getElementById("mobile-menu");
   elemM.classList.remove("fade-out");
   elemM.classList.add("uk-animation-scale-up");
-  
 
-  var elem = document.getElementById("mobile-menu-cont");  
+
+  var elem = document.getElementById("mobile-menu-cont");
   UIkit.offcanvas(elem).show();
 }
 
 function hideMenu() {
   event.stopPropagation();
   var elem = document.getElementById("mobile-menu-cont");
-  
+
   UIkit.offcanvas(elem).hide();
 }
 
 function render() {
-	
-   UIkit.util.on("#mobile-menu-cont", "hide", function () {
+
+  UIkit.util.on("#mobile-menu-cont", "hide", function () {
     var ico = document.getElementById("menu-ico");
-    ico.setAttribute("rotatedSign","0");
-	
-	var elem = document.getElementById("mobile-menu");
-	elem.classList.remove("uk-animation-scale-up");
-	elem.classList.add("fade-out");
-	
+    ico.setAttribute("rotatedSign", "0");
+
+    var elem = document.getElementById("mobile-menu");
+    elem.classList.remove("uk-animation-scale-up");
+    elem.classList.add("fade-out");
+
   });
 
-  UIkit.util.on("#mobile-menu-cont", "hidden", function () {	
-	var btn = document.getElementById("main-menu-button");
+  UIkit.util.on("#mobile-menu-cont", "hidden", function () {
+    var btn = document.getElementById("main-menu-button");
     btn.setAttribute("onClick", "showMenu()");
 
   });

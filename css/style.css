@@ -820,3 +820,15 @@ a.news-block-main, a.news-block-main:hover {
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
+
+@keyframes offCanvasFadeOut {
+    0% { opacity: 1;}
+    99% { opacity: 0.3;width: 100%; height: 100%;transform: scale(0.2);}
+    100% { opacity: 0.2;width: 0; height: 0;}
+}
+
+
+.fade-out {
+  animation: offCanvasFadeOut 0.5s;
+  animation-fill-mode: forwards;
+}

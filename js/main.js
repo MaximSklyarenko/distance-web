@@ -215,13 +215,20 @@ function render() {
    UIkit.util.on("#mobile-menu-cont", "hide", function () {
     var ico = document.getElementById("menu-ico");
     ico.setAttribute("rotatedSign","0");
-  });	
-
-  UIkit.util.on("#mobile-menu-cont", "hidden", function () {
-   
 	
+	var elem = document.getElementById("mobile-menu");
+	elem.classList.add("fade-out");
+	elem.classList.remove("uk-animation-scale-up");
+	
+  });
+
+  UIkit.util.on("#mobile-menu-cont", "hidden", function () {	
 	var btn = document.getElementById("main-menu-button");
     btn.setAttribute("onClick", "showMenu()");
+	
+	var elem = document.getElementById("mobile-menu");
+	elem.classList.add("uk-animation-scale-up");
+	elem.classList.remove("fade-out");
 
   });
 

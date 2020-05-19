@@ -200,6 +200,11 @@ function showMenu() {
   btn.setAttribute("onClick", "hideMenu()");
 
   var elem = document.getElementById("mobile-menu-cont")
+  
+  var elem = document.getElementById("mobile-menu");
+  elem.classList.add("uk-animation-scale-up");
+  elem.classList.remove("fade-out");
+  
   UIkit.offcanvas(elem).show();
 }
 
@@ -225,10 +230,6 @@ function render() {
   UIkit.util.on("#mobile-menu-cont", "hidden", function () {	
 	var btn = document.getElementById("main-menu-button");
     btn.setAttribute("onClick", "showMenu()");
-	
-	var elem = document.getElementById("mobile-menu");
-	elem.classList.add("uk-animation-scale-up");
-	elem.classList.remove("fade-out");
 
   });
 

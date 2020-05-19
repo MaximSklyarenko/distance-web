@@ -200,8 +200,9 @@ function showMenu() {
   btn.setAttribute("onClick", "hideMenu()");
   
   var elemM = document.getElementById("mobile-menu");
-  elemM.classList.add("uk-animation-scale-up");
   elemM.classList.remove("fade-out");
+  elemM.classList.add("uk-animation-scale-up");
+  
 
   var elem = document.getElementById("mobile-menu-cont");  
   UIkit.offcanvas(elem).show();
@@ -221,8 +222,8 @@ function render() {
     ico.setAttribute("rotatedSign","0");
 	
 	var elem = document.getElementById("mobile-menu");
-	elem.classList.add("fade-out");
 	elem.classList.remove("uk-animation-scale-up");
+	elem.classList.add("fade-out");
 	
   });
 

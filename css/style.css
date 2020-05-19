@@ -184,11 +184,16 @@ center {
   transform: rotate(0deg);
   transform-origin:50% 50%;
   transition: transform .25s ease-in-out;  
+  -webkit-transform: rotate(0deg);
+  -webkit-transform-origin:50% 50%;
+  -webkit-transition: -webkit-transform .25s ease-in-out; 
 }	
 
 .menu-ico {
   transform:rotate(0deg);
   transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
+  -webkit-transform:rotate(0deg);
+  -webkit-transition: .3s cubic-bezier(0.165, 0.840, 0.440, 1.000); 
   cursor:pointer;
   color: white;
   width: 11.25vw;
@@ -196,10 +201,12 @@ center {
 
 .menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(2){
   transform: rotate(45deg);  
+  -webkit-transform: rotate(45deg);  
 }
 
 .menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(3){
-  transform: rotate(-45deg);  
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);  
 }
 
 .menu-ico[rotatedSign="1"] .menu-ico-svg:nth-child(1){
@@ -212,6 +219,7 @@ center {
 .menu-ico[rotatedSign="1"]  {
   color:white;
   transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
 }
 
 .header-mobile-menu-ico-div {	
@@ -831,4 +839,6 @@ a.news-block-main, a.news-block-main:hover {
 .fade-out {
   animation: offCanvasFadeOut 0.5s;
   animation-fill-mode: forwards;
+  -webkit-animation: offCanvasFadeOut 0.5s;
+  -webkit-animation-fill-mode: forwards;
 }

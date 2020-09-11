@@ -520,6 +520,15 @@ a.news-block-main:hover {
   text-decoration: underline;
 }
 
+div.news-block-main,
+div.news-block-main:hover {
+  color: #5A2497;
+  text-align: right;
+  font-size: calc(var(--head-url-font-size)*0.8);
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+}
+
 .news {
   /*box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset; */
   cursor: pointer;
